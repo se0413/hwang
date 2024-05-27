@@ -38,5 +38,5 @@ p{
 }
 strong {
     color: #4dc966;
-    font-weight: 400;
+    font-size: 15px; /* 글자크기 */
 }
