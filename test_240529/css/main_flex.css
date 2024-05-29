@@ -41,7 +41,7 @@ html, body {
         <div>
              <ul>
                 <li></li>
-                 <li></li>
+                <li></li>
                 <li></li>
              </ul>
         </div>
@@ -82,4 +82,42 @@ html, body {
 }
 .core .photo img {
     border-radius: 20px;
+}
+.repm h1 {
+    margin: 180px 0 64px 0;
+    color: #1d1d1d;
+    font-size: 40pt;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+.repm ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.repm ul li {
+    width: 511px;
+    height: 422px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    padding: 310px 0 0 40px;
+    border-radius: 20px;
+    margin: 0 12px 24px 12px;
+}
+.repm ul li:nth-child(1) {
+    background-image: url(../re/1.png);
+}
+.repm ul li:nth-child(2) {
+    background-image: url(../re/2.png);
+}
+.repm ul li:nth-child(3) {
+    background-image: url(../re/3.png);
+}
+.repm ul li:nth-child(4) {
+    background-image: url(../re/4.png);
 }
