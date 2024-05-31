@@ -1,0 +1,139 @@
+@import url(default.css); /* default.css 불러오기 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Lightr'), url(../fonts/Pretendard-Light.woff2) format('woff2'), url(../fonts/Pretendard-Light.woff) format('woff');
+}
+html, body {   
+    font-family: "Pretendard", sans-serif; /* sans-serif 고딕체라는 의미, font-family 사용하는 서체명은 font-face에 사용한 이름으로 사용 */
+    font-size: 15px;
+    color: #3d3d3d;
+    line-height: 1.2;
+    font-weight: 400;
+    word-break: keep-all;
+    letter-spacing: -0.05em;
+}
+#wrap { /* 홈페이지 전체를 감싸는 요소 */
+    min-width: 1260px;
+}
+.wrapper {/* 홈페이지 넓이를 제한하고 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;    
+}
+.notice h1 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 120px 0 45px 0;
+}
+.notice ul {
+    display: flex;
+    justify-content: space-between;
+}
+ /* 
+    li와 a사이즈를 같게 하기 위한 것
+    <li> --- 넓이값
+        <a> --- 높이값
+        </a> 
+    </li>
+    a에 높이를 주면 li는 높이값을 동일하게 갖음
+    감싸는 요소는 내부요소의 높이값만큼 높이가 생성됨
+    (안에 있는 것이 늘어나면 밖에 있는 것은 길이 늘어남)
+
+    마우스 커서 올릴때 클릭되는 영역이 디자인한 이미지 범위와 알맞게 설정하기 위해 높이를 맞춰서 줘야 함
+ */
+.notice ul li {
+    width: 404px;
+}
+.notice ul li a { /* 커서 올렸을때 선택 영역이 디자인 크기 */
+    height: 327px;
+    display: block; /* 넓이100% */
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    padding: 42px 30px 0 30px;
+}
+.notice ul li a strong {
+    display: block;
+    color: #1d1d1d;
+    font-size: 30px;
+    margin: 0 0 22px 0;
+}
+.notice ul li a .memo {
+    display: block;
+    font-weight: 300;
+}
+.notice ul li a .group {
+    display: flex;
+    font-weight: 400;
+    border-top: 1px solid #ccc;
+    margin: 22px 0 0px 0;
+    padding: 12px 0 0 0;
+    justify-content: space-between;
+}
+/* 마우스오버 */
+.notice ul li a:hover {
+    background-color: #6a81f8;
+    color: rgba(255,255,255,0.8);
+    font-weight: 700;
+}
+/* a에 마우스를 올렸을때 srtonh은 */
+.notice ul li a:hover strong {
+    color: #fff;
+}
+.notice ul li a:hover .group {
+    border-top: 1px solid rgba(255,255,255,0.8);
+}
+.bbs ul {
+    display: flex;
+    margin: 44px 0 0 0;
+    justify-content: space-between;
+}
+.bbs ul li {
+    width: 404px;
+}
+.bbs ul li a {
+    background-color: #f4f4f4; 
+    border-radius: 20px;
+    padding: 39px 27px 0 27px;
+    height: 327px;
+    display: block;
+    border: 3px solid #f4f4f4;
+    /* border값과 padding 값 합산값이 여백으로 들어감 - 여백이 더 많아짐, 그래서 border값 만큼 padding에서 빼줘야 함 */
+}
+.bbs ul li a h2 {
+    color: #1d1d1d;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 22px 0;
+}
+.bbs ul li a div {
+    display: flex;
+    font-weight: 400;
+    border-top: 1px solid #ccc;
+    margin: 22px 0 0px 0;
+    padding: 12px 0 0 0;
+    justify-content: space-between;
+}
+/* 마우스를 오버했을때 border를 주고자 한다면 원래 border가 있는데 색상만 변경된 것으로 해야함 - 원래는 배경색하고 같은색이다가 오버하면 색상만 변경 */
+.bbs ul li a:hover {
+    border: 3px solid #6a81f8;
+    box-shadow: 10px 10px 20px rgba(106,129,248,18);
+}
+.bbs ul li a:hover h2 {
+    font-weight: 700;
+    color: #6a81f8;
+}
