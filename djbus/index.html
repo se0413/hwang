@@ -8,9 +8,27 @@
 </head>
 <body>
     <div id="wrap"> <!--홈페이지 전체를 감싸는 요소-->
-        <header></header>
+        <!--로고를 클릭하면 무조건 첫페이지로 이동-->
+        <header>
+            <div class="wrapper"><!--레이아웃 그리드 영역 : 넓이를 제한하고 가운데로 정렬-->
+                <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Daejeon Terminal Complex 대전복합터미널 로고"></a></h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="#n">대전복합터미널 개요</a></li>
+                        <li><a href="#n">DTC아트센터 </a></li>
+                        <li><a href="#n">홍보마당 </a></li>
+                        <li><a href="#n">고객지원센터</a></li>
+                        <li><a href="#n">(재)이구열 장학재단</a></li>
+                    </ul>
+                </nav>
+            </div><!--wrapper-->
+        </header>
         <div class="container"><!--header와 footer를 제외한 나머지 전부를 container-->
             <section class="visual">
+                <div class="wrapper">
+                    <strong>365일 불이 꺼지지 않는 곳</strong>
+                    <h2>오늘도 대전복합터미널은<br>내일을 위한 만남을<br>준비합니다.</h2>
+                </div><!--wrapper-->
             </section><!--visual-->
             <section class="introduce">
                 <div class="art">
