@@ -112,7 +112,7 @@ header .gnb ul li a:hover {
 }
 .promotion {
     /* 배경보다 promption 콘텐츠 길이가 더길다 배경의 우치를 정확하게 - 가운데 상단 background-size 주면 안됨, 디자인한 사이즈대로 들어가야 함 */
-    background: url(../images/promotion_bg1.png) no-repeat center top;
+    background: url(../images/promotion_bg2.png) no-repeat center top;
 }
 .promotion .news {
     color: #fff;
@@ -131,16 +131,6 @@ header .gnb ul li a:hover {
 }
 .promotion .news .tit p {
     margin: 18px 0;
-}
-.promotion .news .tit a {
-    border: 1px solid rgba(255,255,255,0.8);
-    padding: 11px 29px;
-    display: inline-block; /* padding 값을 적용하기 위해서 줌 */
-}
-.promotion .news .tit a:hover {
-    color: #4A5372;
-    background-color: #fff;
-    font-weight: 700;
 }
 .promotion .news .list {
     width: 725px;
@@ -171,6 +161,27 @@ header .gnb ul li a:hover {
     font-weight: 700;
     letter-spacing: -0.001px;
 }
+.promotion .news .wrapper {
+    position: relative;
+    /* more 정렬 기준, more를 감싸는 wrapper를 기준으로 정렬
+    wrapper에 position 값을 줘야함
+    position 속성값 중에서 유일하게 relative 값만이 요소에 아무런 영향을 끼치지 않음 */
+}
+.promotion .news .more {
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 11px 29px;
+    display: inline-block; /* padding 값을 적용하기 위해서 줌 */
+    position: absolute;
+    left: 0;
+    top: 120px;
+    /* position absolute 는 반드시 (좌우위치 left-right) (위아래 위치 top bottom) 값이 필수이고이 값을 어디서부터 계산하는지 기준이 필요함, 나를 감싸는 요소 중에서 position 속성을 가진 요소를 기준으로 정렬
+    ~~~~~ wrapper를 기준으로 정렬 */
+}
+.promotion .news .more:hover {
+    color: #4A5372;
+    background-color: #fff;
+    font-weight: 700;
+}
 .promotion .movie {
     margin: 0 0 113px 0;
 }
@@ -194,7 +205,7 @@ header .gnb ul li a:hover {
     display: block; /* a는 inline태그, 내부에는 block태그 a와 li의 영역 크기를 동일하게 주기 위해 a도 block 요소로 만듬 */
 }
 .promotion .movie .list ul li a .photo img { /* 이미지에 테두리를 주면 이미지 밖으로 테두리 생성, 이미지는 감싸는 영역의 크기를 이미보다 작게해도 이미지가 자동으로 줄어들지 않음, 본인의 사이즈대로 나타남, 글자는 줄바꿈을 함*/
-    border: 15px solid #4A5372;
+    border: 15px solid #fff;
     width: calc(100% - 20px);/* 나를 감싸는 photo의 넓이의 100% - 테두리는 별도
     넓이 100%에서 테두리 값을 뺀 넓이를 주면 됨, 테두리가 좌우로 들어가니 보더 값에 두배를 빼줘야 함 */
     border-radius: 5px;
@@ -210,7 +221,7 @@ header .gnb ul li a:hover {
     color: rgba(29,29,29,0.4);
 }
 .promotion .movie .list ul li a:hover .photo img {/* 마우스를 오버했을때 스타일이 정의된 선택자를 그대로 복사해야함 */
-    border: 15px solid #fff;
+    border: 15px solid #F0DAC3;
     border-radius: 5px;
 }
 .promotion .movie .list ul li a:hover h3{
@@ -242,4 +253,24 @@ footer .f_info address, footer .f_info span {
 }
 footer .copyright {
     color: rgba(255,255,255,0.6);
+}
+footer .wrapper {
+    /* footer 의 familly 정렬의 기준 */
+    position: relative;
+}
+footer .familly {
+    /* footer 의 warpper를 기준으로 정렬 */
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+footer .familly button {
+    border: 1px solid rgba(255,255,255,0.6);
+    width: 224px;
+    height: 33px;
+    /* 버튼태그는 원래 위아래 가운데 위아래 가운데 정렬 */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 19px;
+    align-items: center;
 }
