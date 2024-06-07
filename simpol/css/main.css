@@ -40,9 +40,15 @@ html, body{
 .community .text_news a {
     height: 211px;
 }
+.community .text_news h2 {
+    margin: 0 0 60px 0;
+}
 .community .text_news.color1 {
     background-color: #2fb157;
     color: #fff;
+}
+.community .text_news.color1 h2 {
+    margin: 0 0 60px 0;
 }
 .community .text_news.color2 {
     background-color: #6aae27;
@@ -71,9 +77,6 @@ html, body{
 .community a {
     padding: 24px 30px;
     display: block;
-}
-.community a strong {
-
 }
 .community a h2 {
     font-size: 23px;
