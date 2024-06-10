@@ -1,0 +1,285 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자의 스타일은 상속받음, 기본글자의 스타일은 모든 태그를 감싸는 html과 body에 선언 */
+html, body{
+    font-family: 'S-CoreDream', sans-serif; 
+    font-weight:400; 
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0em;
+    color: #3d3d3d;
+    word-break: keep-all;/* 단어별로 줄바꿈 */
+}
+#wrap{ /* 홈페이지 전체를 감싸는 요소 - 가로 스크롤바가 생겼을때 짤리는 현상 막음, #=id */
+    min-width: 1260px;
+}
+.wrapper {/* 홈페이지 넓이 제한, 가운데 정렬 */
+    width: 1260px;
+    margin: 0px auto; /* 가운데 정렬 */
+}
+header {
+    height: 100px;  /* 감싸는 요소 어떤값에도 prosition울 안주면 body룰 기준으로 정렬, header는 block 요소 이기 때문에 넓이가 브라우저 넣이만큼 들어감 근데 position absolute 값이 적용되면 넓이 값은 내부 콘텐츠 요소의 넓이값 만큼만 적용됨
+    header에 position absolute를 주면 넓이 100%를 준다고 생각... header만!!!! */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* position 속성이 있는 요소들은 서로 순서(위아래)가 존재함, 기본적으로 나중에 position이 선언된 요소가 더 위에 존재함, header를 더 위에 배치하기위해 주는 속성 숫자가 높은 요소가 더 위, 대부분 header는 100 나머지는 100 아래
+    
+    div로 감싸고 있는 클래스명 그룹안에 z-index가 100보다 더 높더라도 div밖에 있는 요소와 비교되어 우선순위를 결정할 수는 없음, 그룹안에서만 우선순위 결정*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+} 
+header .wrapper .logo {
+    margin: 23px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+header .gnb ul li a {
+    padding: 38px 33px;
+    display: block;
+}
+header .gnb ul li a:hover {
+    color: #55B2C5;
+}
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    height: 900px;
+    border-radius: 0 0 200px 0;
+}
+.visual .wrapper {
+    height: 900px;
+    /* .visual .camera 의 기준이 되어 줌, absolute는 감싸는 요소 중에서 position 속성을 가지고 있는 가장 가까운 요소를 기준으로 정렬이 됨 , 만약 해당 요소가 position 속성이 없으면 position:relative 를 줌 relative 어떠한 요소에 주더라도 스타일에 영향을 미치지 않음*/
+    position: relative;
+}
+.visual h2 {
+    text-align: center; /* 이미지도 가운데 정렬 가능 */
+    padding: 340px 0 0 0;
+}
+.visual .camera {
+    /* .visual .wrapper 를 기분으로 정렬 */
+    position: absolute;
+    right: -133px;
+    bottom: -92px; /* 기준인 .visual .wrapper 를 기준으로 밖으로 삐져나가는 것이니 - 를 줌 */
+}
+.visual .camera a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 187px;
+    height: 187px;
+    border-radius: 50%;/* 정사각형에 border-radius가 동그라미 */
+    background-color: #55B2C5;
+    color: #fff;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.visual .camera a span { 
+    margin: 5px 0 0 0;
+    font-size: 20px;
+}
+.culture .tit {
+    margin: 197px 0 27px 0;
+}
+.culture .tit h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #1d1d1d;
+    margin: 0 0 5px 0;
+}
+.culture .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.culture .list ul li {
+    width: 404px;
+}
+.culture .list ul li a .photo {
+    overflow: hidden;/* 이미지가 나의 영역보다 커지면 넘치는 부분을 숨김 */
+    font-size: 0;
+    line-height: 0; /* 이미지 하단에는 글자의 행간(여백) 값이 들어감, 하단 여백 조금 발생, 여백 없애고 싶다면 감싸는 이미지만 감싸는 요소가 글자 크기0 행간0 값을 줘야함 */
+    border-radius: 20px; /*overflow: hidden이 있어서 포토에다가 적용해야함*/ 
+}
+.culture .list ul li a .photo img {
+    transition: 0.5s; 
+}
+.culture .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.culture .list ul li h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 8px 0;
+    color: #1d1d1d;
+}
+.culture .wrapper {
+    position: relative; /* .culture .more a 정렬 중심 */
+}
+.culture .more {
+    position: absolute; /* .culture .wrapper 를 기준으로 정렬 */
+    right: 0;
+    top: 20px;
+}
+.culture .more a {
+    border: 1px solid rgba(61, 61, 61, 0.6);
+    border-radius: 20px;
+    display: block;
+    padding: 5px 34px 5px 18px; 
+    background: url(../images/more.svg) no-repeat right 17px center;
+}
+.culture .more a:hover { 
+    color: #fff;
+    background-color: rgba(84, 181, 197, 0.6);
+    background-image: url(../images/more_white.svg);
+    border-color: rgba(84, 181, 197, 0.6);
+}
+.culture .more a span {
+    margin: 0 7px 0 0;
+}
+.tour .tit {
+    margin: 131px 0 27px 0;
+}
+.tour .tit h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #1d1d1d;
+    margin: 0 0 5px 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour .list ul li {
+    width: 190px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.8);
+}
+.tour .list ul li h3 {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+.tour .list ul li.tour1 {
+    background-image: url(../images/tour1.png);
+    border-radius: 20px;
+}
+.tour .list ul li.tour2 {
+    background-image: url(../images/tour2.png);
+    border-radius: 20px;
+}
+.tour .list ul li.tour3 {
+    background-image: url(../images/tour3.png);
+    border-radius: 20px;
+}
+.tour .list ul li.tour4 {
+    background-image: url(../images/tour4.png);
+    border-radius: 20px;
+}
+.tour .list ul li.active {
+    width: 618px;
+}
+.tour .list ul li a {
+    height: 487px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 23px 0;
+    text-align: center;
+}
+.tour .list ul li.active a {
+    padding: 0 44px 34px 39px;
+    text-align: left;
+}
+.tour .list ul li a p { /* 숨김, 공간차지 안함 */
+    display: none;
+}
+.tour .list ul li.active a p {
+    display: block; /* 나타남, display:none, inline,inline-block, block, flex 태그로 나타남 기능 모두 가능 */
+}
+.tour .wrapper {
+    position: relative;
+}
+.tour .more {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.tour .more a {
+    border: 1px solid rgba(61, 61, 61, 0.6);
+    border-radius: 20px;
+    display: inline-block;
+    padding: 5px 34px 5px 18px; 
+    background: url(../images/more.svg) no-repeat right 17px center;
+}
+.tour .more a:hover { 
+    color: #fff;
+    background-color: rgba(84, 181, 197, 0.6);
+    background-image: url(../images/more_white.svg);
+    border-color: rgba(84, 181, 197, 0.6);
+}
+.community {
+    height: 772px;
+    background: url(../images/cummunity_bg.png) no-repeat center center / cover;
+    color: #55B2C5;
+    margin: 211px 0 0 0;
+}
+.community .wrapper {
+    display: flex;
+}
+.community .tit {
+    width: 321px;
+}
+.community .tit h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    margin: 119px 0 0 0;
+}
+.community .tit strong {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+.community .tit p {
+    color: rgba(255, 255, 255, 0.8);
+}
+.community .news {
+    width: 620px;
+    height: 400px;
+    background-color: rgba(108, 185, 179, 0.2);
+    border-radius: 20px;
+    margin: 119px 0 0 0; 
+    padding: 0px 45px;
+    backdrop-filter: blur(10px);
+    color: rgba(108, 185, 179, 0.8);
+}
+.community .news h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin: 33px 0 10px 0; 
+}
+.community .news li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.community .news li a {
+    display: flex;
+    justify-content: space-between;
+
+}
+footer {
+    margin-top: 500px;
+}
