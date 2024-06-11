@@ -258,7 +258,7 @@ header .gnb ul li a:hover {
 }
 .community .news {
     width: 620px;
-    height: 400px;
+    height: 378px;
     background-color: rgba(108, 185, 179, 0.2);
     border-radius: 20px;
     margin: 119px 0 0 0; 
@@ -270,16 +270,109 @@ header .gnb ul li a:hover {
     font-size: 20px;
     font-weight: 600;
     color: #fff;
-    margin: 33px 0 10px 0; 
+    margin: 33px 0 5px 0; 
 }
-.community .news li {
+.community .news ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.community .news li a {
+.community .news ul li:last-child {
+    border-bottom: none;
+}
+.community .news ul li a {
     display: flex;
     justify-content: space-between;
-
+    padding: 11px 8px; /* 마우스 오버했을때 선택되는 범위에 여백도 해당되야해서 안쪽 여백으로 줌 */
+}
+.community .news ul li a:hover {
+    color: #fff; 
+}
+.community .link {
+    display: flex;/* link의 ul을 우측 계단으로 정렬 */
+    align-items: flex-end;
+    width: 323px;
+}
+.community .link ul {
+    display: flex;
+    flex-wrap: wrap; /* 두줄로 바꿈 */
+    justify-content: flex-end;   /* 아래로 정렬 */
+    gap: 19px;/* li요소 사이의 여백, link한테 margin으로 줘도 상관 없음 */
+}
+.community .link ul li {
+    width: 140px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: rgba(108, 185, 179, 0.2);
+    backdrop-filter: blur(10px);
+    color: rgba(108, 185, 179, 0.8);
+}
+.community .link ul li a{
+    height: 132px;
+    display: block;
+    padding: 22px 63px 70px 19px;
+    font-weight: 600;
+    background-position: right 19px bottom 21px;
+    background-repeat: no-repeat;
+}
+.community .link ul li a:hover {
+    color: #fff;
+}
+.community .link ul li.link1 a {
+    background-image: url(../images/commuvity_ico1\ 0.svg);
+}
+.community .link ul li.link2 a {
+    background-image: url(../images/commuvity_ico2\ 0.svg);
+}
+.community .link ul li.link3 a {
+    background-image: url(../images/commuvity_ico3\ 0.svg);
+}
+.community .link ul li.link4 a {
+    background-image: url(../images/commuvity_ico4\ 0.svg);
+}
+.community .link ul li.link1 a:hover {
+    background-image: url(../images/commuvity_ico1.svg);
+}
+.community .link ul li.link2 a:hover {
+    background-image: url(../images/commuvity_ico2.svg);
+}
+.community .link ul li.link3 a:hover {
+    background-image: url(../images/commuvity_ico3.svg);
+}
+.community .link ul li.link4 a:hover {
+    background-image: url(../images/commuvity_ico4.svg);
 }
 footer {
-    margin-top: 500px;
+    background-color: #EAE9E4;
+    color: rgba(61, 61, 61, 0.8);
+    padding: 36px 0 76px 0;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li a {
+    margin-right: 40px;
+}
+footer .f_nav ul li a:first-child {
+    font-weight: 600;
+}
+footer .f_info {
+    display: flex;
+    margin: 27px 0 10px 0;
+    gap: 40px;
+}
+footer .copyright {
+    color: rgba(61, 61, 61, 0.6);
+}
+footer .familly button {
+    width: 145px;
+    height: 31px;
+    border: 1px solid rgba(112,112,112,0.6);
+    border-radius: 20px;
+    color:rgba(61,61,61,0.6);
+    text-align: left;
+    padding: 5px 53px 5px 16px;
+    background: url(../images/more.svg) no-repeat right 17.5px center;
 }
