@@ -1,0 +1,161 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자의 스타일은 상속받음, 기본글자의 스타일은 모든 태그를 감싸는 html과 body에 선언 */
+html, body{
+    font-family: 'Pretendard', sans-serif; 
+    font-weight:400; 
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0em;
+    color: #3d3d3d;
+    word-break: keep-all;/* 단어별로 줄바꿈 */
+}
+#wrap{ /* 홈페이지 전체를 감싸는 요소 - 가로 스크롤바가 생겼을때 짤리는 현상 막음, #=id */
+    min-width: 1260px;
+}
+.wrapper {/* 홈페이지 넓이 제한, 가운데 정렬 */
+    width: 1260px;
+    margin: 0px auto; /* 가운데 정렬 */
+}
+
+@media screen and (max-width:640px){
+    html, body{ /* 640px 이하에서만 우선 적용, 선택자가 동일해야함,pc버전 스타일과 모바일 스타일이 동시에 적용되는 것이라 변경되는 요소만 스타일을 입력하면 됨  */
+        font-size: 13px;
+    }
+    #wrap{
+        min-width: 100%; /* 최소 넓이 꽉차게 */
+    }
+    .wrapper {
+        width: auto; /* block 요소의 속성대로 알아서 주기, 100%적용시 margin이 좌우로 20px씩 들어가서 실제 넓이가 100% + 40px로 사이즈가 넘침 */
+        margin: 0px 20px; /* 좌우 여백 20px */ 
+    }
+}
+.container .eco h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 140px 0 38px 0;
+}
+.container .eco ul {
+    display: flex;
+    justify-content: space-between;
+}
+.container .eco ul li {
+    width: 404px;
+}
+.container .eco ul li a h3 {
+    color: #1d1d1d;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 19px 0 6px 0;
+}
+@media screen and (max-width:640px){
+    .container .eco h2 {
+        font-size: 20px;
+        margin: 44px 0 23px 0;
+    }
+    .container .eco ul li {
+        width: calc(50% - 8px); 
+        /* 두개의 li가 반반 들어가는데 사이 여백이 16px 고정으로 들어감, 
+        (100% / li개수) - (사이 여백의 총합 / li개수)
+        (100% / 2) - (16px / 2) 
+        -> 50% - 8px
+        퍼센트와 픽셀 두단위를 동시에 계산하는 계산식 calc, 반드시 기호 앞 뒤로 띄어쓰기 해야함*/
+    }
+    .container .eco ul li a h3 {
+        font-size: 15px;
+        margin: 14px 0 6px 0;
+    }
+    .container .eco ul li a .photo img { /* 글자는 넓이가 부족하면 줄이 바뀜, 하지만 이미지는 넓이를 주지 않으면 넓이가 바뀌지 않음 */
+        width: 100%; /* 넓이만 줌, 높이는 비율에 맞게 알아서 들어감 */ 
+    }
+    .container .eco ul li:last-child {
+        display: none;
+    }
+}
+.container .pure {
+    background: url(../images/pure_bg.png) no-repeat center center / cover;
+    height: 778px;
+    color: #fff;
+    margin: 113px 0 0 0;
+    text-align: center;
+}
+.container .pure h2 {
+    font-size: 60pt;
+    font-weight: 700;
+    padding: 139px 0 0 0;
+}
+.container .pure ul {
+    display: flex;
+    justify-content: space-between;
+}
+.container .pure ul li {
+    width: 297px;
+    height: 284px;
+    border: 1px solid rgba(255,255,255);
+    margin: 10px 0 0 0;
+}
+.container .pure ul li a {
+    font-size: 30px;
+    font-weight: 700;
+}
+@media screen and (max-width:640px){
+    .container .pure {
+        height: auto; /* 기존에 선언된 높이 값을 해제 */
+        margin: 53px 0 0 0;
+        padding:  0 0 130px 0;/* 모바일에서 높이는 계속 바뀜, 높이 지정이 아니라 하단에 여백을 줌 */
+    }
+    .container .pure h2 {
+        font-size: 20pt;
+        padding: 63px 0 11px 0;
+    }
+    .container .pure ul {
+        flex-wrap: wrap; /* 여러줄 허용 */
+        margin: 20px 0 0 0;
+        gap: 16px; /* li 사이 여백 */
+    }
+    .container .pure ul li {
+        width: calc(50% - 8px);
+        height: 141px;
+    }
+    .container .pure ul li a {
+        font-size: 15px;
+    }
+}
+.tech {
+    margin: 176px 0 0 0;
+}
+.tech .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.tech strong {
+    font-size: 30px;
+    font-weight: 700;
+    display: block; /* 인라인 요소라 마진값 입력위햐 줌 */
+    margin: 79px 0 16px 0;
+    color: #1d1d1d;
+}
+.tech h2 {
+    font-size: 60pt;
+    font-weight: 700;
+    margin:  0 131px 16px 0;
+    color: #1d1d1d;
+}
+.tech p {
+    width: 511px;
+    margin:  0 0 54px 0;
+}
+@media screen and (max-width:640px){
+    .tech .wrapper {
+        display: block; /* flex를 안주기 위해 그냥 블럭으로 줌, 다른거 아무거나 선언해주면 됨 */
+    }
+    .tech p {
+        width: auto;
+        margin:  0 0 54px 0;
+    }
+    .tech .photo img {
+        width: 100%;
+    }
+}
