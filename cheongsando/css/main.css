@@ -352,7 +352,7 @@ footer .wrapper {
 footer .f_nav ul {
     display: flex;
 }
-footer .f_nav ul li {
+footer .f_nav ul li a {
     position: relative;
 }
 footer .f_nav ul li a::after {
@@ -362,10 +362,10 @@ footer .f_nav ul li a::after {
     background-color: rgba(112,112,112,0.3);
     display: block;
     position: absolute; /* 각각의 li를 기준으로 정렬 */
-    right: 132px;
+    right: -24px;
     top: 5px;
 }
-footer .f_nav ul li:last-child:after {
+footer .f_nav ul li a:last-child:after {
     display: none;
 }
 footer .f_nav ul li a {
