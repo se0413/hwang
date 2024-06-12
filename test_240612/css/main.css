@@ -30,3 +30,162 @@
         margin: 0; /* pc버전 여백 제거하려면 0주면됨 */
     }
 }
+.health {
+    background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 170px 0 210px 0;
+}
+.health h2 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 0 0 10px 0;
+}
+@media screen and (max-width: 640px){
+    .health {
+        padding: 75px 0 131px 0;
+    }
+    .health h2 {
+        font-size: 30px;
+    }
+    .health p br {
+        display: none; /* 줄바꿈 태그를 삭제해줌 */
+    }
+}
+.solution {
+    background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 170px 0 210px 0;
+}
+.solution h2 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 0 0 10px 0;
+}
+.solution p span {
+    display: block; /* 줄바꿈 */
+}
+@media screen and (max-width: 640px){
+    .solution {
+        padding: 75px 0 131px 0;
+    }
+    .solution h2 {
+        font-size: 30px;
+    }
+    .solution p span {
+        display: inline; /* 줄바꿈 해제 */
+    }
+}
+.story {
+    margin: 248px 0 248px 0;
+}
+.story .group1,
+.story .group2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* text와 photo룰 위아래 가운데 정렬 (세로정렬) */
+}
+.story .group2 {
+    flex-direction: row-reverse;
+}
+.story .text {
+    width: 630px;
+    padding: 0 0 0 50px;
+}
+.story .text strong {
+    font-weight: 700;
+}
+.story .text h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0 32px 0;
+}
+.story .text .more {
+    margin: 19px 0 0 0;
+}
+.story .text .more a {
+    padding: 11px 84px 14px 30px;
+    background-color: #65AF59;
+    color: #fff;
+    display: inline-block; /* pading 적용위해  */
+    border-radius: 30px;
+    position: relative;
+}
+.story .text .more a:hover {
+    border: 1px solid rgba(101,175,89,0.6);
+    color:rgba(101,175,89,0.6) ;
+    background-color: #fff;
+    font-weight: 700;
+}
+.story .text .more a::after {
+    background: url(../images/story_ico.png) no-repeat center center / contain ;
+    content: ""; /* 가상 선택자는 반드시 컨텐트 속성이 있어야 나타남, 그리고 넓이가 없기때문에 이미지를 배경으로 넣으려면 이미지 사이즈를 넓이와 높이로 지정해줘야함, 태그의 시작 종료 위치가 맘대로 배치되기 때문에 absolute로 배치해야함 */
+    /* 아이콘 같이 전체가 보여야하는 경우는 contain, 배경의 이미지를 넣은 경우는 cover */
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+}
+.story .text .more a:hover::after {
+    background: url(../images/story_icog.png) no-repeat center center / contain ;
+}
+.story .photo {
+    font-size: 0;
+    line-height: 0;
+    /* 이미지 테그 하단에는 행간이 적용되기 때문에 이두가지 값을 0처리해야함 */
+}
+.story .photo img {
+    border-radius: 30px;
+}
+@media screen and (max-width: 640px){
+    .story {
+        margin: 0;
+    }
+    .story .group1,
+    .story .group2 {
+        display: block;
+    }
+    .story .group2 {
+        flex-direction: row-reverse;
+    }
+    .story .text {
+        width: auto;
+        padding: 0;
+        margin: 69px 0 44px 0;
+    }
+    .story .text strong {
+        display: block; 
+        margin: 0 30% 0 0;/* 100/97(여백)x100 = 30 */
+    }
+    .story .text strong  br {
+        display: none; /*br줄바꿈 삭제*/
+    }
+    .story .text h2 {
+        font-size: 30px;
+        margin: 14px 0 21px 0;
+    }
+    .story .text .more {
+        margin: 14px 0 0 0;
+    }
+    .story .text .more a {
+        padding: 9px 62px 12px 22px;
+    }
+    .story .text .more a::after {
+        width: 15px;
+        height: 15px;
+        right: 18px;
+        top: 10px;
+    }
+    .story .photo {
+        font-size: 0;
+        line-height: 0;
+        /* 이미지 테그 하단에는 행간이 적용되기 때문에 이두가지 값을 0처리해야함 */
+    }
+    .story .photo img {
+        width: 100%;
+    }
+
+}
