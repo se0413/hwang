@@ -112,12 +112,6 @@
     border-radius: 30px;
     position: relative;
 }
-.story .text .more a:hover {
-    border: 1px solid rgba(101,175,89,0.6);
-    color:rgba(101,175,89,0.6) ;
-    background-color: #fff;
-    font-weight: 700;
-}
 .story .text .more a::after {
     background: url(../images/story_ico.png) no-repeat center center / contain ;
     content: ""; /* 가상 선택자는 반드시 컨텐트 속성이 있어야 나타남, 그리고 넓이가 없기때문에 이미지를 배경으로 넣으려면 이미지 사이즈를 넓이와 높이로 지정해줘야함, 태그의 시작 종료 위치가 맘대로 배치되기 때문에 absolute로 배치해야함 */
@@ -128,9 +122,6 @@
     position: absolute;
     right: 20px;
     top: 8px;
-}
-.story .text .more a:hover::after {
-    background: url(../images/story_icog.png) no-repeat center center / contain ;
 }
 .story .photo {
     font-size: 0;
@@ -187,5 +178,86 @@
     .story .photo img {
         width: 100%;
     }
+}
+.news h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 28px 0;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news ul li {
+    width: 297px;
+    border: 1px solid #666;
+    border-radius: 30px;
+}
+.news ul li a {
+    padding: 36px 33px 32px 28px;
+    display: block;
+}
+.news ul li a strong {
+    font-weight: 700;
+    color: #65AF59;
+}
+.news ul li a h3 {
+    font-weight: 700;
+    margin: 5px 0 0 0;
+    font-size: 20px;
+    /* 1줄로 제한하기, 주의사항 padding 금지 */
+    white-space: nowrap; /* 줄바꿈 금지 */
+    overflow: hidden; /* 영역에서 넘치는 부분 자르기, 조건은 블럭요소여야함 */
+    text-overflow: ellipsis; /* 글자 마지막에 ... 추가, 글자가 잘리는 현상 막기, 주의사항... 수정불가 */
+}
+.news ul li a p {
+    margin: 12px 0 12px 0;
+    /*3줄로 제한, 주의사항 padding금지*/
+    line-height: 1.2;
+    height: 3.6em; /*행간x줄수 = 단위는 em*/
+    overflow: hidden;
+}
+.news ul li a span {
+    color: rgba(102,102,102,0.8);
+}
+@media screen and (max-width: 640px){
+    .news h2 {
+        font-size: 30px;
+        margin: 105px 0 26px 0;
+    }
+    .news ul {
+        flex-wrap: wrap; /*줄바꿈허용, 2개씩 나오게 할꺼임*/
+        gap: 16px;
+    }
+    .news ul li {
+        width: calc(50% - 8px);
+    }
+    .news ul li a {
+        padding: 36px 33px 32px 28px;
+        display: block;
+    }
+    .news ul li a strong {
+        font-weight: 700;
+        color: #65AF59;
+    }
+    .news ul li a h3 {
+        margin: 5px 0 0 0;
+        /* 1줄로 제한하기, 주의사항 padding 금지 */
+    }
+    .news ul li a p {
+        margin: 13px 0 23px 0;
+    }
 
+}
+@media screen and (max-width: 580px){
+    .news ul {
+        flex-wrap: nowrap;
+        flex-direction: column; /* 이렇게 주면 gap 먹힘 */
+    }
+    .news ul li {
+        width: auto;
+    }
+}
+.container {
+    margin: 0 0 150px 0;
 }
