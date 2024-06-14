@@ -1,0 +1,145 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+/* 폰트 2개 제목에는 gmarket ,본문에는 pretandard */
+
+header {
+    width: 100%;
+    height: 100px;
+    position: absolute; /*body를 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    font-family: 'GmarketSans' ,sans-serif;
+    color: #fff;
+    z-index: 100; /* position 가진 요소들중 제일 높은 우선순위 */ 
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+header .logo {
+    margin: 20px 0;
+}
+header .gnb .gnb_open {
+    display: none;
+}
+header .gnb .gnb_wrap ul {
+    display: flex;
+    justify-content: space-between;
+}
+header .gnb .gnb_wrap ul li a {
+    padding: 37px 22px;
+    display: block;
+    position: relative;
+}
+header .gnb .gnb_wrap ul li a:hover {
+    color: #FED78A;
+}
+header .gnb .gnb_wrap ul li a::after {
+    position: absolute; /*a기준으로 글자 뒤에 땡글뱅이 배치*/
+    content: "";
+    right: 0;
+    top:45px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.8);
+}
+header .gnb .gnb_wrap ul li:last-child a::after { /*li의 마지막 요소 a뒤에 땡글뱅이 삭제*/
+    display: none;
+}
+@media screen and (max-width: 640px){
+    header {
+        height: 50px;
+    }
+    header .wrapper {
+        height: 50px;
+    }
+    header .logo {
+        margin: 11px 0 0 0; 
+    }
+    header .logo img {
+        width: 81px; /*모바일에서 아이콘 사이즈 넓이만 줌, img태그는 꼭 img태그 불러서 수정해야함*/
+    }
+    header .gnb .gnb_open {
+        display: block;
+        width: 60px;
+        height: 50px;
+        font-size: 0; 
+        line-height: 0;/*글자숨기기*/
+        background: url(../images/gnb_open.svg) no-repeat center center;
+    }
+    header .gnb .gnb_wrap {   
+        display: none;
+        position: absolute; /* 이미 header에 position 값이 있음, 그걸 기준으로 정렬 */
+        right: 0;
+        top: 0;
+    }
+
+}
+.tit {
+    font-family: 'Pretendard', sans-serif;
+}
+.tit_b {
+    font-family: 'GmarketSans', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgba(255,255,255,0.8);
+}
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    height: 900px;
+    color: #fff;
+}
+.visual strong {
+    padding: 360px 0 0 0;
+    display: block;
+}
+.visual h2 {
+    font-family: 'GmarketSans';
+    font-size: 60px;
+    margin: 10px 0 0 0;
+}
+@media screen and (max-width: 640px){
+    .visual {
+        height: auto;
+        padding: 35px 0 255px 0;
+    }
+    .visual strong {
+        padding: 100px 0 0 0;
+    }
+    .visual h2 {
+        font-size: 30px;
+    }
+    .visual em span { /* 모바일에서 두줄로 바꿈 고정 */
+        display: block;
+    }
+}
+.biz .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /*flex 특성상 한쪽에 특성을 반대쪽요소가 따라감*/
+}
+.biz .subject {
+    position: sticky; /*스크롤 내릴때 왼쪽에 요소 고정*/
+    top: 20px;/*스크롤 내릴때 자동으로 상단에 여백이 생김*/
+}
+.biz .subject strong {
+    color: #93A9D2;
+}
+.biz .subject h2 {
+    font-size: 45px;
+    color: #2d2d2d;
+    margin: 5px 0 0 0;
+}
+.biz .list {
+    width: 500px;
+    height: 1500px;
+    background-color: #FED78A;
+}
+footer {
+    margin: 200px 0 0 0;
+}
