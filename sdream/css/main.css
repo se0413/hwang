@@ -307,9 +307,191 @@ header .gnb .gnb_wrap ul li:last-child a::after { /*li의 마지막 요소 a뒤�
     }
     .biz .list ul li:nth-child(odd) {/*홀수 번수의 요소 지정*/
         transform: translate(0, 0); /*현재 위치에서부터 요소를 움직이는데 다른 요소와 배치되더라도 배치할 수 있음, 공간을 차지하지 않음, 기본적으로 여백은 마진이고 트렌스폼으로 안되는 경우 사용(margine은 부딫혀서 안들억 가거나 밀림)*/
-    
     }
+}
 
+.news {
+    background-color: rgba(147, 169, 210, 0.2);
+    margin: 372px 0 0 0;
+    padding: 150px 0 166px 0;
+}
+.news .wrapper {
+    position: relative;
+}
+.news .subject strong {
+    color: #93A9D2;
+}
+.news .subject h2 {
+    font-size: 45px;
+    color: #2d2d2d;
+    margin: 5px 0 34px 0;
+}
+.news .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news .list ul li {
+    width: 404px;
+}
+.news .list ul li a {
+    border-top: 1px solid #3d3d33;
+    display: block;
+}
+.news .list ul li a:hover {
+    border-top: 1px solid #93A9D2
+}
+.news .list ul li a h3 {
+    margin: 34px 0;
+    font-size: 25px;
+    color: #2d2d2d;
+    line-height: 1.2;
+    font-family: 'GmarketSans', sans-serif;
+    font-weight: 700;
+    height: auto;
+    overflow: hidden;
+}
+.news .list ul li a:hover h3 {
+    color: #93A9D2;
+}
+.news .list ul li a p {
+    line-height: 1.3;
+    height: 3.9em;
+    overflow: hidden;
+}
+.news .list ul li a:hover p {
+    color: #93A9D2;
+}
+.news .list ul li a .date {
+    padding: 25px 0 0 0;
+    display: block;
+    color: rgba(102, 102, 102, 0.8);
+}
+.news .list ul li a:hover .date {
+    color: #93A9D2;
+}
+.news .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.news .more a {
+    display: block;
+    border: 1px solid #666;
+    padding: 6px 41px 5px 18px;
+    border-radius: 30px;
+    position: relative;
+}
+.news .more a::after {
+    position: absolute;
+    right: 11px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    content: "";
+    background: url(../images/more_gray.svg) no-repeat center center / contain;
+    color: #666;
+}
+.news .more a:hover {
+    color: #fff;
+    display: block;
+    border: 1px solid #93A9D2;
+    padding: 6px 41px 5px 18px;
+    border-radius: 30px;
+    position: relative;
+    background-color: #93A9D2;
+}
+.news .more a:hover::after {
+    background: url(../images/biz_more.svg);
+}
+@media screen and (max-width: 640px){
+    .news {
+        margin: 84px 0 0 0;
+        padding: 42px 0 68px 0;
+    }
+    .news .subject h2 {
+        font-size: 20px;
+        margin: 4px 0 19px 0;
+    }
+    .news .list ul {
+        display: block
+    }
+    .news .list ul li {
+        width: auto;
+    }
+    .news .list ul li a {
+        border-top: 1px solid #93A9D2;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0;
+    }
+    .news .list ul li a h3 {
+        margin: 0;
+        font-size: 13px;
+        height: auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: visible;
+        width: calc(100% - 90px);
+    }
+    .news .list ul li:last-child a {
+        border-bottom: 1px solid #93A9D2;
+    }
+    .news .list ul li a p {
+        display: none;
+    }
+    .news .list ul li a .date {
+        padding: 0;
+        width: 90px;
+        text-align: right;
+    }
+    .news .more {
+        right: 0;
+        top: 0;
+    }
+    .news .more a {
+        padding: 0;
+        border: 0;
+        font-size: 0; /*글자 없애기, 사이즈 행간*/
+        line-height: 0;
+    }
+    .news .more a::after {
+        background: url(../images/mobile_more.svg) no-repeat center center / contain;
+        right: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+    }
+}
+.webzine .subject strong {
+    color: #93A9D2;
+    display: block;
+    margin: 147px 0 0 0;
+}
+.webzine .subject h2 {
+    font-size: 45px;
+}
+.webzine .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.webzine .list ul li {
+    width: 404px;
+}
+.webzine .list ul li a { 
+    border: 1px solid #FED78A;
+    border-radius: 30px;
+    height: 408px;
+    display: block;
+    overflow: hidden;
+}
+.webzine .list ul li a .photo { /* 이미지를 리사이즈 하려면 감싸는 요소가 넓이와 높이 overflow-hidden 를 가져야함 이미지에는 width 100%m heigh 100%, object-fit:cover */
+    overflow: hidden;
+    height: 304px;
+}
+.webzine .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 footer {
     margin: 500px 0 0 0;
