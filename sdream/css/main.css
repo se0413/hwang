@@ -87,7 +87,6 @@ header .gnb .gnb_wrap ul li:last-child a::after { /*li의 마지막 요소 a뒤�
     font-family: 'GmarketSans', sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    color: rgba(255,255,255,0.8);
 }
 .visual {
     background: url(../images/visual_bg.png) no-repeat center center / cover;
@@ -118,28 +117,200 @@ header .gnb .gnb_wrap ul li:last-child a::after { /*li의 마지막 요소 a뒤�
         display: block;
     }
 }
+.biz {
+    margin: 169px 0 0 0;
+}
 .biz .wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /*flex 특성상 한쪽에 특성을 반대쪽요소가 따라감*/
+    align-items: flex-start; /*flex 특성상 한쪽에 특성을 반대쪽요소가 따라감, align-item을 주면 flex로 정렬된 요소들의 길이가 길어지는 현상이 사라짐*/
 }
 .biz .subject {
-    position: sticky; /*스크롤 내릴때 왼쪽에 요소 고정*/
-    top: 20px;/*스크롤 내릴때 자동으로 상단에 여백이 생김*/
+    position: sticky; /*스크롤 내릴때 상단에 요소 고정*/
+    top: 20px; /*스크롤 내릴때 자동으로 상단에 여백이 생김, 주로 top으로 여백을 조절함*/
+    /* 단점 감싸는 요소중에서 절대 overflow-hidden 값을 가지면 안됨, */
+    margin: 127px 0 0 0;
 }
 .biz .subject strong {
     color: #93A9D2;
 }
-.biz .subject h2 {
+ .subject h2 {
     font-size: 45px;
     color: #2d2d2d;
     margin: 5px 0 0 0;
 }
 .biz .list {
-    width: 500px;
-    height: 1500px;
-    background-color: #FED78A;
+    width: 845px;
+}
+.biz .list ul {
+    display: flex;
+    flex-wrap: wrap; /*2줄허용*/
+    gap: 24px;
+}
+.biz .list ul li {
+    width: 404px;
+    color: #fff;
+    border-radius: 30px;
+    overflow: hidden; /* 넘치는 요소 삭제 */ 
+}
+.biz .list ul li a {
+    height: 404px;
+    display: block;
+    position: relative; /* h3, photo, p의 기준이 되어줌 */
+    text-align: center;
+}
+.biz .list ul li a:hover {
+    display: block;
+}
+.biz .list ul li a .photo::before { /*background로 주면 모바일에서 이상이 생김*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(189, 211, 225, 0.8);
+    content: "";
+    display: none;
+}
+.biz .list ul li a:hover .photo::before {
+    display: block;
+}
+.biz .list ul li a h3 {
+    position: absolute;
+    left: 0;
+    bottom: 33px;
+    width: 100%; /* 글자가 가운데 정렬이라면 넓이 백퍼에 텍스트 어라인 센터를 줘야함 */
+    font-size: 30px;
+}
+.biz .list ul li a:hover h3 {
+    bottom: 257px;
+}
+.biz .list ul li a p { /*마우스 오버했을때 변경된느 거면 스타일을 모두 주어놓고 기본에서는 none처리, hover에서 보이게만 해놓으면 더 편함*/
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 139px;
+    width: 275px;
+    margin: 0 64px 0 65px; 
+    color: rgba(255,255,255,0.8);
+}
+.biz .list ul li a:hover p {
+    display: block;
+}
+.biz .list ul li a .more {
+    display: none;
+    transform: translate(-50%, 0); /*가운데 정렬*/
+    padding-right: 57px ; /*아이콘이 들어갈 여백*/
+    position: absolute;
+    left: 50%;
+    bottom: 90px;
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 6px 41px 6px 17px ;
+    border-radius: 30px;
+}
+.biz .list ul li a:hover .more {
+    display: block;
+}
+.biz .list ul li a .more::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url(../images/biz_more.svg) no-repeat center center / contain;
+    color: rgba(255,255,255,0.8);
+    margin: 5px 13px;
+}
+.biz .list ul li:nth-child(odd) {/*홀수 번수의 요소 지정*/
+    transform: translate(0, 130px); /*현재 위치에서부터 요소를 움직이는데 다른 요소와 배치되더라도 배치할 수 있음, 공간을 차지하지 않음, 기본적으로 여백은 마진이고 트렌스폼으로 안되는 경우 사용(margine은 부딫혀서 안들억 가거나 밀림)*/
+
+}
+@media screen and (max-width: 640px){
+    .biz {
+        margin: 87px 0 0 0;
+    }
+    .biz .wrapper {
+        display: block;
+    }
+    .biz .subject {
+        position: relative; /*sticky를 제거하기 위해서 position중에 줘도 변화가 없는 값으로 줌*/
+        top: auto; 
+        margin: 0;
+    }
+     .subject h2 {
+        font-size: 20px;
+        margin: 0 0 22px 0;
+    }
+    .subject h2 br {
+        display: none;
+    }    
+    .subject p {
+        display: none;
+    }
+    .biz .list {
+        width: auto;
+    }
+    .biz .list ul {
+        gap: 16px;
+    }
+    .biz .list ul li {
+        width: calc(50% - 8px);
+        overflow: visible; /*해제 길이만큼 늘어나게 해야함*/
+    }
+    .biz .list ul li a {
+        height: auto;
+    }
+    .biz .list ul li a .photo {
+        height: 152px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    .biz .list ul li a .photo img { /*pc와 모바일에서 이미지 비율이 다르게 보일때, 이미지 태그를 사이즈에 맞게 리사이즈해줌*/
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .biz .list ul li a:hover .photo::before  {
+        display: none;
+    }
+    .biz .list ul li a h3 {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        font-size: 13px;
+        font-family: 'Pretendard', sans-serif;
+        font-weight: 400;
+        color: #3d3d3d;
+        margin: 8px 0 0 0;
+    }
+    .biz .list ul li a:hover h3 {
+        color: #3d3d3d;
+        bottom: 0;
+    }
+    .biz .list ul li a p { /*마우스 오버했을때 변경된느 거면 스타일을 모두 주어놓고 기본에서는 none처리, hover에서 보이게만 해놓으면 더 편함*/
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 139px;
+        width: 275px;
+        margin: 0 64px 0 65px; 
+    }
+    .biz .list ul li a:hover p {
+        display: none;
+    }
+    .biz .list ul li a .more {
+        display: none;
+    }
+    .biz .list ul li a:hover .more {
+        display: none;
+    }
+    .biz .list ul li:nth-child(odd) {/*홀수 번수의 요소 지정*/
+        transform: translate(0, 0); /*현재 위치에서부터 요소를 움직이는데 다른 요소와 배치되더라도 배치할 수 있음, 공간을 차지하지 않음, 기본적으로 여백은 마진이고 트렌스폼으로 안되는 경우 사용(margine은 부딫혀서 안들억 가거나 밀림)*/
+    
+    }
+
 }
 footer {
-    margin: 200px 0 0 0;
+    margin: 500px 0 0 0;
 }
