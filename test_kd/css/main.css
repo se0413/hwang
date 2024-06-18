@@ -1,0 +1,96 @@
+@import url(default.css); 
+@import url(font.css);
+
+html, body {   
+    font-family: "Pretendard", sans-serif; /* sans-serif 고딕체라는 의미, font-family 사용하는 서체명은 font-face에 사용한 이름으로 사용 */
+    font-size: 15px;
+    color: #3d3d3d;
+    line-height: 1.4;
+    font-weight: 400;
+    word-break: keep-all;
+    letter-spacing: -0.05em;
+}
+#wrap { /* 홈페이지 전체를 감싸는 요소 */
+    min-width: 1260px;
+}
+.wrapper {/* 홈페이지 넓이를 제한하고 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;    
+}
+.biz h1 {
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    margin: 85px 0 20px 0;
+    color: #1d1d1d;
+}
+.biz ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz ul li {
+    width: 297px;
+}
+.biz ul li a strong {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 8px 0 4px 0;
+    display: block;
+}
+.biz ul li a span {
+    font-size: 15px;
+    display: block;
+}
+.tech {
+    background-color: #f4f4f4;
+    margin: 87px 0 0 0;
+    padding: 0 0 80px 0;
+}
+.tech h1 {
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    padding: 80px 0 40px 0;
+    color: #1d1d1d;
+    line-height: 0.8;
+}
+.tech ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tech ul li .tech1 {
+    background: url(../images/tech01.png) no-repeat center center / cover;
+    width: 618px;
+    height: 514px;
+    display: block;
+    text-align: center;
+    color: #fff;
+}
+.tech ul li .tech1 strong {
+    font-size: 35px;
+    font-weight: 600;
+    padding: 196px 0 12px 0;
+    display: block;
+}
+.tech ul li .tech1 span {
+    font-size: 15px;
+    display: block;
+}
+.tech ul li .tech2 {
+    background: url(../images/tech02.png) no-repeat center center / cover;
+    width: 618px;
+    height: 514px;
+    display: block;
+    text-align: center;
+    color: #fff;
+}
+.tech ul li .tech2 strong {
+    font-size: 35px;
+    font-weight: 600;
+    padding: 196px 0 12px 0;
+    display: block;
+}
+.tech ul li .tech2 span {
+    font-size: 15px;
+    display: block;
+}

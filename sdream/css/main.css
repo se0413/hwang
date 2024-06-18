@@ -607,7 +607,7 @@ header .gnb .gnb_wrap ul li:last-child a::after { /*li의 마지막 요소 a뒤�
         transform: scale3d(1.2, 1.2, 1);
     }
     .webzine .list ul li a strong {
-  
+        margin: 0 0 0 18px;
     }
     .webzine .list ul li a:hover strong {
         color: #fff;
