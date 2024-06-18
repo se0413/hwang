@@ -607,7 +607,7 @@ header .gnb .gnb_wrap ul li:last-child a::after { /*li의 마지막 요소 a뒤�
         transform: scale3d(1.2, 1.2, 1);
     }
     .webzine .list ul li a strong {
-        margin: 0 0 0 18px;
+        margin: 13px 0 0 18px;
     }
     .webzine .list ul li a:hover strong {
         color: #fff;
@@ -628,7 +628,7 @@ header .gnb .gnb_wrap ul li:last-child a::after { /*li의 마지막 요소 a뒤�
         color: #fff;
     }
     .webzine .more {
-        top: 20px;
+        top: 0;
     }
     .webzine .more a {
         display: block;
@@ -662,6 +662,245 @@ header .gnb .gnb_wrap ul li:last-child a::after { /*li의 마지막 요소 a뒤�
         background-image: url(../images/biz_more.svg);
     }
 }
+.introduce {
+    background-color: #f7f7f7;
+    padding: 70px 0 92px 0;
+    margin: 152px 0 0 0;
+}
+.introduce .subject strong {
+    color: #93A9D2;
+    display: block;
+}
+.introduce .subject h2 {
+    font-size: 45px;
+    margin: 0 0 33px 0;
+}
+.introduce .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.introduce .list ul li {
+    width: 618px;
+}
+.introduce .list ul li a {
+    height: 150px;
+    display: block;
+    padding: 49px 0 0 30px;
+    position: relative;
+}
+.introduce .list ul li a h3 {
+    font-size: 20px;
+    margin: 0 0 16px 0;
+}
+.introduce .list ul .intro1 a {
+    background: url(../images/intro_1.png) no-repeat center center / cover;
+    color: #fff;
+    border-radius: 30px;
+}
+.introduce .list ul .intro2 a {
+    background: url(../images/intro_2.png) no-repeat center center / cover;
+    color: #fff;
+    border-radius: 30px;
+}
+.introduce .list ul li a .more {
+    font-size: 17px;
+    border: 1px solid #fff;
+    padding: 6px 44px 5px 17px;
+    border-radius: 30px;
+}
+.introduce .list ul li a:hover .more {
+    font-size: 17px;
+    border: 1px solid #BDD3E1;
+    padding: 6px 44px 5px 17px;
+    border-radius: 30px;
+    background-color: #BDD3E1;
+}
+.introduce .list ul li a .more::after {
+    position: absolute;
+    left: 110px;
+    bottom: 36px;
+    background: url(../images/arrow_w.svg) no-repeat center center / contain;
+    content: "";
+    width: 24px;
+    height: 24px;
+}
+@media screen and (max-width: 640px){
+    .introduce {
+        padding: 49px 0 92px 0;
+        margin: 56px 0 0 0;
+    }
+    .introduce .subject strong {
+    }
+    .introduce .subject h2 {
+        font-size: 20px;
+        margin: 0 0 22px 0;
+    }
+    .introduce .list ul {
+        display: block;
+    }
+    .introduce .list ul li {
+        width: auto;
+        font-size: 13px;
+    }
+    .introduce .list ul li a {
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 16px 11px 31px;
+    }
+    .introduce .list ul .intro1 {
+        margin: 0 0 8px 0;
+    }
+    .introduce .list ul .intro1 a {
+        background: url(../images/1.png) no-repeat center center / cover;
+        color: #fff;
+        border-radius: 15px;
+    }
+    .introduce .list ul .intro2 a {
+        background: url(../images/2.png) no-repeat center center / cover;
+        color: #fff;
+        border-radius: 15px;
+    }
+    .introduce .list ul li a h3 {
+        font-size: 13px;
+    }
+    .introduce .list ul li a .more {
+        border: 1px solid #fff;
+        padding: 3px 38px 3px 13px;
+        border-radius: 15px;
+        margin: 25px 0 0 0;
+        position: relative;
+        font-size: 13px;
+    }
+    .introduce .list ul li a:hover .more {
+        border: 1px solid #BDD3E1;
+        padding: 3px 38px 3px 13px;
+        border-radius: 15px;
+        background-color: #BDD3E1;
+        margin: 25px 0 0 0;
+        font-size: 13px;
+    }
+    .introduce .list ul li a .more::after {
+        position: absolute;
+        left: 62px;
+        bottom: 0;
+        background: url(../images/arrow_w.svg) no-repeat center center / contain;
+        content: "";
+        width: 24px;
+        height: 24px;
+    }
+}
 footer {
-    margin: 500px 0 0 0;
+    background-color: #BDD3E1;
+    padding: 53px 0 80px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+footer .wrapper {
+    position: relative;
+}
+footer .top {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+footer .top button {
+    font-size: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #BDD3E1;
+    width: 77px;
+    height: 77px;
+    padding: 38px 0 0 0;
+    position: relative;
+}
+footer .top button::before {
+    position: absolute;
+    left: 22px;
+    top: 10px;
+    content: "";
+    width: 33px;
+    height: 33px;
+    background: url(../images/top_ico.svg) no-repeat center center / contain;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 40px
+}
+footer .f_nav ul li {
+    position: relative;
+}
+footer .f_nav ul li::after {   
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    width: 1px;
+    height: 11px;
+    background-color: rgba(255, 255, 255, 0.2);
+    content: "";
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_info {
+    margin:  33px 0 8px 0;
+    display: flex;
+    gap: 40px
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.6);;
+}
+@media screen and (max-width: 640px){
+    footer {
+        padding: 15px 0 42px 0;
+    }
+    footer .top {
+        position: relative;
+        right: auto;
+        top: auto;
+        text-align: right;
+    }
+    footer .top button {
+        font-size: 13px;
+        width: 49px;
+        height: 49px;
+        padding: 26px 0 0 0;
+        position: relative;
+    }
+    footer .top button::before {
+        position: absolute;
+        left: 12px;
+        top: 5px;
+        content: "";
+        width: 23px;
+        height: 23px;   
+     }
+    footer .f_nav ul {
+        flex-wrap: wrap;
+        gap: 0;
+        margin: 9px 0 0 0;
+    }
+    footer .f_nav ul li {
+        margin: 0 33px 7px 0;
+    }
+    footer .f_nav ul li::after {   
+        position: absolute;
+        right: -20px;
+        top: 2px;
+        width: 1px;
+        height: 7px;
+        background-color: rgba(255, 255, 255, 0.2);
+        content: "";
+    }
+    footer .f_nav ul li:last-child::after {
+        display: none;
+    }
+    footer .f_info {
+        margin:  19px 0 5px 0;
+        flex-wrap: wrap;
+        gap: 0
+    }
+    footer .f_info address,
+    footer .f_info span {
+        margin: 0 13px 0 0 ;   
+    }
 }
