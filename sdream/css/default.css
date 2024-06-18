@@ -26,9 +26,11 @@ button {/* 버튼태그는 글자의 스타일을 상속 받지 않음 */
     background-color: transparent; /* 투명한 색 */
     border: 0; /* 테두리삭제 */
     font-style: inherit;
+    font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
     color: inherit;
     letter-spacing: inherit;
     line-height: inherit;
+    cursor: pointer; /*마우스 포인터를 손바닥 모양으로*/
 }
