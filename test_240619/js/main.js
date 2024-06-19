@@ -75,7 +75,7 @@ $(document).ready(function(){
         눌렀을때
         visual_swiper   멈춤orautoplay     
     */
-    $(".visual .stop").hide()
+    $(".visual .play").hide()
     $(".visual .stop").on("click", function(){
         visual_swiper.autoplay.stop();
         $(".visual .stop").hide()
@@ -83,6 +83,8 @@ $(document).ready(function(){
     });
     $(".visual .play").on("click", function(){
         visual_swiper.autoplay.start()
+        $(".visual .stop").show()
+        $(".visual .play").hide()
     });
 
 })//$(document)
