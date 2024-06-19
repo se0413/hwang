@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!--swiper 라이브러리 불러오기-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!--jquery 라이브러리 불러오기-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--구글아이콘을 쓰는 코드-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>반응형, swiper 테스트</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="biz">
+                <div class="wrapper">
+                    <h1>html에 div로 사진을 감싸고 css에서 position으로 글자를 배열하는 경우</h1>
+                    <ul>
+                        <li>
+                            <a href="#n"><!--pc에서는 사진위에 글자가 들어가지만 mobile에서는 사진아래 글자-->
+                                <div class="photo"><img src="images/biz_1.png" alt=""></div>
+                                <h2>멘토링꿈 장학사업</h2>
+                                <p>다양한 분야에 꿈과 가능성이 있는 청소년들을 멘토와 함께 선발</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz_2.png" alt=""></div>
+                                <h2>글로벌 장학사업</h2>
+                                <p>다양한 역사적 상황으로 불가피하게 흩어진 한인후손과 개발도</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz_3.png" alt=""></div>
+                                <h2>리더육성 장학사업</h2>
+                                <p>지역적 · 사회경제적 이유로 교육지원이 부족한 아동, 청소년을 위</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo"><img src="images/biz_4.png" alt=""></div>
+                                <h2>방과후 학교대상</h2>
+                                <p>재단 출신 꿈장학생 가운데 성장이 돋보이고 학업역량 및 의지가 </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="business">
+                <div class="wrapper">
+                    <h1>사진을 css에서 background-image로 주고 여백으로 글자 배치</h1>
+                    <ul>
+                        <li class="biz1"><!--사진은 백그라운드로 li한테 줄꺼임, 그래서 clss 줘야함-->
+                            <a href="#n">
+                                <h2>멘토링꿈 장학사업</h2>
+                                <p>다양한 분야에 꿈과 가능성이 있는 청소년들을 멘토와 함께 선발</p>
+                            </a>
+                        </li>
+                        <li class="biz2">
+                            <a href="#n">
+                                <h2>글로벌 장학사업</h2>
+                                <p>다양한 역사적 상황으로 불가피하게 흩어진 한인후손과 개발도</p>
+                            </a>
+                        </li>
+                        <li class="biz3">
+                            <a href="#n">
+                                <h2>리더육성 장학사업</h2>
+                                <p>지역적 · 사회경제적 이유로 교육지원이 부족한 아동, 청소년을 위</p>
+                            </a>
+                        </li>
+                        <li class="biz4">
+                            <a href="#n">
+                                <h2>방과후 학교대상</h2>
+                                <p>재단 출신 꿈장학생 가운데 성장이 돋보이고 학업역량 및 의지가 </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="wrapper">
+                    <h1>사진을 css에서 background-image로 주고 여백으로 글자 배치</h1>
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/gallery_1.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/gallery_2.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/gallery_3.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="news">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/gallery_1.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/gallery_2.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/gallery_3.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="popup">
+                <div class="wrapper">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                            <li class="swiper-slide"><img src="images/pobup1.png" alt=""></li> 
+                            <li class="swiper-slide"><img src="images/pobup2.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/pobup3.png" alt=""></li>
+                        </ul>
+                        <div class="btn_wrap">
+                            <div class="swiper-pagination"></div>
+                            <button class="play">실행</button>
+                            <button class="stop">정지</button>
+                        </div>
+                        <button class="swiper-button-prev"></button>
+                        <button class="swiper-button-next"></button>
+                    </div>
+                </div>
+            </section>
+            <section class="visual">
+                <div class="swiper"> 
+                    <ul class="swiper-wrapper"> 
+                        <li class="swiper-slide bg1">
+                            <div class="inner">
+                                <h2>KAIST GRADUATE SCHOOL OF<br>GREEN GROWTH & SUSTAINABILITY</h2>
+                                <p>Combining Science & Technolog<br>ywith Policy and Finance to Achieve Carbon Neutrality</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide bg2">
+                            <div class="inner">
+                                <h2>PROGRAM</h2>
+                                <p>KAIST GGGS에서는 녹색성장과 지속가능성 문제해결을 위해<br>탄소중립기후기술 및 정책·금융에 대한 통섭적인 이해를 <br>갖춘 국가 핵심인재를 양성합니다.</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide bg3">
+                            <div class="inner">
+                                <h2>FACULTY</h2>
+                                <p>Combining Science & Technology<br>
+                                    with Policy and Finance to Achieve Carbon Neutrality</p>
+                            </div>
+                        </li> 
+                    </ul>
+                    <div class="btn_wrap">
+                        <div class="paging"></div>
+                        <button class="stop"><i class="material-symbols-outlined">pause_circle</i></button>
+                        <button class="play"><i class="material-symbols-outlined">play_circle</i></button>
+                    </div>
+                    <button class="btn-prev"><i class="material-symbols-outlined">arrow_back</i></button>
+                    <button class="btn-next"><i class="material-symbols-outlined">arrow_forward</i></button>
+                </div>
+            </section>
+            <section class="book">
+                <div class="wrapper">
+                    <div class="swiper"> 
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book1.png"></div>
+                                    <h2>친애하는 슐츠 씨</h2>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book2.png"></div>
+                                    <h2>달빛 그림자 가게</h2>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book3.png"></div>
+                                    <h2>도시의 양육자</h2>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book4.png"></div>
+                                    <h2>엄마의 말 그릇</h2>
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="sns">
+                <div class="wrapper">
+                    <div class="swiper"> 
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book1.png"></div>
+                                    <h2>친애하는 슐츠 씨</h2>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book2.png"></div>
+                                    <h2>달빛 그림자 가게</h2>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book3.png"></div>
+                                    <h2>도시의 양육자</h2>
+                                </a>
+                            </li> 
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/book4.png"></div>
+                                    <h2>엄마의 말 그릇</h2>
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
