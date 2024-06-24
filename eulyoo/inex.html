@@ -15,8 +15,31 @@
 </head>
 <body>
     <div id="wrap">
+        <!--스크롤이 되면 jequry에서 fixed 클래스를 header한테 줌 -->
         <header>
-            <div class="wrapper"></div>
+            <div class="wrapper">
+                <!--로고 이미지가 검, 흰 으로 교차되어 바뀌면 이미태그로 코딩하지 않고 백그라운드로 해서 css에서 상황에 따라 교체하게 해야함-->
+                <h1 class="logo">
+                    <a href="../eulyoo/inex.html">을유문화사</a>
+                </h1>
+                <nav class="gnb">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul>
+                            <li>
+                                <a href="#n">을유문화사</a>
+                                <a href="#n">콘텐츠</a>
+                                <a href="#n">을유소식</a>
+                                <a href="#n">독자참여</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="tnb">
+                    <a href="#n" class="mypage">마이페이지</a>
+                    <a href="#n" class="search">검색</a>
+                </div>
+            </div>
         </header>
         <main class="container">
             <section class="visual">
@@ -119,21 +142,21 @@
                     </div>
                     <div class="list">
                         <ul>
-                            <li>
+                            <li> <!--마우스를 오버하면 jequry에서 오버한 li에만 on클래스를 추가-->
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview1.png" alt="인터뷰 사진"></div>
                                     <div class="text">
-                                        <h3>오디오 평론가<br>이현준</h3>
+                                        <h3>오디오 평론가<br> 이현준</h3>
                                         <p>안녕하세요. 오디오 홈시어터 평론가 이현준입니. 이번에 을유문화사에서 발간한『턴테이블·라이프·디자인』에서 번역을 담당했습니다.</p>
                                         <span>자세히보기</span>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#n">
+                                <a>
                                     <div class="photo"><img src="images/interview2.png" alt="인터뷰 사진"></div>
                                     <div class="text">
-                                        <h3>서울대 교수<br>강초롱</h3>
+                                        <h3>서울대 교수<br> 강초롱</h3>
                                         <p>저는 서울대학교 불어불문학과에서 학생 교육과 연구를 맡고 있는 강초롱이라고 하고요. 파리에서 시몬 드 보부아르의 자서전을 대상으로 박사 논문을 썼습니다.</p>
                                         <span>자세히보기</span>
                                     </div>
@@ -143,7 +166,7 @@
                                 <a href="#n">
                                     <div class="photo"><img src="images/interview3.png" alt="인터뷰 사진"></div>
                                     <div class="text">
-                                        <h3>화가<br>홍지희</h3>
+                                        <h3>화가<br> 홍지희</h3>
                                         <p>안녕하세요. 회화 작가 홍지희입니다. 자연물과 인공물, 평범한 것들을 아름답게 만드는 업사이클링과 회화 작업을 하고 있습니다.</p>
                                         <span>자세히보기</span>
                                     </div>
@@ -154,7 +177,66 @@
                     <div class="more"><a href="#n">더보기</a></div>
                 </div>
             </section>
-            <section class="story"></section>
+            <section class="story">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>시리즈</h2>
+                    </div>
+                    <div class="list swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="long swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story1.png" alt="시리즈썸네일"></div>
+                                    <strong>[한국 팝의 고고학 1960] 미리보기</strong>
+                                    <h3>#1. 탄생과 혁명</h3>
+                                    <p>‘한국 팝의 고고학’ 시리즈는 1960년대부터 1990년대까지 한국 대중음악의 역사를 세밀히 살핀 저작으로, 2005년 ‘1960’, ‘1970’편 출간 당시 그 시대를 파고든 내실 있는 역작으로 평단과 대중에게 모두 인정받은 바 있다. 마치 고고학의 ‘발굴’ 작업과도 같은 치열한 자료 수집과 대중음악 관계자들과의 대면 인터뷰, 정치적・사회적・문화적 맥락에 따른 심도 있는 해석은 확실히 기존에 나온 책들과 차별화되는 요소였다. </p>
+                                </a>
+                            </li>
+                            <li class="short swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story2.png" alt="시리즈썸네일"></div>
+                                    <strong>[한국 팝의 고고학 1970] 미리보기</strong>
+                                    <h3>#2. 전경과 문화</h3>
+                                    <p>한국 팝의 고고학’ 시리즈는 1960년대부터 1990년대까지 한국 대중음악의 역사를 세밀히 살핀 저작으로, 2005년 ‘1960’, ‘1970’편 출간 당시 그 시대를 파고든 내실 있는 역작으로 평단과 대중에게 모두 인정받은 바 있다. 마치 고고학의 ‘발굴’ 작업과도 같은 치열한 자료 수집과 대중음악 관계자들과의 대면 인터뷰, 정치적・사회적・문화적 맥락에 따른 심도 있는 해석은 확실히 기존에 나온 책들과 차별화되는 요소였다. 이 책의 절판을 아쉬워하던 독자들의 요구에 힘입어 개정판 출간이 기획되었고, 저자들은 여기에 더해 1980년대와 1990년대를 관찰하고 정리해 나갔다. </p>
+                                </a>
+                            </li>
+                            <li class="long swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story3.png" alt="시리즈썸네일"></div>
+                                    <strong>[한국 팝의 고고학 1980] 미리보기</strong>
+                                    <h3>#3. 욕망의 장소</h3>
+                                    <p>‘한국 팝의 고고학’ 시리즈는 1960년대부터 1990년대까지 한국 대중음악의 역사를 세밀히 살핀 저작으로, 2005년 ‘1960’, ‘1970’편 출간 당시 그 시대를 파고든 내실 있는 역작으로 평단과 대중에게 모두 인정받은 바 있다. 마치 고고학의 ‘발굴’ 작업과도 같은 치열한 자료 수집과 대중음악 관계자들과의 대면 인터뷰, 정치적・사회적・문화적 맥락에 따른 심도 있는 해석은 확실히 기존에 나온 책들과 차별화되는 요소였다. </p>
+                                </a>
+                            </li>
+                            <li class="short swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story4.png" alt="시리즈썸네일"></div>
+                                    <strong>[한국 팝의 고고학 1990] 미리보기</strong>
+                                    <h3>#4. 상상과 우상</h3>
+                                    <p>‘한국 팝의 고고학’ 시리즈는 1960년대부터 1990년대까지 한국 대중음악의 역사를 세밀히 살핀 저작으로, 2005년 ‘1960’, ‘1970’편 출간 당시 그 시대를 파고든 내실 있는 역작으로 평단과 대중에게 모두 인정받은 바 있다. 마치 고고학의 ‘발굴’ 작업과도 같은 치열한 자료 수집과 대중음악 관계자들과의 대면 인터뷰, 정치적・사회적・문화적 맥락에 따른 심도 있는 해석은 확실히 기존에 나온 책들과 차별화되는 요소였다. 이 책의 절판을 아쉬워하던 독자들의 요구에 힘입어 개정판 출간이 기획되었고, 저자들은 여기에 더해 1980년대와 1990년대를 관찰하고 정리해 나갔다.</p>
+                                </a>
+                            </li>
+                            <li class="long swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story5.png" alt="시리즈썸네일"></div>
+                                    <strong>을유세계문학전집_</strong>
+                                    <h3>#1. 워더링 하이츠</h3>
+                                    <p>2024년 세계 여성의 날(3/8)을 맞아 ‘을유세계문학전집’에서 선정한 여성 작가의 작품 5종을 리커버 에디션으로 선보인다. 브론테 자매의 소설, 에밀리 디킨슨의 시 선집, 시몬 드 보부아르의 자전적 소설, 이디스 워튼의 중단편 소설까지, 자신의 정체성을 찾으려 애쓰며 한 인간으로 오롯이 서기 위해 분투하는 모습과 그 과정에서 드러나는 내적 갈등이 탁월하게 묘사된 작품들이다. </p>
+                                </a>
+                            </li>
+                            <li class="short swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/story6.png" alt="시리즈썸네일"></div>
+                                    <strong>을유세계문학전집_</strong>
+                                    <h3>#2. 버너 자매</h3>
+                                    <p>‘여성과 문학’ 리커버 에디션 작품은 『워더링 하이츠』, 『제인 에어』, 『에밀리 디킨슨 시 선집』, 『버너 자매』, 『아주 편안한 죽음』으로, 다섯 작품 속에는 역경 속에서도 당당히 자신의 뜻을 펼쳐 나가는 인물도 있고, 비극적인 결말을 맞는 인물도 있다. 그들 모두 어려움을 헤쳐 가며 성장하고, 자신의 정체성을 찾으려 애쓰며 한 인간으로 오롯이 서기 위해 분투한다. 그리고 그 과정에서 드러나는 내적 갈등이나 여성의 미묘한 심리가 탁월하게 묘사되어 있다.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#n">더보기</a></div>
+                </div>
+            </section>
         </main>
         <footer></footer>
     </div>
