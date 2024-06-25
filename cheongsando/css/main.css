@@ -52,6 +52,12 @@ header .gnb ul li a {
 header .gnb ul li a:hover {
     color: #55B2C5;
 }
+header.fixed {
+    backdrop-filter: blur(10px) brightness(0.9);
+    position: fixed;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+}
 .visual {
     background: url(../images/visual_bg.png) no-repeat center center / cover;
     height: 900px;
@@ -161,10 +167,12 @@ header .gnb ul li a:hover {
 }
 .tour .list ul li {
     width: 190px;
+    overflow: hidden; /*내가 준 넓이보다 내부요소가 더 크면 자르기*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     color: rgba(255, 255, 255, 0.8);
+    transition: 0.5s;
 }
 .tour .list ul li h3 {
     font-size: 20px;
@@ -189,7 +197,10 @@ header .gnb ul li a:hover {
     border-radius: 20px;
 }
 .tour .list ul li.active {
-    width: 618px;
+    width: 618px; 
+}
+.tour .list ul li.active a {
+    width: 618px;/*transition의 영향으로 190에서 618px로 점점 변형, 하지만 li의 a애는 transition이 없기때문에 즉시 넓이가 618px로 고정되기 때문에 내부 콘텐츠 넓이가 고정 됨 p태그와 글이 여러줄로 바꾸는 현상이 사라짐*/
 }
 .tour .list ul li a {
     height: 487px;
@@ -348,6 +359,7 @@ footer {
 footer .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start; /*flex의 영향으로 길이가 같이 늘어나는것을 방지*/
 }
 footer .f_nav ul {
     display: flex;
@@ -382,6 +394,9 @@ footer .f_info {
 footer .copyright {
     color: rgba(61, 61, 61, 0.6);
 }
+footer .familly {
+    position: relative; /*list 정렬의 기준*/
+}
 footer .familly button {
     width: 145px;
     height: 31px;
@@ -390,5 +405,47 @@ footer .familly button {
     color:rgba(61,61,61,0.6);
     text-align: left;
     padding: 5px 53px 5px 16px;
-    background: url(../images/more.svg) no-repeat right 17.5px center;
+    position: relative;    /*after 정렬의 기준*/
+}
+footer .familly button::after {
+    position: absolute;
+    top: 8px;
+    right: 19px;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+footer .familly button.btn_open::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.5' height='12.5' viewBox='0 0 12.5 12.5'%3E%3Cpath id='add_24dp_FILL0_wght400_GRAD0_opsz24' d='M205.357-752.857h-4.464a.864.864,0,0,1-.636-.257.864.864,0,0,1-.257-.636.864.864,0,0,1,.257-.636.864.864,0,0,1,.636-.257h4.464v-4.464a.864.864,0,0,1,.257-.636.864.864,0,0,1,.636-.257.864.864,0,0,1,.636.257.864.864,0,0,1,.257.636v4.464h4.464a.864.864,0,0,1,.636.257.864.864,0,0,1,.257.636.864.864,0,0,1-.257.636.864.864,0,0,1-.636.257h-4.464v4.464a.864.864,0,0,1-.257.636.864.864,0,0,1-.636.257.864.864,0,0,1-.636-.257.864.864,0,0,1-.257-.636Z' transform='translate(-200 760)' fill='%233d3d3d' opacity='0.6'/%3E%3C/svg%3E%0A");
+}
+footer .familly button.btn_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.6' height='2' viewBox='0 0 11.6 2'%3E%3Cpath id='remove_24dp_FILL0_wght400_GRAD0_opsz24' d='M200.829-518a.738.738,0,0,1-.59-.287A1.08,1.08,0,0,1,200-519a1.079,1.079,0,0,1,.238-.712.738.738,0,0,1,.59-.288h9.943a.738.738,0,0,1,.59.288,1.079,1.079,0,0,1,.238.712,1.08,1.08,0,0,1-.238.713.738.738,0,0,1-.59.287Z' transform='translate(-200 520)' fill='%235f6368' opacity='0.6'/%3E%3C/svg%3E%0A");
+}
+footer .familly button.btn_close {
+    display: none;
+}
+footer .familly .list {
+    display: none;
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    border-radius: 20px;
+    background-color: #EAE9E4;
+    border: 1px solid rgba(112,112,112,0.6);
+    text-align: left;
+    width: 100%;
+    padding: 11px;
+}
+footer .familly .list ul li a {
+    display: block;
+    line-height: 30px;
+}
+footer .familly.open button.btn_open {
+    display: none;
+}
+footer .familly.open button.btn_close {
+    display: block;
 }
