@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: 'SKYBORI';
-    src: url(../fonts/SKYBORI.woff) format('woff');
+    src: local('SKYBORI'), url('../fonts/skybori.woff') ;
     font-weight: normal;
     font-style: normal;
 }

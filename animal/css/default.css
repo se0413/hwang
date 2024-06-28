@@ -25,6 +25,9 @@ em, span, strong, address {
 button {/* 버튼태그는 글자의 스타일을 상속 받지 않음 */
     background-color: transparent; /* 투명한 색 */
     border: 0; /* 테두리삭제 */
+    cursor: pointer; /*마우스 포인터를 손바닥 모양으로*/
+}
+input, select, textarea, button { /* form 테그는 문자 스타일을 상속을 안 받아서 따로 줘야함*/
     font-style: inherit;
     font-family: inherit;
     font-weight: inherit;
@@ -32,5 +35,10 @@ button {/* 버튼태그는 글자의 스타일을 상속 받지 않음 */
     color: inherit;
     letter-spacing: inherit;
     line-height: inherit;
-    cursor: pointer; /*마우스 포인터를 손바닥 모양으로*/
+}
+legend {
+    display: none;
+}
+fieldset {
+    border: 0;
 }

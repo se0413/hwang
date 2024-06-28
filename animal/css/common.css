@@ -1,10 +1,10 @@
 html, body{
-    font-family: 'SKYBORI';
+    font-family:'SKYBORI';
     font-weight:400; 
     font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.2;
     letter-spacing: 0;
-    color: #3d3d3d;
+    color: #6d6d6d;
     word-break: keep-all; /* 단어별로 줄바꿈 */
     word-wrap: break-word; /* 만약 단어가 엄청 길면 줄바꿈 강제로 실행 */
 }
@@ -22,20 +22,20 @@ html, body{
 
 @media screen and (max-width: 1300px){
     #wrap { 
-        min-width: 1300px;/* 브라우저 넓이에 꽉차게 */
+        min-width: 100%;/* 브라우저 넓이에 꽉차게 */
     }
     .wrapper {
         margin: 0 20px; /* 넓이는 1260 유지, 좌우에 20px 여백 */
+        width: auto;
     }
+}
+@media screen and (max-width: 1024px){
+    html, body{
+        font-size: 1px;
+    } 
 }
 @media screen and (max-width: 640px){
     html, body{
         font-size: 13px;
-    }
-    #wrap { 
-        min-width: 100%;
-    }
-    .wrapper {
-        width: auto;
-    }   
+    } 
 }
