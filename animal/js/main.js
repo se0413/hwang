@@ -1,4 +1,22 @@
 $(document).ready(function(){
+
+    let pc_mobile
+    let window_w
+
+    function resize_chk(){
+        window_w = $(window).width()
+        if(window_w > 1024){
+            pc_mobile = 'pc'
+        }else{
+            pc_mobile = 'mobile'
+        }
+        console.log(pc_mobile)
+    }
+    resize_chk()
+    $(window).resize(function(){
+        resize_chk()
+    })
+
     const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
         autoplay: {  /* 팝업 자동 실행 */
@@ -54,4 +72,38 @@ $(document).ready(function(){
         scroll_chk()
 
     })
+    /* header .gnb .gnb_wrap ul.depth1 > li 
+    메뉴에 마우스를 올리면 header 에 menu_over 클래스 추가
+    마우스를 오버한 li에만 on 이라는 클래스 추가
+    
+    -->다른 li에 마우스를 오버하면 이전에 오버했던 메뉴의 on 클래스 삭제
+        (이전에 오버했던 메뉴를 알기 어려움, 그래서 모든 메뉴의 on클래스를 삭제했다가 오버한 것만 추가)
+    -->header에서 마우스를 아웃하면 그때 menu_over라는 클래스 삭제, 모든 메뉴에서 on클래스 삭제*/
+
+    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter', function(){
+        if(pc_mobile == 'pc'){
+            $('header').addClass('menu_over');
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on') /*먼저 모두 삭제*/
+            $(this).addClass('on') /*마우스 오버한 것만 줌*/
+        }
+            
+    })
+
+    $('header').on('mauseleave', function(){
+        if(pc_mobile == 'pc'){
+            $('header').removeClass('menu_over');
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
+        }
+    })
+    $('header .gnb .gnb_open').on('click', function(){
+         if(pc_mobile == 'mobile'){
+            $('header').addClass('mobile_open');
+         }
+    })
+    $('header .gnb .gnb_close').on('click', function(){
+        if(pc_mobile == 'mobile'){
+           $('header').removeClass('mobile_open');
+        }
+    })
 })
+
