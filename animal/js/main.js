@@ -105,5 +105,58 @@ $(document).ready(function(){
            $('header').removeClass('mobile_open');
         }
     })
+
+
+
+
+    /*find swiper*/
+
+    const find1_swiper = new Swiper('.find .tab .find1 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            640: {    /* 640px 이상일때 적용 */
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            768: {    /* 768px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1024: {   /* 1024px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .tab .find1 .btn_wrap .next ',
+            prevEl: '.find .tab .find1 .btn_wrap .prev',
+        },
+    });/*find1 swiper*/
+
+    const find2_swiper = new Swiper('.find .tab .find2 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            640: {    /* 640px 이상일때 적용 */
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            768: {    /* 768px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1024: {   /* 1024px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .tab .find2 .btn_wrap .next ',
+            prevEl: '.find .tab .find2 .btn_wrap .prev',
+        },
+    });/*find2 swiper*/
 })
 

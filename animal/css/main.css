@@ -140,7 +140,7 @@ header .logo a::before {
         header .gnb .gnb_wrap .depth1 > li:has(.depth2) > a::after
          { /*has 가상 선택자는 하위 요소중에서 depth 라는 클래스명을 갖은 요소가 있는지 계산, 하위 브라우저에서는 구현X, 기능 문제는 없고 화살표디자인만 안나옴*/
             position: absolute;
-            top: 35px;
+            top: 38px;
             right: 0;
             width: 15px;
             height: 15px;
@@ -211,7 +211,8 @@ header .logo a::before {
         header .gnb .gnb_wrap ul.depth1 > li.on > a{
             font-family: 'SDSamliphopangche_Outline';  
         }
-        header .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after {
+        header .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after,
+        header.menu_over .gnb .gnb_wrap ul.depth1 > li.on:has(.depth2) > a::after {
             top: 45px;
             background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_36_512' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect x='15' width='15' height='15' transform='rotate(90 15 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_36_512)'%3E%3Cpath d='M7.49984 1.99L2.79187 6.69797C2.6677 6.82213 2.5215 6.88266 2.35328 6.87953C2.18494 6.8763 2.03869 6.8126 1.91453 6.68844C1.79036 6.56417 1.72828 6.41792 1.72828 6.24969C1.72828 6.08146 1.79036 5.93521 1.91453 5.81094L6.69937 1.01656C6.81239 0.903541 6.939 0.819791 7.07921 0.765312C7.21942 0.710833 7.35963 0.683593 7.49984 0.683593C7.64005 0.683594 7.78026 0.710833 7.92046 0.765312C8.06067 0.819791 8.18729 0.903541 8.30031 1.01656L13.0948 5.81094C13.219 5.93521 13.2795 6.08307 13.2762 6.25453C13.273 6.42599 13.2093 6.5738 13.0852 6.69797C12.961 6.82214 12.8147 6.88422 12.6464 6.88422C12.4782 6.88422 12.332 6.82214 12.2078 6.69797L7.49984 1.99Z' fill='%232D2D2D'/%3E%3C/g%3E%3C/svg%3E%0A");
         }
@@ -341,16 +342,19 @@ header .tnb .search .search_box input[type="submit"] {
         display: block;
         font-size: 20px;
         line-height: 1.9;
+        margin-bottom: 10px;
     }
     header .gnb .gnb_wrap ul.depth2 {
         border: 1px solid #2d2d2d;
         border-radius: 20px;
-        padding: 12px 22px;
+        padding: 17px 20px;
     }
     header .gnb .gnb_wrap ul.depth2 > li > a {
         line-height: 1.2;
         color: #2d2d2d;
         font-size: 13px;
+        margin: 10px 0;
+        display: block;
     }
     header .gnb .gnb_open,
     header .gnb .gnb_close {
@@ -412,7 +416,17 @@ header .tnb .search .search_box input[type="submit"] {
     header .logo a {
         width: 103px;
     }
-    
+    header .gnb .gnb_open {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        display: block;
+        width: 24px;
+        height: 24px;
+        line-height: 0;
+        font-size: 0;
+        z-index: 120;
+    }
     header .gnb .gnb_open::before {
         position: absolute;
         top: 50%;
@@ -616,6 +630,42 @@ header .tnb .search .search_box input[type="submit"] {
         font-size: 13px;
         margin: 0 0 0 160px;
     }
+}
+.find {
+    background-color: rgba(227, 221, 188, 0.4);
+    padding: 179px 0 144px 0;
+    color: #6d6d6d;
+}
+.find h2 {
+    font-family: 'SDSamliphopangche_Outline';
+    font-size: 60px;
+    text-align: center;
+    color: #705D3F;
+    margin: 0 0 20px 0;   
+}
+.find .tab > ul > li .tab_menu {
+    font-size: 30px;
+    font-family: 'SDSamliphopangche_Basic';
+    color: #705D3F;
+    padding: 7px 31px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+}
+.find .tab > ul > li.find1.on .tab_menu {
+    color: #fff;
+    background-color: #705D3F;
+    border-radius: 50px;
+    border: 1px solid #705D3F;
+}
+.find .tab > ul > li.find2.on .tab_menu {
+    color: #fff;
+    background-color: #E3D3BC;
+    border-radius: 50px;
+    border: 1px solid #E3D3BC;
+}
+.find .tab .tab_detail ul li a {
+    display: block;
+    
 }
 footer {
     margin-top: 1000px;
