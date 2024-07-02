@@ -155,8 +155,20 @@ $(document).ready(function(){
         loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
         navigation: {
             nextEl: '.find .tab .find2 .btn_wrap .next ',
-            prevEl: '.find .tab .find2 .btn_wrap .prev',
+            prevEl: '.find .tab .find .btn_wrap .prev',
         },
     });/*find2 swiper*/
+
+    /*
+        find의 텝메뉴
+        .find .tab > ul > li 을 클릭하면
+        클릭한 li 만 on클래스 줌
+        1. 원래 html에 기본적으로 하나의 li에 클래스가 있어야함 jequrey에서 누르면 바뀜
+    */
+   $('.find .tab > ul > li').on('click', function(){
+    $('.find .tab > ul > li').removeClass('on') /*다 지웠다가*/
+    $(this).addClass('on')
+   })
+
 })
 
