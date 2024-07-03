@@ -7,6 +7,7 @@ header.menu_over {
     background-color: #fff;
     position: fixed;
     color: #2d2d2d;
+    font-family: 'SDSamliphopangche_Basic';
 }
 header.fixed .logo a::before, 
 header.menu_over .logo a::before {
@@ -551,6 +552,18 @@ header .tnb .search .search_box input[type="submit"] {
 .visual .btn_wrap button.btn_play::before {
     background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_36_298' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='35' height='35'%3E%3Crect width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_36_298)'%3E%3Cpath d='M15.7418 22.4073L22.0939 18.3269C22.406 18.1288 22.562 17.8536 22.562 17.5011C22.562 17.1487 22.406 16.8725 22.0939 16.6724L15.7418 12.592C15.4146 12.3677 15.079 12.3497 14.7348 12.5381C14.3909 12.7264 14.2189 13.0202 14.2189 13.4193V21.5801C14.2189 21.9792 14.3909 22.2729 14.7348 22.4613C15.079 22.6497 15.4146 22.6317 15.7418 22.4073ZM17.5027 31.3538C15.5865 31.3538 13.7853 30.9902 12.0992 30.263C10.4131 29.5358 8.94655 28.5489 7.69943 27.3022C6.45232 26.0556 5.4649 24.5896 4.73719 22.9043C4.00973 21.2189 3.646 19.4182 3.646 17.5022C3.646 15.586 4.00961 13.7848 4.73683 12.0987C5.46405 10.4127 6.45098 8.94606 7.69761 7.69895C8.94424 6.45183 10.4102 5.46441 12.0956 4.73671C13.7809 4.00924 15.5816 3.64551 17.4976 3.64551C19.4139 3.64551 21.215 4.00912 22.9011 4.73634C24.5872 5.46356 26.0538 6.45049 27.3009 7.69712C28.548 8.94375 29.5354 10.4097 30.2631 12.0951C30.9906 13.7804 31.3543 15.5811 31.3543 17.4971C31.3543 19.4134 30.9907 21.2145 30.2635 22.9006C29.5363 24.5867 28.5493 26.0533 27.3027 27.3004C26.0561 28.5475 24.5901 29.5349 22.9047 30.2626C21.2194 30.9901 19.4187 31.3538 17.5027 31.3538ZM17.5002 29.1663C20.7571 29.1663 23.5158 28.0361 25.7762 25.7757C28.0366 23.5153 29.1668 20.7566 29.1668 17.4997C29.1668 14.2427 28.0366 11.484 25.7762 9.22363C23.5158 6.96322 20.7571 5.83301 17.5002 5.83301C14.2432 5.83301 11.4845 6.96322 9.22412 9.22363C6.9637 11.484 5.8335 14.2427 5.8335 17.4997C5.8335 20.7566 6.9637 23.5153 9.22412 25.7757C11.4845 28.0361 14.2432 29.1663 17.5002 29.1663Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
+.visual .slogun {
+    position: absolute;   
+    right: 10%;
+    bottom: -125px;
+    width: 244px;
+    height: 244px;
+    z-index: 10;
+    mix-blend-mode: difference;
+}
+.visual .slogun img {
+    width: 100%;
+}
 @media screen and (max-width: 1024px){
     .visual .btn_wrap {
         display: none;
@@ -633,7 +646,7 @@ header .tnb .search .search_box input[type="submit"] {
 }
 .find {
     background-color: rgba(227, 221, 188, 0.4);
-    padding: 179px 0 250px 0;
+    padding: 179px 0 50px 0;
     color: #6d6d6d;
 }
 .find h2 {
@@ -677,6 +690,10 @@ header .tnb .search .search_box input[type="submit"] {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s;
+}
+.find .tab .tab_detail ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2 ,1);
 }
 .find .tab .tab_detail ul li a .tit {
     display: flex;
@@ -722,7 +739,7 @@ header .tnb .search .search_box input[type="submit"] {
     text-overflow: ellipsis;
 }
 .find .tab .tab_detail .btn_wrap {
-    margin: 85px 0 144px 0;
+    margin: 85px 0 80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -747,6 +764,7 @@ header .tnb .search .search_box input[type="submit"] {
     content: "";
 }
 .find .tab .tab_detail .btn_wrap button.prev::before {
+    margin-left: 5px;
     background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_26_48' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect x='45' width='45' height='45' transform='rotate(90 45 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_26_48)'%3E%3Cpath d='M18.1875 22.5L23.4375 27.75L23.4375 17.25L18.1875 22.5ZM6.1875 22.508C6.1875 20.2527 6.61547 18.1319 7.47141 16.1456C8.32734 14.1594 9.48906 12.4317 10.9566 10.9627C12.4241 9.49328 14.1495 8.33015 16.133 7.47328C18.1167 6.61609 20.2364 6.1875 22.492 6.1875C24.7473 6.1875 26.8681 6.61547 28.8544 7.47141C30.8406 8.32734 32.5683 9.48906 34.0373 10.9566C35.5067 12.4241 36.6698 14.1495 37.5267 16.133C38.3839 18.1167 38.8125 20.2364 38.8125 22.492C38.8125 24.7473 38.3845 26.8681 37.5286 28.8544C36.6727 30.8406 35.5109 32.5683 34.0434 34.0373C32.5759 35.5067 30.8505 36.6698 28.867 37.5267C26.8833 38.3839 24.7636 38.8125 22.508 38.8125C20.2527 38.8125 18.1319 38.3845 16.1456 37.5286C14.1594 36.6727 12.4317 35.5109 10.9627 34.0434C9.49328 32.5759 8.33015 30.8505 7.47328 28.867C6.61609 26.8833 6.1875 24.7636 6.1875 22.508ZM7.5 22.5C7.5 26.6875 8.95312 30.2344 11.8594 33.1406C14.7656 36.0469 18.3125 37.5 22.5 37.5C26.6875 37.5 30.2344 36.0469 33.1406 33.1406C36.0469 30.2344 37.5 26.6875 37.5 22.5C37.5 18.3125 36.0469 14.7656 33.1406 11.8594C30.2344 8.95312 26.6875 7.5 22.5 7.5C18.3125 7.5 14.7656 8.95312 11.8594 11.8594C8.95312 14.7656 7.5 18.3125 7.5 22.5Z' fill='%23705D3F' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 .find .tab .tab_detail .btn_wrap button.prev:hover::before {
@@ -783,6 +801,32 @@ header .tnb .search .search_box input[type="submit"] {
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_295' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_295)'%3E%3Cpath d='M9.37492 10.6247H5.20825C5.03117 10.6247 4.88277 10.5647 4.76304 10.4449C4.64318 10.325 4.58325 10.1765 4.58325 9.99947C4.58325 9.82224 4.64318 9.67384 4.76304 9.55426C4.88277 9.43454 5.03117 9.37467 5.20825 9.37467H9.37492V5.20801C9.37492 5.03092 9.43485 4.88252 9.55471 4.7628C9.67457 4.64294 9.82304 4.58301 10.0001 4.58301C10.1773 4.58301 10.3258 4.64294 10.4453 4.7628C10.5651 4.88252 10.6249 5.03092 10.6249 5.20801V9.37467H14.7916C14.9687 9.37467 15.1171 9.43461 15.2368 9.55447C15.3567 9.67433 15.4166 9.8228 15.4166 9.99988C15.4166 10.1771 15.3567 10.3255 15.2368 10.4451C15.1171 10.5648 14.9687 10.6247 14.7916 10.6247H10.6249V14.7913C10.6249 14.9684 10.565 15.1168 10.4451 15.2365C10.3253 15.3564 10.1768 15.4163 9.99971 15.4163C9.82249 15.4163 9.67409 15.3564 9.5545 15.2365C9.43478 15.1168 9.37492 14.9684 9.37492 14.7913V10.6247Z' fill='%23705D3F' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
     content: "";
 }
+.find .tab .tab_detail .btn_wrap .more:hover {
+    width: 112px;
+    height: 37px;
+    border: 1px solid #705D3F;
+    border-radius: 50px;
+    line-height: 37px;
+    position: relative;
+    color: #fff;
+    background-color: #705D3F;
+    display: block;
+    padding: 0 0 0 12px;
+    font-size: 20px;
+    font-family: 'SDSamliphopangche_Basic';
+}
+.find .tab .tab_detail .btn_wrap .more:hover:after {
+    position: absolute;
+    top: 7px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_300' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_300)'%3E%3Cpath d='M9.37492 10.6247H5.20825C5.03117 10.6247 4.88277 10.5647 4.76304 10.4449C4.64318 10.325 4.58325 10.1765 4.58325 9.99947C4.58325 9.82224 4.64318 9.67384 4.76304 9.55426C4.88277 9.43454 5.03117 9.37467 5.20825 9.37467H9.37492V5.20801C9.37492 5.03092 9.43485 4.88252 9.55471 4.7628C9.67457 4.64294 9.82304 4.58301 10.0001 4.58301C10.1773 4.58301 10.3258 4.64294 10.4453 4.7628C10.5651 4.88252 10.6249 5.03092 10.6249 5.20801V9.37467H14.7916C14.9687 9.37467 15.1171 9.43461 15.2368 9.55447C15.3567 9.67433 15.4166 9.8228 15.4166 9.99988C15.4166 10.1771 15.3567 10.3255 15.2368 10.4451C15.1171 10.5648 14.9687 10.6247 14.7916 10.6247H10.6249V14.7913C10.6249 14.9684 10.565 15.1168 10.4451 15.2365C10.3253 15.3564 10.1768 15.4163 9.99971 15.4163C9.82249 15.4163 9.67409 15.3564 9.5545 15.2365C9.43478 15.1168 9.37492 14.9684 9.37492 14.7913V10.6247Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
 /*tab 메뉴 구현*/
 .find .tab  {
     position: relative; /*tab 메뉴 정렬의 중심*/
@@ -808,19 +852,45 @@ header .tnb .search .search_box input[type="submit"] {
     .find .tab .tab_detail ul li {
         width: 217px;
     }
+    .find h2 {
+        font-size: 40px;
+        margin: 0 0 20px 0;   
+    }
+    .find .tab > ul > li .tab_menu {
+        font-size: 25px;
+        padding: 7px 31px;
+        border-radius: 50px;
+        border: 1px solid #fff;
+    }
+    .find .tab > ul > li.find1.on .tab_menu {
+        color: #fff;
+        background-color: #705D3F;
+        border-radius: 50px;
+        border: 1px solid #705D3F;
+    }
+    .find .tab > ul > li.find2.on .tab_menu {
+        color: #fff;
+        background-color: #E3D3BC;
+        border-radius: 50px;
+        border: 1px solid #E3D3BC;
+    }
+    
 }
 @media screen and (max-width: 768px){
     .find {
         padding: 65px 0 32px 0;
     }
     .find .tab .tab_detail ul li {
-        width: 194px;
+        width: auto;
+    }
+    .find .tab .tab_detail ul li a {
+        height: auto;
     }
     .find .tab .tab_detail ul li a .tit {
         font-size: 18px;
     }
     .find h2 {
-        font-size: 20px;
+        font-size: 30px;
         margin: 0 0 5px 0;   
     }
     .find .tab > ul > li .tab_menu {
@@ -870,6 +940,372 @@ header .tnb .search .search_box input[type="submit"] {
         background-size: contain;
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_295' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_295)'%3E%3Cpath d='M9.37492 10.6247H5.20825C5.03117 10.6247 4.88277 10.5647 4.76304 10.4449C4.64318 10.325 4.58325 10.1765 4.58325 9.99947C4.58325 9.82224 4.64318 9.67384 4.76304 9.55426C4.88277 9.43454 5.03117 9.37467 5.20825 9.37467H9.37492V5.20801C9.37492 5.03092 9.43485 4.88252 9.55471 4.7628C9.67457 4.64294 9.82304 4.58301 10.0001 4.58301C10.1773 4.58301 10.3258 4.64294 10.4453 4.7628C10.5651 4.88252 10.6249 5.03092 10.6249 5.20801V9.37467H14.7916C14.9687 9.37467 15.1171 9.43461 15.2368 9.55447C15.3567 9.67433 15.4166 9.8228 15.4166 9.99988C15.4166 10.1771 15.3567 10.3255 15.2368 10.4451C15.1171 10.5648 14.9687 10.6247 14.7916 10.6247H10.6249V14.7913C10.6249 14.9684 10.565 15.1168 10.4451 15.2365C10.3253 15.3564 10.1768 15.4163 9.99971 15.4163C9.82249 15.4163 9.67409 15.3564 9.5545 15.2365C9.43478 15.1168 9.37492 14.9684 9.37492 14.7913V10.6247Z' fill='%23705D3F' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
         content: "";
+    }
+    .find .tab .tab_detail .btn_wrap .more:hover {
+    width: 112px;
+    height: 37px;
+    border: 1px solid #705D3F;
+    border-radius: 50px;
+    line-height: 37px;
+    position: relative;
+    color: #fff;
+    background-color: #705D3F;
+    display: block;
+    padding: 0 0 0 12px;
+    font-size: 20px;
+    font-family: 'SDSamliphopangche_Basic';
+    }
+}
+@media screen and (max-width: 360px){
+    .find .tab .tab_detail ul li {
+        width: auto;
+    }
+    .find .tab .tab_detail ul li a {
+        height: auto;
+    }
+}
+.campaign {
+    margin: 366px 0 400px 0;
+}
+.campaign h2 {
+    display: none;
+}
+.campaign p {
+    font-family: 'SDSamliphopangche_Outline';
+    font-size: 60px;
+    line-height: 1.4;
+    text-align: center;
+    color: #4d4d4d;
+    margin: 0 0 18px 0;
+}
+.campaign p span {
+    display: inline-block; /*camp에 아이콘 글자랑 나란히 하기위해 다 줌*/
+}
+.campaign p .camp1 {
+    width: 1.5em;
+    height: 0.5em;
+    position: relative;
+}
+.campaign p .camp1::before {
+    position: absolute;
+    left: 0;
+    top: 32%;
+    transform: translate(0, -50%);
+    width: 90%;
+    height: 94px;
+    background: url(../images/camp1.svg) no-repeat center center / contain;
+    content: "";
+}
+.campaign p .camp2 {
+    width: 3.61em;
+    height: 0.5em;
+    position: relative;
+}
+.campaign p .camp2::before {
+    position: absolute;
+    left: 0;
+    top: 32%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 85px;
+    background: url(../images/camp2.svg) no-repeat center center / contain;
+    content: "";
+}
+.campaign p .camp3 {
+    width: 1.45em;
+    height: 0.5em;
+    position: relative;
+}
+.campaign p .camp3::before {
+    position: absolute;
+    left: 0;
+    top: 32%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 75px;
+    background: url(../images/camp3.svg) no-repeat center center / contain;
+    content: "";
+}
+.campaign p .camp4 {
+    width: 1.45em;
+    height: 0.5em;
+    position: relative;
+}
+.campaign p .camp4::before {
+    position: absolute;
+    left: 0;
+    top: 32%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 70px;
+    background: url(../images/camp4.svg) no-repeat center center / contain;
+    content: "";
+}
+.campaign strong {
+    font-family: 'SDSamliphopangche_Basic';
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    color: #4d4d4d;
+}
+@media screen and (max-width: 1300px){
+    .campaign p {
+        font-size: 48px;
+    }
+    .campaign strong {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .campaign p {
+        font-size: 35px;
+    }
+    .campaign {
+        margin: 250px 0 280px 0;
+    }
+    .campaign strong {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 768px){
+    .campaign p br {
+        display: none;
+    }
+    .campaign {
+        margin: 200px 0 200px 0;
+    }
+    .campaign p {
+        font-size: 30px;
+    }
+    .campaign strong {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 640px){
+    .campaign {
+        margin: 121px 0 109px 0;
+    }
+    .campaign p {
+        font-size: 17px;
+    }
+    .campaign strong {
+        font-size: 13px;
+    }
+}
+.familly {
+    background-color: rgba(151, 162, 104, 0.4);
+    padding: 155px 0 120px 0;
+    text-align: center;
+}
+.familly h2 {
+    font-family: 'SDSamliphopangche_Outline';
+    font-size: 60px;
+    text-align: center;
+    color: #425E2E;
+    margin: 0 0 82px 0; 
+}
+.familly .list ul li {
+    width: 404px;
+}
+.familly .list ul li a {
+    display: block;  
+    position: relative;/*strong의 기준이 됨*/
+}
+.familly .list ul li a .photo {
+    overflow: hidden;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+}
+.familly .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.familly .list ul li :hover .photo img {
+    transform: scale3d(1.2, 1.2 ,1);
+}
+.familly .list ul li a strong {
+    position: absolute;
+    bottom: 1.4em;
+    left: 10%;
+    font-size: 30px;
+    width: 2.6em;
+    height: 2.6em;
+    line-height: 2.6;
+    border-radius: 50%;
+    font-family: 'SDSamliphopangche_Basic';
+    color: #fff;
+}
+.familly .list ul li a p {
+    margin: 20px 0 0 0;
+    font-size: 17px;
+}
+.familly .list ul li a strong.cate1 {
+    background-color: #97A268;
+}
+.familly .list ul li a strong.cate2 {
+    background-color: #425E2E;
+}
+.familly .list .btn_wrap {
+    margin: 85px 0 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.familly .list .btn_wrap button {
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+}
+.familly .list .btn_wrap button::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.familly .list .btn_wrap button.prev::before {
+    margin-left: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_306' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect x='45' width='45' height='45' transform='rotate(90 45 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_306)'%3E%3Cpath d='M18.1875 22.5L23.4375 27.75L23.4375 17.25L18.1875 22.5ZM6.1875 22.508C6.1875 20.2527 6.61547 18.1319 7.47141 16.1456C8.32734 14.1594 9.48906 12.4317 10.9566 10.9627C12.4241 9.49328 14.1495 8.33015 16.133 7.47328C18.1167 6.61609 20.2364 6.1875 22.492 6.1875C24.7473 6.1875 26.8681 6.61547 28.8544 7.47141C30.8406 8.32734 32.5683 9.48906 34.0373 10.9566C35.5067 12.4241 36.6698 14.1495 37.5267 16.133C38.3839 18.1167 38.8125 20.2364 38.8125 22.492C38.8125 24.7473 38.3845 26.8681 37.5286 28.8544C36.6727 30.8406 35.5109 32.5683 34.0434 34.0373C32.5759 35.5067 30.8505 36.6698 28.867 37.5267C26.8833 38.3839 24.7636 38.8125 22.508 38.8125C20.2527 38.8125 18.1319 38.3845 16.1456 37.5286C14.1594 36.6727 12.4317 35.5109 10.9627 34.0434C9.49328 32.5759 8.33015 30.8505 7.47328 28.867C6.61609 26.8833 6.1875 24.7636 6.1875 22.508ZM7.5 22.5C7.5 26.6875 8.95312 30.2344 11.8594 33.1406C14.7656 36.0469 18.3125 37.5 22.5 37.5C26.6875 37.5 30.2344 36.0469 33.1406 33.1406C36.0469 30.2344 37.5 26.6875 37.5 22.5C37.5 18.3125 36.0469 14.7656 33.1406 11.8594C30.2344 8.95312 26.6875 7.5 22.5 7.5C18.3125 7.5 14.7656 8.95312 11.8594 11.8594C8.95312 14.7656 7.5 18.3125 7.5 22.5Z' fill='%23425E2E' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.familly .list .btn_wrap button.prev:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_377' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect x='45' width='45' height='45' transform='rotate(90 45 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_377)'%3E%3Cpath d='M18.1875 22.5739L23.4375 27.7849L23.4375 17.363L18.1875 22.5739ZM6.1875 22.5818C6.1875 20.3433 6.61547 18.2383 7.47141 16.2668C8.32734 14.2954 9.48906 12.5806 10.9566 11.1224C12.4241 9.66399 14.1495 8.50952 16.133 7.65902C18.1167 6.80822 20.2364 6.38281 22.492 6.38281C24.7473 6.38281 26.8681 6.8076 28.8544 7.65716C30.8406 8.50673 32.5683 9.65981 34.0373 11.1164C35.5067 12.573 36.6698 14.2856 37.5267 16.2543C38.3839 18.2233 38.8125 20.3272 38.8125 22.566C38.8125 24.8045 38.3845 26.9095 37.5286 28.881C36.6727 30.8525 35.5109 32.5673 34.0434 34.0254C32.5759 35.4839 30.8505 36.6383 28.867 37.4888C26.8833 38.3396 24.7636 38.765 22.508 38.765C20.2527 38.765 18.1319 38.3403 16.1456 37.4907C14.1594 36.6411 12.4317 35.488 10.9627 34.0315C9.49328 32.5749 8.33015 30.8623 7.47328 28.8936C6.61609 26.9246 6.1875 24.8207 6.1875 22.5818Z' fill='%23425E2E'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.familly .list .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_309' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect y='45' width='45' height='45' transform='rotate(-90 0 45)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_309)'%3E%3Cpath d='M26.8125 22.5L21.5625 17.25L21.5625 27.75L26.8125 22.5ZM38.8125 22.492C38.8125 24.7473 38.3845 26.8681 37.5286 28.8544C36.6727 30.8406 35.5109 32.5683 34.0434 34.0373C32.5759 35.5067 30.8505 36.6698 28.867 37.5267C26.8833 38.3839 24.7636 38.8125 22.508 38.8125C20.2527 38.8125 18.1319 38.3845 16.1456 37.5286C14.1594 36.6727 12.4317 35.5109 10.9627 34.0434C9.49328 32.5759 8.33016 30.8505 7.47328 28.867C6.61609 26.8833 6.1875 24.7636 6.1875 22.508C6.1875 20.2527 6.61547 18.1319 7.47141 16.1456C8.32734 14.1594 9.48906 12.4317 10.9566 10.9627C12.4241 9.49328 14.1495 8.33015 16.133 7.47328C18.1167 6.61609 20.2364 6.1875 22.492 6.1875C24.7473 6.1875 26.8681 6.61547 28.8544 7.47141C30.8406 8.32734 32.5683 9.48906 34.0373 10.9566C35.5067 12.4241 36.6698 14.1495 37.5267 16.133C38.3839 18.1167 38.8125 20.2364 38.8125 22.492ZM37.5 22.5C37.5 18.3125 36.0469 14.7656 33.1406 11.8594C30.2344 8.95313 26.6875 7.5 22.5 7.5C18.3125 7.5 14.7656 8.95313 11.8594 11.8594C8.95313 14.7656 7.5 18.3125 7.5 22.5C7.5 26.6875 8.95313 30.2344 11.8594 33.1406C14.7656 36.0469 18.3125 37.5 22.5 37.5C26.6875 37.5 30.2344 36.0469 33.1406 33.1406C36.0469 30.2344 37.5 26.6875 37.5 22.5Z' fill='%23425E2E' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.familly .list .btn_wrap button.next:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_378' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect y='45' width='45' height='45' transform='rotate(-90 0 45)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_378)'%3E%3Cpath d='M26.8125 22.5745L21.5625 17.3636L21.5625 27.7854L26.8125 22.5745ZM38.8125 22.5666C38.8125 24.8051 38.3845 26.9101 37.5286 28.8816C36.6727 30.8531 35.5109 32.5679 34.0434 34.026C32.5759 35.4844 30.8505 36.6389 28.867 37.4894C26.8833 38.3402 24.7636 38.7656 22.508 38.7656C20.2527 38.7656 18.1319 38.3408 16.1456 37.4913C14.1594 36.6417 12.4317 35.4886 10.9627 34.0321C9.49328 32.5755 8.33016 30.8628 7.47328 28.8942C6.61609 26.9252 6.1875 24.8213 6.1875 22.5824C6.1875 20.3439 6.61547 18.2389 7.47141 16.2674C8.32734 14.296 9.48906 12.5812 10.9566 11.123C12.4241 9.66458 14.1495 8.51011 16.133 7.65961C18.1167 6.80881 20.2364 6.3834 22.492 6.3834C24.7473 6.3834 26.8681 6.80819 28.8544 7.65776C30.8406 8.50732 32.5683 9.66039 34.0373 11.117C35.5067 12.5736 36.6698 14.2862 37.5267 16.2549C38.3839 18.2238 38.8125 20.3278 38.8125 22.5666Z' fill='%23425E2E'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.familly .list .btn_wrap .more {
+    width: 112px;
+    height: 37px;
+    border: 1px solid #425E2E;
+    border-radius: 50px;
+    line-height: 37px;
+    position: relative;
+    color: #425E2E;
+    display: block;
+    padding: 0 0 0 12px;
+    font-size: 20px;
+    font-family: 'SDSamliphopangche_Basic';
+    text-align: left;
+}
+.familly .list .btn_wrap .more::after {
+    position: absolute;
+    top: 7px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_314' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_314)'%3E%3Cpath d='M9.37492 10.6247H5.20825C5.03117 10.6247 4.88277 10.5647 4.76304 10.4449C4.64318 10.325 4.58325 10.1765 4.58325 9.99947C4.58325 9.82224 4.64318 9.67384 4.76304 9.55426C4.88277 9.43454 5.03117 9.37467 5.20825 9.37467H9.37492V5.20801C9.37492 5.03092 9.43485 4.88252 9.55471 4.7628C9.67457 4.64294 9.82304 4.58301 10.0001 4.58301C10.1773 4.58301 10.3258 4.64294 10.4453 4.7628C10.5651 4.88252 10.6249 5.03092 10.6249 5.20801V9.37467H14.7916C14.9687 9.37467 15.1171 9.43461 15.2368 9.55447C15.3567 9.67433 15.4166 9.8228 15.4166 9.99988C15.4166 10.1771 15.3567 10.3255 15.2368 10.4451C15.1171 10.5648 14.9687 10.6247 14.7916 10.6247H10.6249V14.7913C10.6249 14.9684 10.565 15.1168 10.4451 15.2365C10.3253 15.3564 10.1768 15.4163 9.99971 15.4163C9.82249 15.4163 9.67409 15.3564 9.5545 15.2365C9.43478 15.1168 9.37492 14.9684 9.37492 14.7913V10.6247Z' fill='%23425E2E' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.familly .list .btn_wrap .more:hover {
+    width: 112px;
+    height: 37px;
+    border: 1px solid #425E2E;
+    border-radius: 50px;
+    line-height: 37px;
+    position: relative;
+    color: #fff;
+    background-color: #425E2E;
+    display: block;
+    padding: 0 0 0 12px;
+    font-size: 20px;
+    font-family: 'SDSamliphopangche_Basic';
+}
+.familly .list .btn_wrap .more:hover:after {
+    position: absolute;
+    top: 7px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_300' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_300)'%3E%3Cpath d='M9.37492 10.6247H5.20825C5.03117 10.6247 4.88277 10.5647 4.76304 10.4449C4.64318 10.325 4.58325 10.1765 4.58325 9.99947C4.58325 9.82224 4.64318 9.67384 4.76304 9.55426C4.88277 9.43454 5.03117 9.37467 5.20825 9.37467H9.37492V5.20801C9.37492 5.03092 9.43485 4.88252 9.55471 4.7628C9.67457 4.64294 9.82304 4.58301 10.0001 4.58301C10.1773 4.58301 10.3258 4.64294 10.4453 4.7628C10.5651 4.88252 10.6249 5.03092 10.6249 5.20801V9.37467H14.7916C14.9687 9.37467 15.1171 9.43461 15.2368 9.55447C15.3567 9.67433 15.4166 9.8228 15.4166 9.99988C15.4166 10.1771 15.3567 10.3255 15.2368 10.4451C15.1171 10.5648 14.9687 10.6247 14.7916 10.6247H10.6249V14.7913C10.6249 14.9684 10.565 15.1168 10.4451 15.2365C10.3253 15.3564 10.1768 15.4163 9.99971 15.4163C9.82249 15.4163 9.67409 15.3564 9.5545 15.2365C9.43478 15.1168 9.37492 14.9684 9.37492 14.7913V10.6247Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+@media screen and (max-width: 1024px){
+    .familly h2 {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 768px){
+    .familly {
+        padding: 61px 0 50px 0;
+    }
+    .familly .list ul li {
+        width: 250px;
+    }
+    .familly h2 {
+        font-size: 30px;
+        margin: 0 0 30px 0; 
+    }
+    .familly .list ul li a strong {
+        font-size: 17px;
+        bottom: 3.4em;
+    }
+    .familly .list ul li a p {
+        margin: 20px 0 0 0;
+        font-size: 13px;
+    }
+    .familly .list .btn_wrap {
+        margin: 25px 0 32px 0;
+    }
+    .familly .list .btn_wrap button {
+        display: none;
+    }
+    .familly .list .btn_wrap .more {
+        width: 77px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 0 0 12px;
+        font-size: 14px;
+        text-align: left;
+    }
+    .familly .list .btn_wrap .more::after {
+        position: absolute;
+        top: 3px;
+        right: 5px;
+        width: 15px;
+        height: 15px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_29_314' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_29_314)'%3E%3Cpath d='M9.37492 10.6247H5.20825C5.03117 10.6247 4.88277 10.5647 4.76304 10.4449C4.64318 10.325 4.58325 10.1765 4.58325 9.99947C4.58325 9.82224 4.64318 9.67384 4.76304 9.55426C4.88277 9.43454 5.03117 9.37467 5.20825 9.37467H9.37492V5.20801C9.37492 5.03092 9.43485 4.88252 9.55471 4.7628C9.67457 4.64294 9.82304 4.58301 10.0001 4.58301C10.1773 4.58301 10.3258 4.64294 10.4453 4.7628C10.5651 4.88252 10.6249 5.03092 10.6249 5.20801V9.37467H14.7916C14.9687 9.37467 15.1171 9.43461 15.2368 9.55447C15.3567 9.67433 15.4166 9.8228 15.4166 9.99988C15.4166 10.1771 15.3567 10.3255 15.2368 10.4451C15.1171 10.5648 14.9687 10.6247 14.7916 10.6247H10.6249V14.7913C10.6249 14.9684 10.565 15.1168 10.4451 15.2365C10.3253 15.3564 10.1768 15.4163 9.99971 15.4163C9.82249 15.4163 9.67409 15.3564 9.5545 15.2365C9.43478 15.1168 9.37492 14.9684 9.37492 14.7913V10.6247Z' fill='%23425E2E' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    .familly .list .btn_wrap .more:hover {
+        width: 112px;
+        height: 37px;
+        border: 1px solid #705D3F;
+        border-radius: 50px;
+        line-height: 37px;
+        position: relative;
+        color: #fff;
+        background-color: #705D3F;
+        display: block;
+        padding: 0 0 0 12px;
+        font-size: 20px;
+        font-family: 'SDSamliphopangche_Basic';
+    }
+}
+@media screen and (max-width: 640px){
+    .familly .list ul li {
+        width: 236px;
     }
 }
 footer {
