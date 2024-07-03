@@ -559,7 +559,6 @@ header .tnb .search .search_box input[type="submit"] {
     width: 244px;
     height: 244px;
     z-index: 10;
-    mix-blend-mode: difference;
 }
 .visual .slogun img {
     width: 100%;
