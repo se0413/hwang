@@ -563,6 +563,11 @@ header .tnb .search .search_box input[type="submit"] {
 .visual .slogun img {
     width: 100%;
 }
+@media screen and (max-width: 1300px){
+    .visual .slogun {
+        display: none;
+    }
+}
 @media screen and (max-width: 1024px){
     .visual .btn_wrap {
         display: none;
@@ -578,6 +583,7 @@ header .tnb .search .search_box input[type="submit"] {
         font-size: 17px;
         margin: 0 0 0 550px;
     }
+    
 }
 @media screen and (max-width: 768px){
     .visual .btn_wrap {
