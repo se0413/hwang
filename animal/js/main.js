@@ -203,5 +203,20 @@ $(document).ready(function(){
             prevEl: '.familly .btn_wrap .prev',
         },
     });
+
+
+    /*familly site
+
+    footer .familly_site button.open  open 클래스 추가
+    footer .familly_site button.close  open 클래스 삭제
+
+    */
+
+    $('footer .familly_site button.open').on('click', function(){
+        $('footer .familly_site').addClass('open')
+    })
+    $('footer .familly_site button.close').on('click', function(){
+        $('footer .familly_site').removeClass('open')
+    })
 })
 
