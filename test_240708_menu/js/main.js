@@ -45,4 +45,31 @@ $(document).ready(function(){
             $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
         }
     })
+
+
+    /* 모바일 하위 메뉴 열고 닫기
+        모바일에서 1차 메뉴를 클릭하면 (다만 pc에서는 작동되어야함)
+            - 1차메뉴에 걸려있는 링크가 작동되면 안됨
+            - 하위 메뉴가 열려 있음(li에 opem 클래스 추가)
+            닫힌 1차메뉴를 클리하면 열리고 열린 1차 메뉴를 클릭하면 닫힘 동시에 여러개의 1차메뉴가 열릴 수 있음
+    */
+    $("header .gnb .gnb_wrap ul.depth1 > li > a").on("click", function(e){
+        if(pc_mobile == 'mobile'){
+            e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+            $(this).parent().toggleClass('open') /*toggleClass 클래스를 눌렀을때 줬다 뺐다 함*/
+        }     
+    });
+
+    /* 모바일 메뉴 버튼 작동
+        메뉴 열기를 클릭하면 header 에 menu_open 클래스가 추가, header .gnb button.btn_open
+        메뉴 닫기를 클리하면 header에 menu_open 클래스 삭제 , header .gnb button.btn_close
+    */
+   $('header .gnb button.btn_open').on('click', function(){
+        $('header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+   })
+   $('header .gnb button.btn_close').on('click', function(){
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+        $('header').removeClass('menu_open')
+    })
 })
