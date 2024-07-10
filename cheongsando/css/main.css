@@ -50,7 +50,7 @@ header .gnb ul li a {
     display: block;
 }
 header .gnb ul li a:hover {
-    color: #55B2C5;
+    color: #19815E;
 }
 header.fixed {
     backdrop-filter: blur(10px) brightness(0.9);
@@ -85,7 +85,7 @@ header.fixed {
     width: 187px;
     height: 187px;
     border-radius: 50%;/* 정사각형에 border-radius가 동그라미 */
-    background-color: #55B2C5;
+    background-color: #19815E;
     color: #fff;
     text-align: center;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -145,9 +145,9 @@ header.fixed {
 }
 .culture .more a:hover { 
     color: #fff;
-    background-color: rgba(84, 181, 197, 0.6);
+    background-color: rgba(25, 129, 94, 0.6);
     background-image: url(../images/more_white.svg);
-    border-color: rgba(84, 181, 197, 0.6);
+    border: 1px solid rgba(25, 129, 94, 0.6);
 }
 .culture .more a span {
     margin: 0 7px 0 0;
@@ -237,9 +237,9 @@ header.fixed {
 }
 .tour .more a:hover { 
     color: #fff;
-    background-color: rgba(84, 181, 197, 0.6);
+    background-color: rgba(25, 129, 94, 0.6);
     background-image: url(../images/more_white.svg);
-    border-color: rgba(84, 181, 197, 0.6);
+    border: 1px solid rgba(25, 129, 94, 0.6);
 }
 .community {
     height: 772px;
@@ -270,12 +270,12 @@ header.fixed {
 .community .news {
     width: 620px;
     height: 378px;
-    background-color: rgba(108, 185, 179, 0.2);
+    background-color: rgba(50, 173, 198, 0.2);
     border-radius: 20px;
     margin: 119px 0 0 0; 
     padding: 0px 45px;
     backdrop-filter: blur(10px);
-    color: rgba(108, 185, 179, 0.8);
+    color: rgba(255, 255, 255, 0.4);
 }
 .community .news h3 {
     font-size: 20px;
@@ -312,9 +312,8 @@ header.fixed {
     width: 140px;
     height: 132px;
     border-radius: 20px;
-    background-color: rgba(108, 185, 179, 0.2);
     backdrop-filter: blur(10px);
-    color: rgba(108, 185, 179, 0.8);
+    color: rgba(255, 255, 255, 0.4);
 }
 .community .link ul li a{
     height: 132px;
@@ -328,16 +327,16 @@ header.fixed {
     color: #fff;
 }
 .community .link ul li.link1 a {
-    background-image: url(../images/commuvity_ico1\ 0.svg);
+    background-image: url(../images/commuvity_ico10.png);
 }
 .community .link ul li.link2 a {
-    background-image: url(../images/commuvity_ico2\ 0.svg);
+    background-image: url(../images/commuvity_ico20.png);
 }
 .community .link ul li.link3 a {
-    background-image: url(../images/commuvity_ico3\ 0.svg);
+    background-image: url(../images/commuvity_ico30.png);
 }
 .community .link ul li.link4 a {
-    background-image: url(../images/commuvity_ico4\ 0.svg);
+    background-image: url(../images/commuvity_ico40.png);
 }
 .community .link ul li.link1 a:hover {
     background-image: url(../images/commuvity_ico1.svg);
