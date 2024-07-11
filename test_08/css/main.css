@@ -3,6 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-a {
+li {
     list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0px auto;
+}
+header {
+    height: 100px;
+}
+header .logo img {
+    width: 400px;
+    height: 100px;
+    
 }
