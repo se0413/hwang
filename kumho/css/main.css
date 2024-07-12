@@ -1,0 +1,30 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.visual h2 {
+    display: none; /*숨김*/
+}
+.visual ul li {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /*브라우저 높이만큼*/
+    color: #fff;
+    text-align: right;
+    min-height: 480px; /*최소높이, 브라우저 세로길이를 줄였을때 글자가 잘리는 것을 방지*/
+}
+.visual ul li.bg1 {
+    background-image: url(../images/bg1.png);
+}
+.visual ul li.bg2 {
+    background-image: url(../images/bg2.png);
+}
+.visual ul li.bg3 {
+    background-image: url(../images/bg3.png);
+}
+.visual ul li h3 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 60vh 20vh 10vh 0;
+}
