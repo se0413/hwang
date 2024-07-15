@@ -21,6 +21,16 @@ $(document).ready(function(){
         },
 
     });
-    visual_swiper.autoplay.stop();  /* 일시정지 기능 */
-    visual_swiper.autoplay.start();  /* 재생 기능 */
+
+    /* .visual .btn_wrap .btn_stop, btn_play */
+    $('.visual .btn_wrap .btn_stop').on('click', function(){
+        visual_swiper.autoplay.stop();  /* 일시정지 기능 */
+        $(this).hide()
+        $('.visual .btn_wrap .btn_play').show()
+    })
+    $('.visual .btn_wrap .btn_play').on('click', function(){
+        visual_swiper.autoplay.start();  /* 재생 기능 */
+        $(this).hide()
+        $('.visual .btn_wrap .btn_stop').show()
+    })
 })
