@@ -33,4 +33,5 @@ $(document).ready(function(){
         $(this).hide()
         $('.visual .btn_wrap .btn_stop').show()
     })
+    
 })
