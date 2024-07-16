@@ -286,22 +286,23 @@ header.fixed .logo a::before {
         top: 16px;
         left: 20px;
         color: #2d2d2d;
-        font-size: 10px;
+        font-size: 15px;
+        margin-top: 13px;
     }
     header .tnb a {
-        margin-right: 10px;
+        margin-right: 15px;
     }
     header .tnb .lang {
         display: block;
-        padding-left: 20px;
+        padding-left: 32px;
         position: relative; /*before의 정렬의 기준*/
     }
     header .tnb .lang::before {
         position: absolute;
         top: -2px;
         left: 0;
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -312,8 +313,8 @@ header.fixed .logo a::before {
         font-size: 0;
         line-height: 0;
         position: relative;
-        width: 20px;
-        height: 20px;
+        width: 36px;
+        height: 36px;
     }
     header .tnb .sns::after {
         position: absolute;
@@ -328,19 +329,20 @@ header.fixed .logo a::before {
         content: "";
     }
     header .tnb .artera {
-        width: 95px;
-        height: 19px;
+        width: 126px;
+        height: 30px;
         border: 1px solid #2d2d2d;
         border-radius: 50px;
-        padding: 3px 18px 3px 12px;
+        padding-left: 14px;
         position: relative;
+        line-height: 30px;
     }
     header .tnb .artera::after {
         position: absolute;
-        top: 3px;
+        top: 5px;
         right: 10px;
-        width: 12px;
-        height: 12px;
+        width: 18px;
+        height: 18px;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -470,12 +472,40 @@ header.fixed .logo a::before {
         height: 24px;
     }
     header .tnb {
-        top: 16px;
-        left: 20px;
+        font-size: 10px;
+        margin-top: auto;
+    }
+    header .tnb .lang {
+        display: block;
+        padding-left: 20px;
+        position: relative; /*before의 정렬의 기준*/
     }
     header .tnb .lang::before {
+        top: -2px;
+        left: 0;
         width: 18px;
         height: 18px;
+    }
+    header .tnb .sns {
+        width: 20px;
+        height: 20px;
+    }
+    header .tnb .sns::after {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    header .tnb .artera {
+        width: 95px;
+        height: 19px;
+        line-height: 19px;
+    }
+    header .tnb .artera::after {
+        top: 3px;
+        right: 10px;
+        width: 12px;
+        height: 12px;
     }
 }
 footer {
