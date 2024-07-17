@@ -16,13 +16,13 @@
     min-height: 480px; /*최소높이, 브라우저 세로길이를 줄였을때 글자가 잘리는 것을 방지*/
 }
 .visual ul li.bg1 {
-    background-image: url(../images/bg1.png);
+    background-image: url(..//images/main/bg1.png);
 }
 .visual ul li.bg2 {
-    background-image: url(../images/bg2.png);
+    background-image: url(../images/main/bg2.png);
 }
 .visual ul li.bg3 {
-    background-image: url(../images/bg3.png);
+    background-image: url(../images/main/bg3.png);
 }
 .visual ul li h3 {
     font-size: 50px;
@@ -133,7 +133,27 @@
 
 }
 @media screen and (max-width: 1024px){
-
+    .visual ul li {
+        height: 800px; /*브라우저 높이만큼*/
+        min-height: auto
+    }
+    .visual ul li h3 {
+        font-size: 35px;
+        margin: 47vh 7vh 0 0;
+    }
+    .visual .btn_wrap {
+        right: 6vh;
+        bottom: 125px;
+        z-index: 10;
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+    .visual .btn_wrap .paging .swiper-pagination-bullet { /*현재 선택되지 않은 블릿*/
+        width: 120px;
+        height: 5px;
+        border-radius: 0;
+    }
 }
 @media screen and (max-width: 768px){ /*mobile 디자인 적용*/
     .visual ul li {
@@ -142,7 +162,7 @@
     }
     .visual ul li h3 {
         font-size: 20px;
-        margin: 23vh 3vh 5vh 0;
+        margin: 24vh 3vh 5vh 0;
     }
     .visual .btn_wrap {
         position: absolute; /*swiper를 기준으로 정렬*/  
@@ -153,8 +173,12 @@
         display: flex;
         align-items: center;
     }
+    .visual .btn_wrap .btn_next,
+    .visual .btn_wrap .btn_prev {
+        display: none;
+    }
     .visual .btn_wrap .paging .swiper-pagination-bullet { /*현재 선택되지 않은 블릿*/
-        width: 75px;
+        width: 70px;
         height: 4px;
         border-radius: 0;
     }
@@ -168,4 +192,231 @@
 }
 @media screen and (max-width: 560px){
 
+}
+.biz .tit h2 {
+    font-size: 20px;
+    color: #EA0C14;
+    font-weight: 600;
+    margin-top: 146px;
+}
+.biz .tit h2 span {
+    position: relative;
+}
+.biz .tit h2 span::after {
+    position: absolute;
+    top: -11px;
+    right: -30px;
+    width: 23px;
+    height: 23px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 9.13645C0 9.45911 0.0452965 9.78743 0.175528 10.0931C0.741752 11.4857 2.16298 12.3404 3.97489 11.6159C4.41088 11.4404 16.4148 6.60609 16.4148 6.60609C16.4148 6.60609 11.6869 18.5899 11.5113 19.0371C10.8205 20.7523 11.6472 22.309 13.0571 22.8355C13.3685 22.9487 13.6913 23.0053 14.014 22.9996C15.1578 22.994 16.1714 22.3147 16.664 20.9674C16.7432 20.7636 22.6546 4.53426 22.7848 4.13801C22.8584 3.91158 23 3.36814 23 2.98887C23 2.18505 22.6999 1.42651 22.128 0.854773C21.5618 0.288698 20.82 0 20.0217 0C19.6423 0 19.3252 0.0679289 18.8496 0.220769C18.5665 0.311341 3.32374 5.98341 2.02142 6.47023C0.713446 6.95706 0 7.99297 0 9.13645Z' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.biz .tit p {
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+.biz .list ul {
+    display: flex;
+}
+.biz .list ul li {
+    width: 25%; /*4분의1*/
+    color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /*before의 기준이 됨*/
+    transition: 0.5s;
+}
+.biz .list ul li.biz1 {
+    background-image: url(../images/main/biz1.png);
+}
+.biz .list ul li.biz2 {
+    background-image: url(../images/main/biz2.png);
+}
+.biz .list ul li.biz3 {
+    background-image: url(../images/main/biz3.png);
+}
+.biz .list ul li.biz4 {
+    background-image: url(../images/main/biz4.png);
+}
+.biz .list ul li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    content: "";
+}
+.biz .list ul li a {
+    display: block;
+    height: 800px;
+    position: relative;
+    z-index: 10; /*li:before한테 준 검은색 배경때문에 글자가 뭍히는걸 방지*/
+}
+.biz .list ul li a .inner {
+    position: absolute;
+    left: 10%;
+    bottom: 10px;
+    width: 90%;
+    transition: 0.5s;
+}
+.biz .list ul li a .inner h3 {
+    font-size: 20px;
+    transition: 0.5s;
+}
+.biz .list ul li a .inner strong {
+    font-size: 30px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.biz .list ul li a .inner p {
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.5s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1024px){ /*모바일 버전일때 마우스 오버한 효과 안들어가게 따로 분리해야함*/
+    /*.biz .list ul li에 오버했을때 스타일*/
+    .biz .list ul li.on::before {
+        opacity: 0;
+    }
+    .biz .list ul li.off::before {
+        opacity: 0.4;
+    }
+    .biz .list ul li.on {
+        width: 70%;
+    }
+    /* .biz .list ul li.off {
+        width: 16%; transition 줄때는 넓이를 주지 않는게 좋음
+    } */
+    .biz .list ul li.on a .inner {
+        bottom: 70px;
+    }
+    .biz .list ul li.off .inner p {
+        opacity: 0;
+    }
+    .biz .list ul li.off a {
+        color: rgba(255, 255, 255, 0.4);
+    }
+    .biz .list ul li.off br {
+        display: block;
+    }
+    .biz .list ul li.on .inner strong {
+        font-size: 40px;
+    }
+    .biz .list ul li.on .inner p { 
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 1300px){
+    .biz .tit h2 {
+        font-size: 17px;
+    }
+    .biz .tit p {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .biz .list ul {
+        display: block;
+    }
+    .biz .list ul li {
+        width: auto; 
+    }
+    .biz .list ul li br {
+        display: none;
+    }
+    .biz .list ul li a {
+        height: 200px;
+    }
+    .biz .list ul li a .inner {
+        left: 5%;
+        bottom: 22px;
+        width: calc(100% - 10%);
+    }
+    .biz .list ul li a .inner h3 {
+        font-size: 15px;
+    }
+    .biz .list ul li a .inner strong {
+        font-size: 30px;
+    }
+    .biz .list ul li a .inner p {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+    .biz .tit h2 {
+        font-size: 13px;
+        margin-top: 70px;
+    }
+    .biz .tit p {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+    .biz .tit h2 span::after {
+        top: -3px;
+        right: -15px;
+        width: 11px;
+        height: 11px;
+    }
+    .biz .list ul {
+        display: block;
+    }
+    .biz .list ul li {
+        width: auto; 
+    }
+    .biz .list ul li br {
+        display: none;
+    }
+    .biz .list ul li a {
+        height: 100px;
+    }
+    .biz .list ul li a .inner {
+        left: 5%;
+        bottom: 12px;
+        width: calc(100% - 10%);
+    }
+    .biz .list ul li a .inner h3 {
+        font-size: 13px;
+    }
+    .biz .list ul li a .inner strong {
+        font-size: 15px;
+    }
+    .biz .list ul li a .inner p {
+        display: none;
+    }
+}
+@media screen and (max-width: 560px){}
+.news .tit h2 {
+    font-size: 20px;
+    color: #EA0C14;
+    font-weight: 600;
+    margin-top: 146px;
+}
+.news .tit h2 span {
+    position: relative;
+}
+.news .tit h2 span::after {
+    position: absolute;
+    top: -11px;
+    right: -30px;
+    width: 23px;
+    height: 23px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 9.13645C0 9.45911 0.0452965 9.78743 0.175528 10.0931C0.741752 11.4857 2.16298 12.3404 3.97489 11.6159C4.41088 11.4404 16.4148 6.60609 16.4148 6.60609C16.4148 6.60609 11.6869 18.5899 11.5113 19.0371C10.8205 20.7523 11.6472 22.309 13.0571 22.8355C13.3685 22.9487 13.6913 23.0053 14.014 22.9996C15.1578 22.994 16.1714 22.3147 16.664 20.9674C16.7432 20.7636 22.6546 4.53426 22.7848 4.13801C22.8584 3.91158 23 3.36814 23 2.98887C23 2.18505 22.6999 1.42651 22.128 0.854773C21.5618 0.288698 20.82 0 20.0217 0C19.6423 0 19.3252 0.0679289 18.8496 0.220769C18.5665 0.311341 3.32374 5.98341 2.02142 6.47023C0.713446 6.95706 0 7.99297 0 9.13645Z' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.news .tit p {
+    font-size: 40px;
+    margin-bottom: 60px;
 }

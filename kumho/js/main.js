@@ -34,4 +34,17 @@ $(document).ready(function(){
         $('.visual .btn_wrap .btn_stop').show()
     })
     
+    /*.biz .list ul li.on or off*/
+    $('.biz .list ul li').on('mouseenter', function(){ //1025부터 적용
+        if($(window).width() > 1024){
+            $('.biz .list ul li').removeClass('on')
+            $('.biz .list ul li').addClass('off')
+            $(this).removeClass('off')
+            $(this).addClass('on')
+        }
+    })
+    $('.biz .list').on('mouseleave', function(){
+        $('.biz .list ul li').removeClass('on')
+        $('.biz .list ul li').removeClass('off')
+    })
 })
