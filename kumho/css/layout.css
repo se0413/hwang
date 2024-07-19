@@ -143,7 +143,7 @@ header.fixed .logo a::before {
     }
     header .tnb .sns {
         display: block;
-        width: 36px;
+        width: 30px;
         height: 36px;
         font-size: 0;
         line-height: 0;
@@ -313,7 +313,7 @@ header.fixed .logo a::before {
         font-size: 0;
         line-height: 0;
         position: relative;
-        width: 36px;
+        width: 30px;
         height: 36px;
     }
     header .tnb .sns::after {
@@ -509,5 +509,109 @@ header.fixed .logo a::before {
     }
 }
 footer {
-    height: 200vh;
+    background-color: #3D3D3D;
+    color: rgba(255, 255, 255, 0.6);
+}
+footer .wrapper {
+    position: relative;
+    padding: 72px 0 112px 0;
+}
+footer .familly_site {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 167px;
+    height: auto;
+    margin-top: 72px;
+}
+footer .familly_site button {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    padding: 9px 50px 9px 20px;
+    position: relative;
+}
+footer .familly_site button::after {
+    position: absolute;
+    top: 7px;
+    right: 17px;
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .familly_site button.familly_open::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_49_299' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect x='24' width='24' height='24' transform='rotate(90 24 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_49_299)'%3E%3Cpath d='M6 14L12 8L18 14L16.6 15.4L12 10.8L7.4 15.4L6 14Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .familly_site.open button.familly_open {
+    display: none;
+}
+footer .familly_site button.familly_close {
+    display: none;
+}
+footer .familly_site.open button.familly_close {
+    display: block;
+}
+footer .familly_site button.familly_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_142_13' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect y='24' width='24' height='24' transform='rotate(-90 0 24)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_142_13)'%3E%3Cpath d='M18 10L12 16L6 10L7.4 8.6L12 13.2L16.6 8.6L18 10Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .familly_site ul {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    width: 100%;
+    text-align: center;
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 242px;
+    background-color: #3d3d3d;
+}
+footer .familly_site ul li a {
+    display: block;
+    padding: 10px 15px;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin-right: 36px;
+    position: relative;
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    top: 6px;
+    right: -20px;
+    width: 1px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    content: "";
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 26px 0 0 0 ;
+}
+@media screen and (max-width: 768px){
+    footer .wrapper {
+        padding: 33px 0 36px 0;
+    }
+    footer .familly_site {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: auto;
+        height: auto;
+        margin-top: 30px;
+    }
+    footer .f_nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    footer .copyright {
+        align-items: center;
+    }
 }

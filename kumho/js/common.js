@@ -74,4 +74,14 @@ $(document).ready(function(){
         $('header').removeClass('menu_open')
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
+
+    //footer famillysite
+    $('footer .familly_site button.familly_open').on('click', function(){
+        $('footer .familly_site').addClass('open')
+        $('footer .familly_site ul').slideDown()
+    })
+    $('footer .familly_site button.familly_close').on('click', function(){
+        $('footer .familly_site').removeClass('open')
+        $('footer .familly_site ul').slideUp()
+    })
 })
