@@ -1,4 +1,26 @@
 /*header 와 footer 처럼 page에 공통으로 나타나는 요소*/
+
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: -100px; /*포커스가 될때만 나타나야함, 위에 숨겨져 있어야함*/
+    width: 100%;
+    z-index: 9999999999999999999999999999999999;/*꼭 맨 상단*/
+}
+.skip_nav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #3D3D3D;
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+}
+.skip_nav a:focus {
+    top: 100px;
+}
 header {
     position: absolute;
     left: 0;
@@ -564,7 +586,7 @@ footer .familly_site ul {
     display: none;
     position: absolute;
     right: 0;
-    bottom: 242px;
+    bottom: 47px;
     background-color: #3d3d3d;
 }
 footer .familly_site ul li a {
@@ -595,6 +617,9 @@ footer .copyright {
     margin: 26px 0 0 0 ;
 }
 @media screen and (max-width: 768px){
+    footer .f_nav ul {
+        justify-content: space-between;
+    }
     footer .wrapper {
         padding: 33px 0 36px 0;
     }
@@ -605,6 +630,10 @@ footer .copyright {
         width: auto;
         height: auto;
         margin-top: 30px;
+    }
+    footer .familly_site button {
+        width: 100%;
+        padding: 10px 0;
     }
     footer .f_nav ul {
         margin-top: 20px;
