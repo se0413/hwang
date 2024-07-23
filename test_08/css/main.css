@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,19 +6,26 @@
 li {
     list-style: none;
 }
-a{
-    color: inherit;
+a {
     text-decoration: none;
+    color: inherit;
 }
 .wrapper {
     width: 1200px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 header {
     height: 100px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
-header .logo img {
-    width: 400px;
+header .gnb .depth1 {
+    display: flex;
+}
+header .gnb .depth1 > li > a {
+    display: block;
+    width: 150px;
     height: 100px;
-    
+    line-height: 100px;
 }

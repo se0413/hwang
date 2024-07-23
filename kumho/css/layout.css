@@ -644,3 +644,132 @@ footer .copyright {
         align-items: center;
     }
 }
+
+/*서브페이지 레이아웃 코딩*/
+.sub_visual { /*클래스가 빠질때를 대비해 넣어주는 것*/
+    height: 500px;
+    background: url(../images/common/sub_visual1.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: right;
+}
+.sub_visual.bg1 {
+    background-image: url(../images/common/sub_visual1.png);
+}
+.sub_visual.bg2 {
+    background-image: url(../images/common/sub_visual2.png);
+}
+.sub_visual.bg3 {
+    background-image: url(../images/common/sub_visual3.png);
+}
+.sub_visual.bg4 {
+    background-image: url(../images/common/sub_visual4.png);
+}
+.sub_visual.bg5 {
+    background-image: url(../images/common/sub_visual5.png);
+}
+.sub_visual strong {
+    display: block;
+    font-size: 50px;
+    font-weight: 600;
+    padding: 290px 0 0 0;
+}
+.sub_visual p {
+    font-weight: 400;
+}
+.sub_menu {
+    background-color: #f7f7f7;
+    color: #2d2d2d;
+    height: 70px;
+}
+.sub_menu .wrapper {
+    display: flex;
+    justify-content: space-between;
+    line-height: 70px;
+}
+.sub_menu .lnb ul {
+    display: flex;
+}
+.sub_menu .lnb ul li a {
+    display: block;
+    padding: 0 19px;
+}
+.sub_menu .lnb ul li.active a,
+.sub_menu .lnb ul li a:hover {
+    font-weight: 600;
+    color: #EA0C14;
+    position: relative;
+}
+.sub_menu .lnb ul li.active a::after,
+.sub_menu .lnb ul li a:hover::after {
+    position: absolute;
+    right: 6px;
+    top: 20px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #EA0C14;
+    content: "";
+}
+.sub_menu .lnb ul li:first-child a {
+    padding-left: 0;
+}
+.sub_menu .breadcrumb ol {
+    display: flex;
+}
+.sub_menu .breadcrumb ol li {
+    margin-right: 25px;
+    position: relative;
+}
+.sub_menu .breadcrumb ol li::after {
+    position: absolute;
+    right: -20px;
+    top: 25px;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_152_295' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_152_295)'%3E%3Cpath d='M8.33301 14.1673V5.83398L12.4997 10.0007L8.33301 14.1673Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .breadcrumb ol li:last-child {
+    margin-right: 0;
+}
+.sub_menu .breadcrumb ol li:last-child:after {
+    display: none;
+}
+.sub_menu .breadcrumb ol li a {
+    display: block;
+}
+.sub_menu .breadcrumb ol li.home a {
+    font-size: 0;
+    line-height: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.sub_menu .breadcrumb ol li.home a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px; /*a태그랑 같이 위치를 내려야함 top을 움직이지 말고 높이를 행간이랑 동일하게 주면 가운데로 옴*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_152_289' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_152_289)'%3E%3Cmask id='mask1_152_289' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask1_152_289)'%3E%3Cpath d='M5.00033 15.8335H8.0772V10.9298H11.9235V15.8335H15.0003V8.33352L10.0003 4.55143L5.00033 8.33352V15.8335ZM4.16699 16.6668V7.91685L10.0003 3.50977L15.8337 7.91685V16.6668H11.0901V11.7631H8.91053V16.6668H4.16699Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .breadcrumb ol li.now a {
+    font-weight: 600;
+}
+.sub_contents .sub_title h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #EA0C14;
+    margin-top: 145px;
+}
+.sub_contents .sub_title p {
+    font-size: 30px;
+    font-weight: 600;
+}
