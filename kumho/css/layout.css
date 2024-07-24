@@ -820,7 +820,7 @@ footer .copyright {
     }
     .sub_menu .wrapper::-webkit-scrollbar {
         width: 3px;
-        height: 0px;
+        height: 0px; /*안보이게 해놈*/
         background-color: transparent; /*투명*/
     }
     .sub_menu .wrapper::-webkit-scrollbar-thumb {
@@ -836,6 +836,7 @@ footer .copyright {
     .sub_menu .lnb ul li a {
         display: block;
         padding: 0 15px;
+        white-space: nowrap; /*모바일에서 사이즈 줄일때 줄바꿈 X*/
     }
     .sub_menu .lnb ul li.active a::after,
     .sub_menu .lnb ul li a:hover::after {
