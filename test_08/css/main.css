@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    color: #333;
+    background-color: #fff;
+    font-family: '맑은고딕';
+    font-size: 15px;
+}
 li {
     list-style: none;
 }
@@ -13,19 +19,129 @@ a {
 .wrapper {
     width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 header {
     height: 100px;
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
 }
-header .gnb .depth1 {
+.gnb .depth1 {
     display: flex;
+    position: absolute;
+    right: 0;
+    top: 25px;
 }
-header .gnb .depth1 > li > a {
+.gnb .depth1 > li > a {
     display: block;
     width: 150px;
-    height: 100px;
-    line-height: 100px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: #3d3d3d;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+.gnb .depth1 > li.on > a {
+    background-color: #ddd;
+    color: #3d3d3d;
+}
+.gnb .depth2 {
+    display: none;
+}
+.gnb .depth1 > li.on > .depth2 {
+    display: block;
+    position: relative;
+    z-index: 3;
+}
+.gnb .depth2 > li > a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #3d3d3d; 
+    color: #fff; 
+}
+.gnb .depth2 > li > a:hover{
+    background-color: #ddd;
+    color: #333;
+    text-decoration: underline;
+}
+.visual {
+    width: 1200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.visual ul li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.visual ul li.active {
+    z-index: 2;
+    opacity: 1;
+}
+.container {
+    margin: 5px 0;
+    display: flex;
+}
+.container .borad {
+    width: 390px;
+    height: 190px;
+    position: relative;
+}
+.borad > ul {
+    display: flex;
+}
+.borad > ul > li > .detail {
+    position: absolute;
+    left: 0;
+    top: 42px;
+}
+.borad button {
+    border: 0;
+    padding: 5px 10px;
+    background-color: #ddd;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    position: relative;
+}
+.borad button::before {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    border-bottom: 2px solid #ddd;
+    height: 2px;
+    width: 290px;
+    content: "";
+}
+.borad .notice > ul > li.cloror {
+    background-color: #ddd;
+}
+.borad .notice > ul > li a {
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+}
+.borad .notice > ul > li a:hover {
+    text-decoration: underline;
+}
+.container .banner {
+    width: 390px;
+    height: 190px;
+    margin: 0 10px;
+}
+.container .link {
+    width: 390px;
+    height: 190px;
 }
