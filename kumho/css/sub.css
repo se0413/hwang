@@ -169,6 +169,9 @@
     padding-left: calc(50% + 56px);
 }
 .cts_history .history_list .year_wrap.left {
+    padding-right: calc(50% + 56px);
+}
+.cts_history .history_list .year_wrap.left {
     text-align: right;
 }
 .cts_history .history_list .year_wrap.left ul li {
