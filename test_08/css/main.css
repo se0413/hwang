@@ -106,16 +106,6 @@ header {
     background-color: #3d3d33;
     color: #fff;
 }
-.borad > ul > li > .detail {
-    position: absolute;
-    left: 0;
-    top: 42px;
-    width: 100%;
-    display: none;
-}
-.borad > ul > li.on > .detail {
-    display: block;
-}
 .borad button {
     border: 0;
     padding: 5px 10px;
@@ -134,6 +124,16 @@ header {
     width: 290px;
     content: "";
 }
+.borad > ul > li > .detail {
+    position: absolute;
+    left: 0;
+    top: 42px;
+    width: 100%;
+    display: none;
+}
+.borad > ul > li.on > .detail {
+    display: block;
+}
 .borad .notice > ul > li.cloror {
     background-color: #ddd;
 }
@@ -150,6 +150,9 @@ header {
     display: flex;
     justify-content: space-around;
 }
+.borad .gallery li a:hover {
+    opacity: 0.5;
+}
 .container .banner {
     width: 390px;
     height: 190px;
@@ -158,4 +161,32 @@ header {
 .container .link {
     width: 390px;
     height: 190px;
+}
+.popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px ;
+    background-color: #ddd;
+    z-index: 10;
+    display: none;
+}
+.popup strong {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+.popup p {
+    margin-bottom: 10px;
+}
+.popup .close button {
+    border: 0;
+    padding: 5px;
+    background-color: #3d3d33;
+    color: #fff;
+    float: right;
+    cursor: pointer;
 }

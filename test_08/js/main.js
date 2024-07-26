@@ -21,4 +21,18 @@ $(document).ready(function(){
         $('.visual ul li').eq(idx-1).addClass('active')
     },3000)
 
+    $('.borad > ul > li').on('click', function(){
+        $(this).removeClass('on')
+        $(this).addClass('on')
+    })
+    $('.borad > ul > li button ').on('click', function(){
+        $('.borad > ul > li').removeClass('on')
+    })
+
+    $('.popup_layer').on('click', function(){
+        $('.popup').show()
+    })
+    $('.close').on('click', function(){
+        $('.popup').hide()
+    })
 })
