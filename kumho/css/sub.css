@@ -338,7 +338,7 @@
     background-color: #EA0C14;
     border-radius: 50px;
     color: #fff;
-    font-weight: 20px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.8;
     position: absolute;
@@ -588,7 +588,7 @@
     }
     .kumho_info .location_link button {
         padding: 2px 33px 2px 16px;
-        font-weight: 13px;
+        font-size: 13px;
         top: -48px;
     }
     .kumho_info .location_link button span {
