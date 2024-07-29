@@ -351,7 +351,7 @@
 .kumho_info .location_link span::after {
     position: absolute;
     left: 139px;
-    top: 5px;
+    top: 8px;
     width: 7px;
     height: 12px;
     background-position: center center;
