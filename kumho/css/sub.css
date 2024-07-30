@@ -149,7 +149,7 @@
 .cts_history .history_list::before {
     position: absolute;
     left: 50%;
-    top: 61px;
+    top: 20px;
     width: 5px;
     height: calc(100% - 61px);
     background-color: #f4f4f4;
@@ -159,7 +159,7 @@
     margin-bottom: 67px;
 }
 .cts_history .history_list .year_wrap:last-child {
-    margin-bottom: none;
+    margin-bottom: 0;
     position: relative;
 }
 .cts_history .history_list .year_wrap:last-child::before{
@@ -259,7 +259,6 @@
         height: calc(100% - 7px);
     }
     .cts_history .history_list .year_wrap:last-child {
-        margin-bottom: none;
         position: relative;
     }
     .cts_history .history_list .year_wrap:last-child::before{
