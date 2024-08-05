@@ -27,7 +27,7 @@
 .visual ul li h3 {
     font-size: 50px;
     font-weight: 600;
-    margin: 60vh 20vh 10vh 0;
+    margin: 550px 20vh 0 0;
 }
 .visual .btn_wrap {
     position: absolute; /*swiper를 기준으로 정렬*/  
@@ -139,7 +139,7 @@
     }
     .visual ul li h3 {
         font-size: 35px;
-        margin: 47vh 7vh 0 0;
+        margin: 470px 7vh 0 0;
     }
     .visual .btn_wrap {
         right: 6vh;
@@ -162,7 +162,7 @@
     }
     .visual ul li h3 {
         font-size: 20px;
-        margin: 24vh 3vh 5vh 0;
+        margin: 240px 3vh 0 0;
     }
     .visual .btn_wrap {
         position: absolute; /*swiper를 기준으로 정렬*/  
