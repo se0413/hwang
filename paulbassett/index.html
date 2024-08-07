@@ -15,15 +15,47 @@
         <a href="#skip_nav">대메뉴 바로가기</a>
     </div>
     <div id="wrap">
-        <header></header>
+        <header>
+            <div class="wrapper"></div>
+        </header>
         <main class="container" id="skip_contents">
-            <section class="visual_popup"></section>
-            <section class="menu"></section>
-            <section class="brand"></section>
-            <section class="brand"></section>
-            <section class="md"></section>
+            <section class="visual_popup">
+                <div class="wrapper"></div>
+            </section>
+            <section class="menu">
+                <div class="wrapper"></div>
+            </section>
+            <section class="brand">
+                <div class="wrapper"></div>
+            </section>
+            <section class="brand">
+                <div class="wrapper"></div>
+            </section>
+            <section class="md">
+                <div class="wrapper"></div>
+            </section>
         </main>
-        <aside class="quick"></aside>
+        <aside class="quick">
+            <button title="퀵메뉴 열기" class="open">Quick</button>
+            <div class="quick_ctn">
+                <ul>
+                    <!--다른 페이지 이동은 a, jquery를 작동 시키는 태그는 button-->
+                    <li class="q01">
+                        <a href="#n"><span>Mobile</span></a>
+                    </li>
+                    <li class="q02">
+                        <a href="#n"><span>Event</span></a>
+                    </li>
+                    <li class="q03">
+                        <a href="#n"><span>e-shop</span></a>
+                    </li>
+                    <li class="q04">
+                        <button class="top"><span>Top</span></button>
+                    </li>
+                </ul>
+            </div>
+            <button title="퀵메뉴 닫기" class="close">닫기</button>
+        </aside>
         <footer></footer>
     </div>
 </body>
