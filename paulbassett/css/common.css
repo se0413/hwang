@@ -57,6 +57,7 @@ button:focus {
     40px -2.667rem
     35px - 2.333rem
     30px - 2rem
+    25px - 1.667rem
     15px - 1rem
 
     13px 일때
@@ -67,7 +68,11 @@ button:focus {
     --txt-size-tit1 : 8rem;
     --txt-color-tit : #2d2d2d;
     --txt-size-tit2 : 2.667rem;
+    --txt-size-tit3 : 1.667rem;
     --txt-color-brown : #231815;
     --txt-color-gray : #666;
     --txt-color-choco : #3e2a2f;
+    --txt-color-main : #e80a4d;
+
+    
 }

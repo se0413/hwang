@@ -337,7 +337,7 @@
 .kumho_info .location_link {
     position: relative;
 }
-.kumho_info .location_link button {
+.kumho_info .location_link a {
     border: 0;
     padding: 6px 50px 6px 30px;
     background-color: #EA0C14;
@@ -350,7 +350,7 @@
     right: 0;
     top: -94px;
 }
-.kumho_info .location_link button span {
+.kumho_info .location_link a span {
     position: relative;
 }
 .kumho_info .location_link span::after {
@@ -422,7 +422,7 @@
     font-size: 15px;
     margin: 10px 0;
 }
-.kumho_info .call .artera_link button {
+.kumho_info .call .artera_link a {
     border: 0;
     padding: 6px 50px 6px 30px;
     background-color: rgba(221, 221, 221, 0.4);
@@ -431,15 +431,14 @@
     line-height: 1.8;
     color: #3d3d3d;
     font-size: 15px;
-}
-.kumho_info .call .artera_link button span {
     display: block;
     position: relative;
+    width: 250px;
 }
-.kumho_info .call .artera_link span::after {
+.kumho_info .call .artera_link a::after {
     position: absolute;
-    left: 163px;
-    top: 8px;
+    left: 205px;
+    top: 13px;
     width: 7px;
     height: 12px;
     background-position: center center;
@@ -591,12 +590,12 @@
     .kumho_info .location_link {
         position: relative;
     }
-    .kumho_info .location_link button {
+    .kumho_info .location_link a {
         padding: 2px 33px 2px 16px;
         font-size: 13px;
         top: -48px;
     }
-    .kumho_info .location_link button span {
+    .kumho_info .location_link a span {
         position: relative;
     }
     .kumho_info .location_link span::after {
@@ -647,11 +646,11 @@
         font-size: 13px;
         margin: 6px 0;
     }
-    .kumho_info .call .artera_link button {
-        padding: 3px 30px 3px 15px;
+    .kumho_info .call .artera_link a {
+        padding: 3px 30px 3px 15px; 
         font-size: 13px;
     }
-    .kumho_info .call .artera_link button span {
+    .kumho_info .call .artera_link a span {
         display: block;
         position: relative;
     }
