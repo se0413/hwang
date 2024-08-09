@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+strong {
+    font-weight: 400;
+}
+body {
+    font-family: '맑은고딕';
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+    background-color: #fff;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+header h1 {
+    padding-top: 25px;
+}
+header .gnb .depth1 {
+    display: flex;
+}
+header .gnb .depth1 > li {
+    width: 150px;
+    text-align: center;
+    position: relative;
+}
+header .gnb .depth1 > li > a {
+    font-size: 20px;
+    display: block;
+    line-height: 100px;
+    font-weight: bold;
+}
+header .gnb .depth1 > li.over .depth2 {
+    display: block;
+}
+header .gnb .depth1 > li > a:hover {
+    color: #0066ad;
+}
+header .gnb .depth2 {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    display: none;
+}
+header .gnb .depth2 > li {
+    width: 150px;
+}
+header .gnb .depth2 > li > a {
+    display: block;
+    line-height: 50px;
+    background-color: #ddd;
+}
+header .gnb .depth2 > li > a:hover {
+    background-color: #30a3f3;
+    color: #fff;
+    font-weight: bold;
+}
+.visual {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.visual ul li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.visual ul li.active {
+    z-index: 2;
+    opacity: 1;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding-top: 20px;
+}
+.news {
+    width: 400px;
+    position: relative;
+}
+.news .tab {
+    display: flex;
+}
+.news .tab button {
+    background-color: #ededed;
+    font-size: 18px;
+    border: 0;
+    padding: 5px 10px;
+}
+.news .tab > li.active > button {
+    background-color: #0066ad;
+    color: #fff;
+    font-weight: bold;
+}
+.news .tab > li.active .detail {
+    display: block;
+}
+.news .detail {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+}
+.news .notice .detail > ul > li > a {
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+}
+.news .notice > ul > li > a span {
+    color: rgba(0, 0, 0, 0.6);
+}
+.news .notice .detail > ul > li > a:hover {
+    text-decoration: underline;
+}
+.news .gallery .detail ul {
+    display: flex; 
+    justify-content: space-between;
+}
+.news .gallery .detail ul > li a:hover {
+    opacity: 0.5;
+}
+.banner {
+    width: 380px;
+    background-color: #333;
+}
+.link {
+    width: 380px;
+    background-color: #333;
+}
+.popup {
+    position: absolute;
+    left: 35%;
+    top: 200px;
+    width: 500px;
+    background-color: #0066ad;
+    padding: 20px 40px;
+    color: #fff;
+    z-index: 101;
+    display: none;
+}
+.popup h2 {
+    font-size: 22px;
+}
+.popup p {
+    margin: 30px 0;
+}
+.popup button {
+    background-color: #fff;
+    border: 0;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+footer {
+    height: 100px;
+    padding-top: 20px;
+    background-color: #3d3d3d;
+    color: #fff;
+    display: flex;
+}
+footer .f_logo {
+    margin: 0 20px ;
+}
+footer .f_logo img {
+    width: 150px;
+}
+footer .f_nav {
+    display: flex;
+}
+footer .f_nav li {
+    margin: 0 10px 0 0;
+}
+footer .copy {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.6);
+}
