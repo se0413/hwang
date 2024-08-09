@@ -25,6 +25,20 @@ header {
     position: relative;
     z-index: 100;
 }
+header .header_sub .logo {
+    position: absolute;
+    left: 50%;
+    top: -90px;
+    transform: translate(-50%, 0);
+}
+header .header_sub .logo a {
+    display: block;
+    width: 107px;
+    height: 85px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/main/logo.png) no-repeat center center / contain; /*svg 코드로 입력시 bg-image 로 주고 위치 반복 따로 줌*/
+}
 @media screen and (min-width: 1025px){ /*1025px 이상*/
     header .header_top {
         height: 100px;
@@ -62,36 +76,45 @@ header {
         height: 95px;
         position: relative;
     }
-    header .header_sub .logo {
-        position: absolute;
-        left: 50%;
-        top: -90px;
-        transform: translate(-50%, 0);
+    header .header_sub .gnb .gnb_open,
+    header .header_sub .gnb .gnb_close {
+        display: none; /*숨김*/
     }
-    header .header_sub .logo a {
-        display: block;
-        width: 107px;
-        height: 85px;
-        font-size: 0;
-        line-height: 0;
-        background: url(../images/main/logo.png) no-repeat center center / contain; /*svg 코드로 입력시 bg-image 로 주고 위치 반복 따로 줌*/
-    }
-    header .header_sub .gnb .depth1 {
+    header .header_sub .gnb .gnb_wrap .depth1 {
         display: flex;
     }
-    header .header_sub .gnb .depth1 > li {
+    header .header_sub .gnb .gnb_wrap .depth1 > li {
         width: 16.66%; /*100 나누기 6, 소수점은 반올림 하지말고 자르기*/
+        min-width: 132px;
         position: relative;
     }
-    header .header_sub .gnb .depth1 > li > a {
+    header .header_sub .gnb .gnb_wrap .depth1 > li > a {
         display: block;
         font-family: 'Ownglyph_meetme-Rg';
         text-align: center;
         font-size: var(--txt-size-tit3);
         color: var(--txt-color-tit);
         line-height: 95px;
+        white-space: nowrap;
     }
-    header .header_sub .gnb .depth2 { /*header 밖에 존재, position:absolute 로 배치해야함*/
+    header .header_sub .gnb .gnb_wrap .depth1 > li.over > a {
+        color: var(--txt-color-main);
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.over > a > span {
+        position: relative;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.over > a > span::after {
+        position: absolute;
+        left: 50%;
+        bottom: -37px;
+        width: 100%;
+        height: 2px;
+        transform: translate(-50%, 0);
+        background-color: var(--txt-color-main);
+        content: "";
+        z-index: 1;
+    }
+    header .header_sub .gnb .gnb_wrap .depth2 { /*header 밖에 존재, position:absolute 로 배치해야함*/
         font-family: 'Ownglyph_meetme-Rg';
         text-align: center;
         color: var(--txt-color-tit);
@@ -100,15 +123,154 @@ header {
         top: 95px;
         width: 100%;
         display: none;
+        line-height: 2;
+        padding-top: 20px;
+        font-size: var(--txt-size-tit4);
+    }
+    header .header_sub .gnb .gnb_wrap .depth2 > li > a {
+        display: block;
+        white-space: nowrap;
+    }
+    header .header_sub .gnb .gnb_wrap .depth2 > li > a:hover {
+        color: var(--txt-color-main);
+        letter-spacing: 0.3px;
+    }
+
+    /*pc header.menu_over*/
+    header.menu_over .header_sub .gnb .gnb_wrap .depth2 {
+        display: block;
+    }
+    header.menu_over::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 450px;
+        background-color: #fff;
+        content: "";
+        box-shadow: 0 0 10px rgba(0, 0, 0 ,0.2);
+        z-index: -1;
+    }
+    header.menu_over::after {
+        position: absolute;
+        left: 0;
+        top: 195px;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        content: "";
+    }
+
+    /*pc header.fixed*/
+    header.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0 ,0.2);
+    }
+    header.menu_over.fixed::after {
+        top: 95px;
+    }
+    header.menu_over.fixed::before {
+        height: 350px;
+    }
+    header.fixed+.container {
+        margin-top: 95px;
+    }
+    header.fixed .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+    header.fixed .header_top {
+        display: none;
+    }
+    header.fixed .header_sub .logo {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: translate(0, 0);
+        margin-top: 5px;
+    }
+    header.fixed .header_sub {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 /*모바일 버전*/
 @media screen and (max-width: 1024px){
+    header {
+        height: 50px;
+    }
     header .header_top {
         display: none;
     }
-    header .header_sub .gnb {
+    header .header_sub .gnb .gnb_wrap {
         display: none;
     }
+    header .header_sub .gnb .gnb_open,
+    header .header_sub .gnb .gnb_close {
+        position: absolute; /*header를 기준으로 정렬*/
+        right: 0;
+        top :0;
+        width: 50px;
+        height: 100%;
+        font-size: 0;
+        line-height: 0;
+    }
+    header .header_sub .gnb .gnb_open::before,
+    header .header_sub .gnb .gnb_close::before {
+        position: absolute;
+        left: 50;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+    }
+    header .header_sub .gnb .gnb_open::before {
+        width: 16px;
+        height: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px'%3E%3Cpath fill-rule='evenodd' fill='rgb(232, 10, 77)' d='M14.000,-0.000 C15.105,-0.000 16.000,0.895 16.000,2.000 C16.000,3.105 15.105,4.000 14.000,4.000 C12.895,4.000 11.1000,3.105 11.1000,2.000 C11.1000,0.895 12.895,-0.000 14.000,-0.000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(232, 10, 77)' d='M14.000,5.1000 C15.105,5.1000 16.000,6.895 16.000,8.000 C16.000,9.105 15.105,10.000 14.000,10.000 C12.895,10.000 11.1000,9.105 11.1000,8.000 C11.1000,6.895 12.895,5.1000 14.000,5.1000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(232, 10, 77)' d='M14.000,11.1000 C15.105,11.1000 16.000,12.895 16.000,14.000 C16.000,15.105 15.105,16.000 14.000,16.000 C12.895,16.000 11.1000,15.105 11.1000,14.000 C11.1000,12.895 12.895,11.1000 14.000,11.1000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(232, 10, 77)' d='M8.000,11.1000 C9.105,11.1000 10.000,12.895 10.000,14.000 C10.000,15.105 9.105,16.000 8.000,16.000 C6.895,16.000 5.1000,15.105 5.1000,14.000 C5.1000,12.895 6.895,11.1000 8.000,11.1000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(232, 10, 77)' d='M8.000,5.1000 C9.105,5.1000 10.000,6.895 10.000,8.000 C10.000,9.105 9.105,10.000 8.000,10.000 C6.895,10.000 5.1000,9.105 5.1000,8.000 C5.1000,6.895 6.895,5.1000 8.000,5.1000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(232, 10, 77)' d='M8.000,-0.000 C9.105,-0.000 10.000,0.895 10.000,2.000 C10.000,3.105 9.105,4.000 8.000,4.000 C6.895,4.000 5.1000,3.105 5.1000,2.000 C5.1000,0.895 6.895,-0.000 8.000,-0.000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(232, 10, 77)' d='M2.000,-0.000 C3.105,-0.000 4.000,0.895 4.000,2.000 C4.000,3.105 3.105,4.000 2.000,4.000 C0.895,4.000 -0.000,3.105 -0.000,2.000 C-0.000,0.895 0.895,-0.000 2.000,-0.000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(232, 10, 77)' d='M2.000,5.1000 C3.105,5.1000 4.000,6.895 4.000,8.000 C4.000,9.105 3.105,10.000 2.000,10.000 C0.895,10.000 -0.000,9.105 -0.000,8.000 C-0.000,6.895 0.895,5.1000 2.000,5.1000 Z'/%3E%3Cpath fill-rule='evenodd' fill='rgb(232, 10, 77)' d='M2.000,11.1000 C3.105,11.1000 4.000,12.895 4.000,14.000 C4.000,15.105 3.105,16.000 2.000,16.000 C0.895,16.000 -0.000,15.105 -0.000,14.000 C-0.000,12.895 0.895,11.1000 2.000,11.1000 Z'/%3E%3C/svg%3E");
+    }
+    header .header_sub .gnb .gnb_close {
+        display: none;
+    }
+    header .header_sub .gnb .gnb_close::before {
+        width: 17px;
+        height: 17px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px'%3E%3Cpath fill-rule='evenodd' stroke='rgb(0, 0, 0)' stroke-width='2px' stroke-linecap='round' stroke-linejoin='round' fill='none' d='M2.646,3.354 L3.354,2.646 L16.354,15.646 L15.646,16.354 L2.646,3.354 Z'/%3E%3Cpath fill-rule='evenodd' stroke='rgb(0, 0, 0)' stroke-width='2px' stroke-linecap='round' stroke-linejoin='round' fill='none' d='M15.269,3.010 L15.990,3.731 L2.731,16.990 L2.010,16.269 L15.269,3.010 Z'/%3E%3C/svg%3E");
+    }
+    header .header_sub .logo {
+        position: absolute;
+        left: 30px;
+        top: 10px;
+    }
+    header .header_sub .logo a {
+        width: 38px;
+        height: 30px;
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/main/logo.png) no-repeat center center / contain; /*svg 코드로 입력시 bg-image 로 주고 위치 반복 따로 줌*/
+    }
+
+    /*mobile header.fixed*/
+    header.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0 ,0.2);
+    }
+    header.fixed + .container {
+        margin-top: 50px;
+    }
+}
+
+footer {
+    margin-top: 1000px;
 }
