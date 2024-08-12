@@ -13,7 +13,7 @@ $(document).ready(function(){
     $('.menu .list .popup').slick({
         dots: false, //하단 페이지 버튼 (true, false)
 	    arrows: false,  //다음, 이전팝업 (true, false)
-        slidesToShow: 6, //한번에 보일 팝업 수
+        slidesToShow: 5, //한번에 보일 팝업 수
         swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
         centerMode: true, //가운데정렬(가운데가 1번)
         responsive: [
@@ -26,7 +26,7 @@ $(document).ready(function(){
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 4
+                slidesToShow: 3
               }
             },
             {
