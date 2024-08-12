@@ -63,8 +63,35 @@ $(document).ready(function(){
         $('header').removeClass('menu_over')
         $('header .header_sub .gnb .gnb_wrap .depth1 > li').removeClass('over')
     })
-    $('header .header_sub .gnb .gnb_wrap .depth2 > li:last-child ul.depth2 > li:last-child').on('focusout', function(){
+    $('header .header_sub .gnb .gnb_wrap .depth2 > li:last-child ul.depth2 > li:last-child > a').on('focusout', function(){
         $('header').removeClass('menu_over')
         $('header .header_sub .gnb .gnb_wrap .depth1 > li').removeClass('over')
     })
+
+    /*
+        mobile 버전 메뉴
+        header .header_sub .gnb .gnb_wrap .depth1 > li > a 를 클릭시
+        1차의 href 값을 무력화 (클릭해도 해당페이지를 이동되지 않게 함) (ex 1차메뉴 누르면 2차메뉴중 하나 골라서 이동하게 했던것)
+        li 에 open 클래스를 줌
+        열려있는 메뉴를 클릭하면 닫힘
+        닫힌 메뉴를 클릭하면 열림
+    */
+
+        $('header .header_sub .gnb .gnb_wrap .depth1 > li > a ').on('click', function(e){
+            if(pc_mobile == 'mobile'){ //모바일에서만 작동
+                e.preventDefault(); //1차의 href 값을 무력화 (클릭해도 해당페이지를 이동되지 않게 함)
+                $(this).parent().toggleClass('open')
+            }
+        })
+
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+        //스크롤금지
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+        //스크롤금지 해제
+        $('header .header_sub .gnb .gnb_open').on('click', function(){
+            $('header').addClass('menu_open')
+        })
+        $('header .header_sub .gnb .gnb_close').on('click', function(){
+            $('header').removeClass('menu_open')
+        })
 })
