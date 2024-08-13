@@ -49,7 +49,7 @@
     }
 }
 .menu .tit {
-    margin: 150px 0 125px 0;
+    margin: 150px 0 60px 0;
     text-align: center;
 }
 .menu .tit h2 {
@@ -111,5 +111,253 @@
     .menu .list .popup .popup_item::before {
         width: 100%;
         height: 70%;
+    }
+}
+@media screen and (max-width: 768px){
+    .menu .list .popup {
+        margin-bottom: -15px;
+        padding-top: 18px;
+    }
+    .menu .list .popup .popup_item h3 {
+        font-size: 1.538rem;
+        line-height: 0.8;
+        height: 1.6em;
+    }
+    .menu .list .popup .popup_item {
+        width: 180px;
+    }
+}
+.brand {
+    margin-top: 100px;
+}
+.brand .inner ul {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+.brand .inner ul li {
+    border: 1px solid var(--txt-color-choco);
+    margin-left: 10px;
+}
+.brand .inner ul li span{
+    position: relative;
+    display: block;
+    width: 112px;
+    height: 124px;
+    padding-top: 100px;
+    font-family: 'Ownglyph_meetme-Rg';
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.brand .inner ul li span::before{
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    width: 80px;
+    height: 75px;
+    content: "";
+}
+.brand .inner ul .ico1 span::before {
+    background-image: url(../images/main/brand_ico3.png);
+}
+.brand .inner ul .ico2 span::before {
+    background-image: url(../images/main/brand_ico2.png);
+}
+.brand .inner ul .ico3 span::before {
+    background-image: url(../images/main/brand_ico1.png);
+}
+.brand .inner {
+    background: url(../images/main/brand_bg.jpg) no-repeat center center / cover;
+    height: 800px;
+    color: var(--txt-color-choco);
+    padding: 395px 100px 0 0;
+    text-align: right;
+}
+.brand .inner h2 {
+    font-family: 'Ownglyph_meetme-Rg';
+    font-size: 2.333rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.brand .inner p {
+    font-size: 2rem;
+}
+@media screen and (max-width: 1024px){
+    .brand .inner ul {
+        display: none;
+    }
+    .brand .inner {
+        padding: 490px 70px 0 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .brand {
+        margin-top: 50px;
+        white-space: nowrap;
+    }
+    .brand .inner {
+        height: 400px;
+        padding: 255px 35px 0 0;
+    }
+    .brand .inner h2 {
+        font-size: 1.538rem;
+    }
+    .brand .inner p {
+        font-size: 1.154rem;
+    }
+}
+/*
+    loop 에니메이션을 줄때
+    <div> 감싸는 요소
+        <span></span> 움직일 요소
+    </div>
+    움직일 요소는 white-sapce : no-wrap; 이 되어있고 넓이가 완전하게 인식되어야 함
+    넓이가 온전히 인식되지 않는 경우 position : absolute 를 줘야 함
+*/
+.brand .loop {
+    height: 3.333rem;
+    padding: 0.667rem 0;
+    background-color: var(--txt-color-choco);
+    color: #fff;
+    font-family: 'Ownglyph_meetme-Rg';
+    font-size: 2rem;
+    position: relative;
+}
+.brand .loop span {
+    white-space: nowrap;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    animation-name: brand_loop;
+    animation-duration: 15s;
+    animation-iteration-count: infinite; /*무한반복*/
+    animation-timing-function: linear; /*가속도 삭제*/
+}
+@keyframes brand_loop {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-50.13%, 0);}
+}
+@media screen and (max-width: 768px){
+    .brand .loop {
+        height: 1.667rem;
+        padding: 0.667rem 0;
+        font-size: 1.154rem;
+        position: relative;
+    }
+    .brand .loop span {
+        left: 0;
+        top: 0.1rem;
+    }
+}
+.md .tit {
+    margin: 150px 0 60px 0;
+    text-align: center;
+}
+.md .tit h2 {
+    font-family: 'Ownglyph_meetme-Rg';
+    font-size: var(--txt-size-tit1);
+    color: var(--txt-color-tit);
+}
+.md .list .popup .popup_item{
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: 0 12px;
+}
+.md .list .popup .popup_item .photo {
+    overflow: hidden;
+}
+.md .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.md .list .popup .popup_item h3 {
+    font-size: var(--txt-size-tit2);
+    color: var(--txt-color-choco);
+    line-height: 1;
+    height: 2.1em;
+    overflow: hidden;
+    margin-top: 15px;
+}
+@media screen and (max-width: 1024px){
+    .md .tit {
+        margin: 150px 0 50px 0;
+        text-align: center;
+    }
+    .md .tit h2 {
+        font-size: 3.077rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .md .tit {
+        margin: 80px 0 25px 0;
+        text-align: center;
+    }
+    .md .list .popup {
+        margin-bottom: -15px;
+        padding-top: 18px;
+    }
+    .md .list .popup .popup_item h3 {
+        font-size: 1.538rem;
+        line-height: 0.8;
+        height: 1.6em;
+    }
+}
+.event {
+    margin-top: 180px;
+}
+.event .tit {
+    margin: 150px 0 60px 0;
+    text-align: center;
+}
+.event .tit h2 {
+    font-family: 'Ownglyph_meetme-Rg';
+    font-size: var(--txt-size-tit1);
+    color: var(--txt-color-tit);
+}
+.event .list .popup .popup_item{
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: 0 12px;
+}
+.event .list .popup .popup_item .photo {
+    overflow: hidden;
+    border-radius: 28px;
+}
+.event .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media screen and (max-width: 1024px){
+    .event .tit {
+        margin: 150px 0 50px 0;
+        text-align: center;
+    }
+    .event .tit h2 {
+        font-size: 3.077rem;
+    }
+    .event .list .popup .popup_item .photo {
+        border-radius: 25px;
+    }
+}
+@media screen and (max-width: 768px){
+    .event {
+        margin-top: 110px;
+    }
+    .event .tit {
+        margin: 80px 0 25px 0;
+        text-align: center;
+    }
+    .event .list .popup {
+        margin-bottom: -15px;
+        padding-top: 18px;
+    }
+    .event .list .popup .popup_item .photo {
+        border-radius: 17px;
     }
 }
