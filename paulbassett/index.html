@@ -9,6 +9,8 @@
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <script src="js/slick.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <link rel="stylesheet" href="css/slick.css">
     <title>Paul Bassett</title>
 </head>
@@ -295,8 +297,9 @@
             </section>
         </main>
         <aside class="quick">
-            <button title="퀵메뉴 열기" class="open">Quick</button>
+            <button title="퀵메뉴 열기" class="open">Quick</button><!--코딩 순서상 열기가 위 닫기가 아래여야 함, 스타일상 위치는 css 에서 position으로 배치-->
             <div class="quick_ctn">
+                <h2>Quick</h2>
                 <ul>
                     <!--다른 페이지 이동은 a, jquery를 작동 시키는 태그는 button-->
                     <li class="q01">
@@ -365,7 +368,7 @@
                 <div class="wrapper">
                     <div class="f_info">
                         <span>엠즈씨드(주) 대표이사 : 권익범</span>
-                        <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address><br>
+                        <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address>
                         <span>사업자등록번호 211-88-95935</span>
                         <span>대표번호 1899-8829</span>
                         <span>개인정보관리책임자 : 정보문 </span>
@@ -375,5 +378,12 @@
             </div>
         </footer>
     </div>
+    <script>
+        AOS.init({
+        offset: 0, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>
