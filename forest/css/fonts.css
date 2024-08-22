@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url(../fonts/GowunBatang-Regular.ttf) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GowunBatang-Bold';
+    src: url(../fonts/GowunBatang-Bold.ttf) format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

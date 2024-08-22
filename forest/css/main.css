@@ -1,0 +1,71 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+/*
+    플러그인을 사용시 이미 적용되어 있는 css 를 변경하려면
+    1. 동일한 이름의 앞에 body 태그 선택자를 추가하는 방법
+        strong
+        body strong 이 경우 body strong 의 우선순위가 더 높음
+    2. 속성값의 뒤에 !important 를 붙일시 우선순위가 1순위가 됨
+
+    단, !important 는 모바일에서도 적용되기 때문에 주의, 진짜 안될때만 사용...
+*/
+body #fp-nav.fp-left {
+    left: 3% 
+}
+body #fp-nav ul li {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+body #fp-nav ul li .fp-tooltip {
+    display: none;
+}
+body #fp-nav ul li a {
+    width: auto;
+    height: auto;
+}
+body #fp-nav ul li a.active span, 
+body #fp-nav ul li:hover a.active span{
+    height: auto;
+    width: auto;
+    margin: 0;
+    border-radius: 0
+}
+body #fp-nav ul li a span{
+    position: relative;
+    border: 0;
+    background: transparent;
+    left: auto;
+    top: auto;
+    margin: 0;
+}
+body #fp-nav .fp-sr-only {
+    padding: 0;
+    overflow: visible;
+    clip: auto;
+}
+
+.section {
+    text-align: center;
+    font-size: 100px;
+    color: #fff;
+}
+.visual {
+    background-color: var(--txt-color-main);
+}
+.tree {
+    background-color: var(--txt-color-main2);
+}
+.forest {
+    background-color: var(--txt-color-main3);
+}
+.story {
+    background-color: var(--txt-color-main4);
+}
+footer {
+    background-color: var(--txt-color-main);
+    height: 300px;
+}
