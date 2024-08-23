@@ -207,7 +207,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: auto;
+    width: 100%;
     z-index: 10;
     display: flex;
 }
@@ -262,6 +262,7 @@
     .visual .swiper .paging {
         bottom: 23px;
         left: 50%;
+        width: auto;
         transform: translateX(-50%);
     }
     .visual .swiper .paging .item {
