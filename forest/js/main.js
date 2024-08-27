@@ -7,6 +7,7 @@ $(document).ready(function(){
 		navigationTooltips: ['Main', '2023 나무', '생명의숲', '숲이야기'], /* 툴팁 */
 		showActiveTooltip: true, /* 현재 활성화된 페이지의 툴팁에 특정 클래스 주기 */
 
+		lockAnchors: true,
 		anchors: ['visual', 'tree', 'forest', 'story', 'footer'], /* href="#link1" 이렇게 코딩하면 해당 링크명으로 이동 */
 
 		autoScrolling:true, /* 한페이지씩 스크롤 */
@@ -60,7 +61,7 @@ $(document).ready(function(){
 		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 		breakpoints: {
 			768: {    /* 1280px 이상일때 적용 */
-				slidesPerView: 4,
+				slidesPerView: 3,
 				spaceBetween: 14,
 			},
 			1240: {    
