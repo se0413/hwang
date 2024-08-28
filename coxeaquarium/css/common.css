@@ -72,9 +72,9 @@ html, body{
 */
 
 :root {
-    --txt-size-tit : 4.667rem; /*70px*/
+    --txt-size-tit : 3.333rem; /*50px*/
     --txt-size-sub : 1.333rem; /*20px*/
-    --txt-size-txt : 1.667rem; /*25px*/
+    --txt-size-txt : 1.133rem; /*25px*/
     --txt-color-main : #001B48;
     --txt-color-main2 : #263D71;
 }

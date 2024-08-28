@@ -18,7 +18,7 @@ $(document).ready(function(){
 		scrollOverflow: false, /* 컨텐츠가 넘쳐도 스크롤 금지 */
 
 		afterLoad: function(origin, destination, direction, trigger){
-			if((destination.index == 1)||(destination.index == 3)||(destination.index == 4)){ 
+			if((destination.index == 1)||(destination.index == 3)||(destination.index == 5)){ 
 				$('header').addClass('dark')
 				$('.fp_nav').addClass('dark')
 			}else{
@@ -28,10 +28,6 @@ $(document).ready(function(){
 			console.log(destination.index)
 			$('.fp_nav ul li').removeClass('active')
 			$('.fp_nav ul li').eq(destination.index).addClass('active')
-
-			if(destination.index == 1){
-				$('.tree .count span').counterUp(); /* tree페이지로 왔을때만 실행 */
-			}
 		},
 
 		responsiveWidth: 768 /* fullpage를 적용시키지 않을 모바일 사이즈 */
