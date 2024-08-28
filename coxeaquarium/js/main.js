@@ -7,7 +7,7 @@ $(document).ready(function(){
 		navigationTooltips: ['COEX', 'INFORMATION', 'Show & Event', 'Stamp Zone', 'Photo review', 'Theme Zone', 'Location'], /* 툴팁 */
 		showActiveTooltip: true, /* 현재 활성화된 페이지의 툴팁에 특정 클래스 주기 */
 
-		lockAnchors: true,
+		lockAnchors: false,
 		anchors: ['visual', 'info', 'show_event', 'stamp', 'photo_review', 'theme', 'location'], /* href="#link1" 이렇게 코딩하면 해당 링크명으로 이동 */
 
 		autoScrolling:true, /* 한페이지씩 스크롤 */
@@ -19,10 +19,8 @@ $(document).ready(function(){
 
 		afterLoad: function(origin, destination, direction, trigger){
 			if((destination.index == 1)||(destination.index == 3)||(destination.index == 5)){ 
-				$('header').addClass('dark')
 				$('.fp_nav').addClass('dark')
 			}else{
-       		 	$('header').removeClass('dark')
 				$('.fp_nav').removeClass('dark')
       		}
 			console.log(destination.index)
@@ -35,10 +33,10 @@ $(document).ready(function(){
 
 	const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
-		// autoplay: {  /* 팝업 자동 실행 */
-		// 	delay: 3000,
-		// 	disableOnInteraction: true,
-		// },
+		autoplay: {  /* 팝업 자동 실행 */
+			delay: 5000,
+			disableOnInteraction: true,
+		},
 		effect: "fade", /* fade 효과 */
 		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 
@@ -51,6 +49,14 @@ $(document).ready(function(){
 		},
 
 	});
+
+	$('.visual .btn_wrap button.btn_stop').on('click', function(){
+        visual_swiper.autoplay.stop();  /* 일시정지 기능 */
+   })
+
+   $('.visual .btn_wrap button.btn_play').on('click', function(){
+        visual_swiper.autoplay.start();  /* 재생 기능 */
+    })
 
 	const story_swiper = new Swiper('.story .swiper', { /* 팝업을 감싼는 요소의 class명 */
 		slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
