@@ -19,133 +19,308 @@
 .skip_nav a:focus {
     top: 100px;
 }
-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100px;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    font-size: var(--txt-size-sub);
-    padding: 0 0 0 2%;
-    align-items: center;
+@media screen and (min-width: 1025px){ 
+    header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        font-size: var(--txt-size-sub);
+        padding: 0 0 0 2%;
+        align-items: center;
+    }
+    header .logo a {
+        display: block;
+        width: 164px;
+        height: 57px;
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+    }
+    header .logo a::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../images/main/logo_w.png");
+        content: ""
+    }
+    header .gnb {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    header .gnb button {
+        display: none;
+    }
+    header .gnb .gnb_wrap .depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap .depth1 > li {
+        width: 185px;
+        position: relative;
+    }
+    header .gnb .gnb_wrap .depth1 > li > a {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    header .gnb .gnb_wrap .depth1 > li.on > a {
+        font-weight: 600;
+    }
+    header .gnb .gnb_wrap .depth1 > li.on > a span {
+        position: relative; 
+    }
+    header .gnb .gnb_wrap .depth1 > li.on > a span::after {
+        position: absolute;
+        left: 0;
+        bottom: -36px;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        content: "";
+    }
+    header .gnb .depth2 {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 63px;
+        width: 100%;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.4);
+        padding-top: 18px;
+    }
+    header.menu_over .gnb .depth2 {
+        display: block;
+    }
+    header .gnb .depth2 > li > a {
+        display: block;
+        line-height: 20px;
+        text-align: center;
+        line-height: 2;
+    }
+    header .gnb .depth2 > li > a span {
+        position: relative;
+    }
+    header .gnb .depth2 > li > a span:hover::before {
+        display: block;
+        position: absolute;
+        right: -24px;
+        top: 0;
+        width: 20px;
+        height: 15px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='15' viewBox='0 0 20 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3.75' cy='11.25' r='3.25' stroke='white' stroke-opacity='0.4'/%3E%3Ccircle cx='13.75' cy='6.25' r='5.75' stroke='white' stroke-opacity='0.8'/%3E%3Ccircle cx='14.375' cy='3.125' r='0.625' fill='white'/%3E%3Ccircle cx='16.25' cy='5' r='1.25' fill='white'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    header .gnb .depth2 > li > a span:hover {
+        color: #fff;
+    }
+    header.menu_over::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 350px;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 1px 15px rgba(0, 0, 0, 0.25);
+        z-index: -1;
+        content: "";
+    }
+    header.menu_over::after {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        content: "";
+    }
 }
-header .logo a {
-    display: block;
-    width: 164px;
-    height: 57px;
-    font-size: 0;
-    line-height: 0;
-    position: relative;
+@media screen and (max-width: 1300px) and  (min-width: 1025px){ /*max이상, min이하*/
+    header .logo a {
+        display: block;
+        width: 118px;
+        height: 41px;
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+    }
+    header .gnb .gnb_wrap .depth1 > li {
+        width: 150px;
+        position: relative;
+    }
 }
-header .logo a::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("../images/main/logo_w.png");
-    content: ""
-}
-header .gnb {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-header .gnb button {
-    display: none;
-}
-header .gnb .gnb_wrap .depth1 {
-    display: flex;
-}
-header .gnb .gnb_wrap .depth1 > li {
-    width: 185px;
-    position: relative;
-}
-header .gnb .gnb_wrap .depth1 > li > a {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-align: center;
-}
-header .gnb .gnb_wrap .depth1 > li.on > a {
-    font-weight: 600;
-}
-header .gnb .gnb_wrap .depth1 > li.on > a span {
-    position: relative; 
-}
-header .gnb .gnb_wrap .depth1 > li.on > a span::after {
-    position: absolute;
-    left: 0;
-    bottom: -36px;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    content: "";
-}
-header .gnb .depth2 {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 63px;
-    width: 100%;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.4);
-    padding-top: 18px;
-}
-header.menu_over .gnb .depth2 {
-    display: block;
-}
-header .gnb .depth2 > li > a {
-    display: block;
-    line-height: 20px;
-    text-align: center;
-    line-height: 2;
-}
-header .gnb .depth2 > li > a span {
-    position: relative;
-}
-header .gnb .depth2 > li > a span:hover::before {
-    display: block;
-    position: absolute;
-    right: -24px;
-    top: 0;
-    width: 20px;
-    height: 15px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='15' viewBox='0 0 20 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3.75' cy='11.25' r='3.25' stroke='white' stroke-opacity='0.4'/%3E%3Ccircle cx='13.75' cy='6.25' r='5.75' stroke='white' stroke-opacity='0.8'/%3E%3Ccircle cx='14.375' cy='3.125' r='0.625' fill='white'/%3E%3Ccircle cx='16.25' cy='5' r='1.25' fill='white'/%3E%3C/svg%3E%0A");
-    content: "";
-}
-header .gnb .depth2 > li > a span:hover {
-    color: #fff;
-}
-header.menu_over::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 350px;
-    background-color: transparent;
-    /* background-color: rgba(255, 255, 255, 0.1); */
-    backdrop-filter: blur(20px);
-    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.25);
-    z-index: -1;
-    content: "";
-}
-header.menu_over::after {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
-    content: "";
+@media screen and (max-width: 1024px){
+    header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        color: #fff;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1% 0 3%;
+        align-items: center;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+    }
+    header .logo a {
+        display: block;
+        width: 80px;
+        height: 28px;
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+    }
+    header .logo a::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../images/main/logo_w.png");
+        content: "";
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+    }
+    header .gnb .gnb_open {
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+        width: 60px;
+        height: 50px;
+    }
+    header .gnb .gnb_open::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_335_2114' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_335_2114)'%3E%3Cpath d='M16.3037 11.9616L12.077 7.73456L16.3037 3.50781L20.5307 7.73456L16.3037 11.9616ZM4.61523 10.6156V4.61531H10.6155V10.6156H4.61523ZM13.3845 19.3848V13.3846H19.3847V19.3848H13.3845ZM4.61523 19.3848V13.3846H10.6155V19.3848H4.61523ZM5.61548 9.61556H9.61548V5.61556H5.61548V9.61556ZM16.3287 10.5846L19.1537 7.75956L16.3287 4.93456L13.5037 7.75956L16.3287 10.5846ZM14.3845 18.3846H18.3845V14.3846H14.3845V18.3846ZM5.61548 18.3846H9.61548V14.3846H5.61548V18.3846Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    header .gnb .gnb_close {
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+        width: 60px;
+        height: 50px;
+        display: none;
+    }
+    header .gnb .gnb_close::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_335_2453' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_335_2453)'%3E%3Cpath d='M8.4 16.3077L12 12.7078L15.6 16.3077L16.3077 15.6L12.7078 12L16.3077 8.4L15.6 7.69225L12 11.2923L8.4 7.69225L7.69225 8.4L11.2923 12L7.69225 15.6L8.4 16.3077ZM12.0033 21C10.7587 21 9.58867 20.7638 8.493 20.2915C7.3975 19.8192 6.4445 19.1782 5.634 18.3685C4.8235 17.5588 4.18192 16.6067 3.70925 15.512C3.23642 14.4175 3 13.2479 3 12.0033C3 10.7587 3.23617 9.58867 3.7085 8.493C4.18083 7.3975 4.82183 6.4445 5.6315 5.634C6.44117 4.8235 7.39333 4.18192 8.488 3.70925C9.5825 3.23642 10.7521 3 11.9967 3C13.2413 3 14.4113 3.23617 15.507 3.7085C16.6025 4.18083 17.5555 4.82183 18.366 5.6315C19.1765 6.44117 19.8181 7.39333 20.2908 8.488C20.7636 9.5825 21 10.7521 21 11.9967C21 13.2413 20.7638 14.4113 20.2915 15.507C19.8192 16.6025 19.1782 17.5555 18.3685 18.366C17.5588 19.1765 16.6067 19.8181 15.512 20.2908C14.4175 20.7636 13.2479 21 12.0033 21ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    header.menu_open .gnb .gnb_wrap {
+        display: none;
+        position: absolute; 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh; 
+        background-color: #3B63A1;
+    }
+    header.menu_open .gnb .gnb_wrap .depth1 {
+        margin-top: 50px;
+        height: calc(100% - 50px);
+        overflow-y: auto;
+    }
+    header.menu_open .gnb .gnb_wrap .depth1 > li > a {
+        display: block;
+        padding: 20px;
+        white-space: nowrap;
+        font-size: 1.538rem;
+        font-weight: bold;
+    }
+    header.menu_open .gnb .gnb_wrap .depth1 > li > a  {
+        position: relative;
+    }
+    header.menu_open .gnb .gnb_wrap .depth1 > li > a::after {
+        position: absolute;
+        right: 22px;
+        top: 13px;
+        width: 30px;
+        height: 30px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_335_2470' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect y='24' width='24' height='24' transform='rotate(-90 0 24)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_335_2470)'%3E%3Cpath d='M21.3069 14.0008L11.9992 23.3086L2.69141 14.0008L3.75491 12.9373L11.9992 21.1816L20.2434 12.9373L21.3069 14.0008Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+        content: "";
+    }
+    header.menu_open .gnb .gnb_wrap .depth1 > li > a::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        content: "";
+    }
+    header .gnb .gnb_wrap ul.depth1 > li:first-child {
+        border-top: 1px solid rgba(225, 255, 255, 0.4);
+    }
+    header.menu_open .gnb .gnb_wrap .depth1 > li.open > a > span::after {
+        transform: rotate(180deg);
+    }
+    header.menu_open .gnb .gnb_wrap .depth2 {
+        margin: 20px 25px 30px 25px;
+        color: rgba(255, 255, 255, 0.6);
+        display: none;
+    }
+    header.menu_open .gnb .gnb_wrap .depth1 > li.open > .depth2 {
+        display: block;
+    }
+    header.menu_open .gnb .gnb_wrap .depth2 > li > a {
+        display: block;
+        font-size: 1.385rem;
+        line-height: 20px;
+        padding: 10px;
+    }
+    header.menu_open .gnb .gnb_wrap .depth2 > li > a:hover {
+        color: #fff;
+        font-weight: 600;
+    }
+    header.menu_open .gnb .gnb_open {
+        display: none;
+    }
+    header.menu_open .gnb .gnb_close {
+        display: block;
+    }
+    header.menu_open .gnb .gnb_wrap {
+        display: block;
+    }
+
 }
