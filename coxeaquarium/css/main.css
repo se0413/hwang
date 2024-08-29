@@ -535,8 +535,42 @@
     }
 }
 .show_event {
-    background-color: #33496D;
+    background-color: rgba(0, 27, 72, 0.8);
+    text-align: center;
 }
+.show_event  h2 {
+    font-family: 'TTHakgyoansimMulgyeolB';
+    font-weight: 600;
+    font-size: var(--txt-size-tit);
+}
+.show_event h2 span {
+    position: relative;
+}
+.show_event h2 span::before {
+    position: absolute;
+    left: -38px;
+    top: -44px;
+    width: 80px;
+    height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='94' viewBox='0 0 100 94' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='37.1142' cy='56.7021' r='35.6142' stroke='white' stroke-opacity='0.6' stroke-width='3'/%3E%3Ccircle cx='83.5069' cy='16.4952' r='14.9952' stroke='white' stroke-opacity='0.6' stroke-width='3'/%3E%3Ccircle cx='20.8337' cy='50.8327' r='9.16668' fill='white' fill-opacity='0.6'/%3E%3Ccircle cx='34.1667' cy='37.5007' r='4.16667' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.show_event .wrapper > p {
+    font-size: var(--txt-size-sub);
+    color: rgba(255, 255, 255, 0.6);
+    margin: 16px 0 80px 0;
+}
+.show_event .se_borad ul {
+    display: flex;
+}
+.show_event .se_borad ul li {
+    width: 315px;
+    height: 650px;
+}
+.show_event .se_borad ul li 
 .stamp {
     background-color: bisque;
 }
