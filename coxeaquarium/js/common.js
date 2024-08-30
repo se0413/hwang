@@ -71,4 +71,13 @@ $(document).ready(function(){
     $('header .gnb .gnb_close').on('click', function(){
         $('header').removeClass('menu_open')
     })
+
+    $('.show_event .se_borad ul li').on('mouseover', function(){
+        $('.show_event .se_borad ul li').removeClass('on')
+        $(this).addClass('on')
+    })
+    $('.show_event .se_borad ul li').on('mouseleave', function(){
+        $('.show_event .se_borad ul li').removeClass('on')
+        $(this).removeClass('on')
+    })
 })

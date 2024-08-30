@@ -11,6 +11,8 @@
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <title>코엑스 아쿠아리움</title>
 </head>
 <body>
@@ -143,7 +145,7 @@
         <section class="section fp-auto-height-responsive info">
             <div class="wrapper">
                 <h2><span>INFORMATION</span></h2>
-                <p>*상기 운영 시간은 현장 및 기상상황에 따라 변경될 수 있습니다.</p>
+                <p>* 상기 운영 시간은 현장 및 기상상황에 따라 변경될 수 있습니다.</p>
                 <div class="info_borad">
                     <div class="time info_box">
                         <h3><span>운영시간</span></h3>
@@ -174,38 +176,85 @@
                 <p>방문하기 전 미리 공연 일정을 체크하고  코엑스 아쿠아리움의 모든 프로그램을 즐겨보세요!</p>
                 <div class="se_borad">
                     <ul>
-                        <li>
-                            <strong>인어 수중 공연</strong>
-                            <div class="more"><a href="#n"><span>공연 일정 보러가기</span></a></div>
+                        <li class="mermaid">
+                            <div class="photo">
+                                <img src="images/main/se_borad_bg1.png" alt="인어수중공연사진">
+                            </div>
+                            <div class="se_txt">
+                                <strong>인어 <br>수중 공연</strong>
+                                <div class="more"><a href="#n"><span>공연 일정</span></a></div>
+                            </div>
                         </li>
-                        <li>
-                            <strong>생태 설명회</strong>
-                            <div class="more"><a href="#n"><span>설명회 정보 보러가기</span></a></div>
+                        <li class="briefing">
+                            <div class="photo">
+                                <img src="images/main/se_borad_bg2.png" alt="생태설명회사진">
+                            </div>
+                            <div class="se_txt">
+                                <strong>생태 <br>설명회</strong>
+                                <div class="more"><a href="#n"><span>설명회 정보</span></a></div>
+                            </div>
                         </li>
-                        <li>
-                            <strong>친구들 식사시간</strong>
-                            <div class="more"><a href="#n"><span>식사 시간표 보러가기</span></a></div>
+                        <li class="feeding">
+                            <div class="photo">
+                                <img src="images/main/se_borad_bg3.png" alt="식사시간사진">
+                            </div>
+                            <div class="se_txt">
+                                <strong>친구들 <br>식사시간</strong>
+                                <div class="more"><a href="#n"><span>식사 시간표</span></a></div>
+                            </div>
                         </li>
-                        <li>
-                            <strong>동물의숲 콜라보</strong>
-                            <div class="more"><a href="#n"><span>굿즈&체험존 보러가기</span></a></div>
+                        <li class="animal">
+                            <div class="photo">
+                                <img src="images/main/se_borad_bg4.png" alt="모여봐요 동물의숲사진">
+                            </div>
+                            <div class="se_txt">
+                                <strong>동물의숲 <br>콜라보</strong>
+                                <div class="more"><a href="#n"><span>굿즈&체험존</span></a></div>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="section fp-auto-height-responsive stamp"></section>
-        <section class="section fp-auto-height-responsive photo_review"></section>
+        <section class="section fp-auto-height-responsive stamp">
+            <div class="wrapper">
+                <h2><span>Stamp Zone</span></h2>
+                <p>바다를 탐험하고 모든 스탬프를 모아보세요.</p>
+                <div class="more"><a href="#n"><span>자세히 보러가기</span></a></div>
+            </div>
+            <div class="photo">
+                <img src="images/main/stamp_map.png">
+            </div>
+        </section>
+        <section class="section fp-auto-height-responsive photo_review">
+            <div class="wrapper">
+                <h2><span>Photo review</span></h2>
+                <p>여러분들의 환상적인 순간을 공유해보세요.</p>
+                <div class="btn_wrap">
+                    <button class="swiper-button-prev">이전</button>
+                    <button class="swiper-button-next">다음</button>
+                </div>
+                <div class="swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="#n"><img src="images/main/photo_review_post1.png" alt="sns후기 사진"></a></li> 
+                        <li class="swiper-slide"><a href="#n"><img src="images/main/photo_review_post2.png" alt="sns후기 사진"></a></li> 
+                        <li class="swiper-slide"><a href="#n"><img src="images/main/photo_review_post3.png" alt="sns후기 사진"></a></li> 
+                        <li class="swiper-slide"><a href="#n"><img src="images/main/photo_review_post4.png" alt="sns후기 사진"></a></li> 
+                        <li class="swiper-slide"><a href="#n"><img src="images/main/photo_review_post5.png" alt="sns후기 사진"></a></li> 
+                        <li class="swiper-slide"><a href="#n"><img src="images/main/photo_review_post6.png" alt="sns후기 사진"></a></li> 
+                        <li class="swiper-slide"><a href="#n"><img src="images/main/photo_review_post7.png" alt="sns후기 사진"></a></li> 
+                        <li class="swiper-slide"><a href="#n"><img src="images/main/photo_review_post8.png" alt="sns후기 사진"></a></li> 
+                    </ul>
+                </div>
+                <div class="txt">
+                    <strong>#코엑스 아쿠아리움</strong>
+                    <div class="more"><a href="#n"><span>더 많은 보러가기</span></a></div>
+                </div>
+            </div>
+        </section>
         <section class="section fp-auto-height-responsive theme"></section>
         <section class="section fp-auto-height-responsive location"></section>
         <footer class="section fp-auto-height-responsive"></footer>
     </div>
-    <script>
-        AOS.init({
-        offset: 200, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
-        duration: 500, // 애니메이션 효과가 작동되는 시간
-        easing: 'ease', // 가속도
-        });
-    </script>
 </body>
 </html>
