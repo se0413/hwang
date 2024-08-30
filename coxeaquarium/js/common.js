@@ -80,4 +80,14 @@ $(document).ready(function(){
         $('.show_event .se_borad ul li').removeClass('on')
         $(this).removeClass('on')
     })
+
+    $('.theme .theme_cnt ul li ').on('mouseover', function(){
+        $('.theme .theme_cnt ul li ').removeClass('on')
+        $(this).addClass('on')
+    })
+    $('.theme .theme_cnt ul li ').on('mouseleave', function(){
+        $('.theme .theme_cnt ul li ').removeClass('on')
+        $(this).removeClass('on')
+    })
+
 })
