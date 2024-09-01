@@ -17,6 +17,9 @@
     position: relative;
     margin: 17px 0 ;
 }
+#fp-nav ul li:last-child {
+    display: none;
+}
 #fp-nav ul li a {
     display: block;
     position: relative;
@@ -1125,7 +1128,7 @@
 .theme .wrapper > p {
     font-size: var(--txt-size-sub);
     color: rgba(255, 255, 255, 0.6);
-    margin: 16px 0 30px 0;
+    margin: 16px 0 70px 0;
 }
 .theme .more {
     position: absolute;
@@ -1321,7 +1324,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/main/location_bg.png);
-    padding: 30px 0 80px 0;
+    padding: 152px 0 146px 0;
     text-align: center;
 }
 .location h2 {
@@ -1348,7 +1351,7 @@
 .location .wrapper > p {
     font-size: var(--txt-size-sub);
     color: rgba(255, 255, 255, 0.6);
-    margin: 16px 0 30px 0;
+    margin: 16px 0 70px 0;
 }
 .location .location_map {
     display: flex;
@@ -1408,24 +1411,19 @@
 }
 .location .map_list .subway a ul li {
     margin: 0 2px;
+    padding: 1px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
 }
 .location .map_list .subway a ul li:nth-child(1) {
     background-color: #3B9F37;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
 }
 .location .map_list .subway a ul li:nth-child(2) {
     background-color: #5B692E;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
 }
 .location .map_list .subway a ul li:nth-child(3) {
     background-color: #B39627;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
 }
 .location .map_list .location_txt {
     border: 1px solid #fff;
@@ -1505,6 +1503,10 @@
         padding: 15px;
         margin: 25px 0 25px 0;
     }
+    .location .map_list .subway a ul li  {
+        width: 20px;
+        height: 20px;
+    }
     .location .map_list .location_txt {
         border: 1px solid #fff;
         padding: 15px;
@@ -1513,4 +1515,70 @@
         font-size: 1rem;
         margin: 5px 0;
     }
+}
+footer {
+    background-color: #2d2d2d;
+    padding: 40px 0 85px 0;
+}
+footer .wrapper {
+    display: flex;
+    position: relative;
+}
+footer .familly_site button {
+    padding: 16px 40px 16px 16px;
+    background-color: #2d2d2d;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+footer .familly_site button::before {
+    position: absolute;
+    right: 12px;
+    top: 16px;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .familly_site button.familly_open::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_306_3833' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_306_3833)'%3E%3Cpath d='M9.16699 10.8327H4.16699V9.16602H9.16699V4.16602H10.8337V9.16602H15.8337V10.8327H10.8337V15.8327H9.16699V10.8327Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .familly_site button.familly_close::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_306_3836' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_306_3836)'%3E%3Cpath d='M3.33301 10.8327V9.16602H16.6663V10.8327H3.33301Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .familly_site button.familly_close {
+    display: none;
+}
+footer .familly_site ul {
+    background-color: #2d2d2d;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 24px 28px;
+    text-align: center;
+    display: none;
+}
+footer .familly_site ul li {
+    line-height: 32px;
+}
+footer .sns {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+footer .f_inner {
+    margin: 0 0 0 30px;
+    color: rgba(255, 255, 255, 0.4)
+}
+footer .f_inner .f_info {
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+footer .f_inner .f_info span {
+    padding-right: 40px;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.2);
 }
