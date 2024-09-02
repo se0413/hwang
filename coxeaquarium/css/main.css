@@ -353,7 +353,7 @@
 .info .wrapper > p {
     font-size: var(--txt-size-sub);
     color: rgba(255, 255, 255, 0.6);
-    margin: 16px 0 80px 0;
+    margin: 16px 0 30px 0;
 }
 .info .info_borad {
     display: flex;
@@ -903,7 +903,7 @@
     background-size: cover;
     background-image: url(../images/main/photo_review_bg.png);
     text-align: center;
-    padding: 160px 0 136px 0;
+    padding: 58px 0 136px 0;
 }
 .photo_review h2 {
     font-family: 'TTHakgyoansimMulgyeolB';
@@ -988,25 +988,21 @@
 }
 .photo_review .txt {
     float: left;
-    position: relative;
     margin-top: 30px;
 }
 .photo_review .txt strong {
     font-size: 2rem;
     font-family: 'TTHakgyoansimMulgyeolB';
-}
-.photo_review .more{
-    position: absolute;
-    top: 50px;
-    left: 0;
+    margin-bottom: 44px;
+    display: block;
 }
 .photo_review .more a {
-    display: block;
-    padding: 15px 60px 15px 20px;
+    padding: 15px 75px 15px 25px;
     white-space: nowrap;
     position: relative;
     transition: 0.5s;
     border: 1px solid #fff;
+    text-align: left;
 }
 .photo_review .more a::before {
     position: absolute;
@@ -1134,13 +1130,8 @@
     margin: 16px 0 70px 0;
 }
 .theme .more {
-    position: absolute;
-    bottom: 4%;
-    left: 50%;
-    transform: translate(-50%, 0);
 }
 .theme .more a {
-    display: block;
     padding: 15px 60px 15px 20px;
     white-space: nowrap;
     position: relative;
@@ -1150,7 +1141,7 @@
 .theme .more a::before {
     position: absolute;
     right: 18px;
-    top: 15px;
+    top: 13px;
     width: 24px;
     height: 24px;
     background-position: center center;
