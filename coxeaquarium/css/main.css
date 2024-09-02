@@ -903,7 +903,7 @@
     background-size: cover;
     background-image: url(../images/main/photo_review_bg.png);
     text-align: center;
-    padding: 58px 0 136px 0;
+    padding: 108px 0 136px 0;
 }
 .photo_review h2 {
     font-family: 'TTHakgyoansimMulgyeolB';
@@ -1128,8 +1128,6 @@
     font-size: var(--txt-size-sub);
     color: rgba(255, 255, 255, 0.6);
     margin: 16px 0 70px 0;
-}
-.theme .more {
 }
 .theme .more a {
     padding: 15px 60px 15px 20px;
