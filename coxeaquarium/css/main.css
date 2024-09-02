@@ -170,7 +170,8 @@
     top: 50%;
     transform: translateY(-50%);
 }
-.visual .swiper .swiper-slide h3 {
+.visual .swiper .swiper-slide strong {
+    display: block;
     font-family: 'TTHakgyoansimMulgyeolB';
     font-weight: 700;
     font-size: var(--txt-size-tit);
