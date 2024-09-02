@@ -127,6 +127,7 @@
     }
     header .gnb .depth2 > li > a span:hover {
         color: #fff;
+        letter-spacing: 0.5px;
     }
     header.menu_over::before {
         position: absolute;
