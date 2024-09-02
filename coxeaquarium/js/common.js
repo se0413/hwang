@@ -90,4 +90,12 @@ $(document).ready(function(){
         $(this).removeClass('on')
     })
 
+    $('footer .familly_site button.familly_open').on('click', function(){
+        $('footer .familly_site').addClass('on')
+        $('footer .familly_site ul').slideDown()
+    })
+    $('footer .familly_site button.familly_close').on('click', function(){
+        $('footer .familly_site').removeClass('on')
+        $('footer .familly_site ul').slideUp()
+    })
 })

@@ -547,7 +547,7 @@
 .show_event {
     background-color: rgba(0, 27, 72, 0.8);
     text-align: center;
-    padding: 160px 0 136px 0;
+    padding: 86px 0 136px 0;
 }
 .show_event  h2 {
     font-family: 'TTHakgyoansimMulgyeolB';
@@ -764,7 +764,7 @@
     background-size: cover;
     background-image: url(../images/main/stamp_bg1.png);
     text-align: center;
-    padding: 160px 0 136px 0;
+    padding: 160px 0 239px 0;
 }
 .stamp .wrapper {
     position: relative;
@@ -796,7 +796,7 @@
 .stamp .wrapper > p {
     font-size: var(--txt-size-sub);
     color: rgba(255, 255, 255, 0.6);
-    margin: 16px 0 100px 0;
+    margin: 16px 0 50px 0;
 }
 .stamp .photo {
     font-size: 0;
@@ -846,7 +846,7 @@
 }
 @media screen and (max-width: 1024px) {
     .stamp {
-        padding: 68px 0 100px 0;
+        padding: 68px 0 136px 0;
     }
     .stamp  h2 {
         font-size: 3.077rem;
@@ -860,7 +860,7 @@
     }
     .stamp .wrapper > p {
         font-size: 1rem;
-        margin: 14px 0 80px 0;
+        margin: 14px 0 35px 0;
     }
     .stamp .more a {
         padding: 12px 60px 12px 20px;
@@ -1098,7 +1098,7 @@
     }
 }
 .theme {
-    padding: 168px 0 60px 0;
+    padding: 75px 0 60px 0;
 }
 .theme {
     background-color: var(--txt-color-main);
@@ -1161,7 +1161,7 @@
     border-color: var(--txt-color-main3);
 }
 .theme .theme_cnt ul {
-    margin-bottom: 90px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1373,19 +1373,22 @@
     text-align: left;
     padding: 15px 0;
 }
-.location .map_list .parking {
+
+.location .map_list .parking a {
+    display: block;
+    transition: 0.5s;
     border: 1px solid #fff;
     white-space: nowrap;
 }
 .location .map_list .parking a span {
     display: block;
     position: relative;
-    padding: 20px 90px 15px 20px;
+    padding: 15px 90px 15px 20px;
 }
 .location .map_list .parking a span::before {
     position: absolute;
     right: 18px;
-    top: 20px;
+    top: 16px;
     width: 24px;
     height: 24px;
     background-position: center center;
@@ -1393,6 +1396,10 @@
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_382_4' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect y='24' width='24' height='24' transform='rotate(-90 0 24)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_382_4)'%3E%3Cpath d='M21.4997 12.0008L14.8267 18.6738L13.7575 17.6296L18.6362 12.7508L11.4902 12.7508L11.4902 11.2508L18.646 11.2508L13.7825 6.37208L14.8267 5.32783L21.4997 12.0008ZM9.49023 12.7508L6.49023 12.7508L6.49023 11.2508L9.49023 11.2508L9.49023 12.7508ZM4.49023 12.7508L2.49023 12.7508L2.49023 11.2508L4.49023 11.2508L4.49023 12.7508Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
     content: "";
+}
+.location .map_list .parking a:hover {
+    background-color: var(--txt-color-main3);
+    border-color: var(--txt-color-main3);
 }
 .location .map_list .subway {
     border: 1px solid #fff;
@@ -1411,7 +1418,6 @@
 }
 .location .map_list .subway a ul li {
     margin: 0 2px;
-    padding: 1px;
     width: 23px;
     height: 23px;
     border-radius: 50%;
@@ -1454,7 +1460,7 @@
 }
 @media screen and (max-width: 768px) {
     .location {
-        padding: 30px 0 120px 0;
+        padding: 30px 0 46px 0;
     }
     .location  h2 {
         font-size: 2.308rem;
@@ -1483,7 +1489,7 @@
     }
     .location .map_list {
         width: auto;
-        font-size: 1rem;
+        font-size: 1.154rem;
         margin-left: 0;
         margin: 30px 0 0 0;
     }
@@ -1515,70 +1521,4 @@
         font-size: 1rem;
         margin: 5px 0;
     }
-}
-footer {
-    background-color: #2d2d2d;
-    padding: 40px 0 85px 0;
-}
-footer .wrapper {
-    display: flex;
-    position: relative;
-}
-footer .familly_site button {
-    padding: 16px 40px 16px 16px;
-    background-color: #2d2d2d;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-footer .familly_site button::before {
-    position: absolute;
-    right: 12px;
-    top: 16px;
-    width: 20px;
-    height: 20px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
-}
-footer .familly_site button.familly_open::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_306_3833' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_306_3833)'%3E%3Cpath d='M9.16699 10.8327H4.16699V9.16602H9.16699V4.16602H10.8337V9.16602H15.8337V10.8327H10.8337V15.8327H9.16699V10.8327Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
-}
-footer .familly_site button.familly_close::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_306_3836' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_306_3836)'%3E%3Cpath d='M3.33301 10.8327V9.16602H16.6663V10.8327H3.33301Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
-}
-footer .familly_site button.familly_close {
-    display: none;
-}
-footer .familly_site ul {
-    background-color: #2d2d2d;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 24px 28px;
-    text-align: center;
-    display: none;
-}
-footer .familly_site ul li {
-    line-height: 32px;
-}
-footer .sns {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-footer .f_inner {
-    margin: 0 0 0 30px;
-    color: rgba(255, 255, 255, 0.4)
-}
-footer .f_inner .f_info {
-    margin-bottom: 20px;
-    line-height: 20px;
-}
-footer .f_inner .f_info span {
-    padding-right: 40px;
-}
-footer .copyright {
-    color: rgba(255, 255, 255, 0.2);
 }
