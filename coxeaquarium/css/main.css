@@ -607,7 +607,7 @@
     font-family: 'TTHakgyoansimMulgyeolB';
     position: absolute;
     left: 50%;
-    top: 35%;
+    top: 38%;
     transform: translate(-50%, 0);
     white-space: nowrap;
 }
@@ -619,7 +619,7 @@
     display: block;
 }
 .show_event .se_borad ul li.on .more{
-    top: 50%;
+    top: 55%;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
