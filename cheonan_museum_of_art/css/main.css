@@ -1,0 +1,41 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+.visual {
+    background-color: #20231F;
+    height: 1000px;
+    font-size: 90px;
+    font-family: 'SF_HambakSnow';
+    text-align: center;
+    position: relative;
+}
+.visual h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.visual h1 strong {
+    display: inline-block;
+    margin-right: 0.5em;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.visual h1 strong em {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    position: relative;
+    animation-name: h1_text;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes h1_text {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
