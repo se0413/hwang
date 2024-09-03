@@ -39,53 +39,59 @@
     0% {width: 0;}
     100% {width: 100%;}
 } */
-body {
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    -webkit-transform: translate3d(0,0,0);
-}
-.visual2 {
+
+.visual {
     background-color: #20231F;
     height: 1000px;
     font-size: 90px;
     font-family: 'SF_HambakSnow';
     text-align: center;
     position: relative;
+
 }
-.visual2 h1 {
+.visual h1 {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    width: 87rem;
+    justify-content: center;
 }
-.visual2 h1 strong {
-    display: inline-block;
-    margin-right: 0.2em;
+.visual h1 .ca {
+    margin-right: 1rem;
+    display: flex;
+}
+.visual h1 strong {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     overflow: hidden;
     white-space: nowrap;
 }
-span:last-of-type {
+.visual h1 em {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.visual h1 > strong {
+    margin-right: 1rem;
+}
+.visual h1 span {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.visual h1 span:last-of-type {
+    animation: slide 7s forwards;
     margin-left:-355px;
-    animation: slidein 5s forwards;
+    display: block;
 }
-@keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
-}
-@keyframes slidein {
-    0% { margin-left:-800px; }
+@keyframes slide {
+    0% { margin-left:-800px; opacity: 0;}
     20% { margin-left:-800px; }
     35% { margin-left:0px; }
-    100% { margin-left:0px; }
-}
-@keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
-    30% {width:355px;}
-    80% {opacity:1;}
-    100% {opacity:0;width:355px;}
+    100% { margin-left:0px; opacity: 100%;}
 }
