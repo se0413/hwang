@@ -3,7 +3,7 @@
 @import url(common.css);
 @import url(layout.css);
 
-.visual {
+/* .visual {
     background-color: #20231F;
     height: 1000px;
     font-size: 90px;
@@ -38,4 +38,54 @@
 @keyframes h1_text {
     0% {width: 0;}
     100% {width: 100%;}
+} */
+body {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+}
+.visual2 {
+    background-color: #20231F;
+    height: 1000px;
+    font-size: 90px;
+    font-family: 'SF_HambakSnow';
+    text-align: center;
+    position: relative;
+}
+.visual2 h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.visual2 h1 strong {
+    display: inline-block;
+    margin-right: 0.2em;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+span:last-of-type {
+    margin-left:-355px;
+    animation: slidein 5s forwards;
+}
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
 }
