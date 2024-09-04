@@ -22,7 +22,7 @@ html, body{
 
 @media screen and (max-width: 1600px){
     .wrapper {
-        margin: 0 200px; /*사이즈 줄일때 양 사이드 퀵메뉴들이 겹쳐서 줌*/
+        margin: 0 20px; /*사이즈 줄일때 양 사이드 퀵메뉴들이 겹쳐서 줌*/
         width: auto;
     }
 }
@@ -50,6 +50,7 @@ html, body{
     기본이 15px 일때
     120px -8rem
     100px - 
+    90px - 
     70px - 4.667rem /
     50px - 3.333rem
     45px - 3rem /
@@ -78,7 +79,6 @@ html, body{
     --txt-size-tit2 : 3.333rem; /*50px*/
     --txt-size-sub : 1.333rem; /*20px*/
     --txt-size-txt : 1.133rem; /*25px*/
-    --txt-color-main : #001B48;
-    --txt-color-main2 : #263D71;
-    --txt-color-main3 : rgba(67, 142, 243, 0.6) /*마우스 오버시 색상*/
+    --txt-color-main : #20231F;
+
 }
