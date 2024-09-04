@@ -3,59 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <title>천안시립미술관</title>
 </head>
 <body>
     <div id="wrap">
         <header>
-            <button class="btn_open"></button>
             <nav class="gnb">
-                <ul>
-                    <li><a href="#n">About us</a></li>
-                    <li><a href="#n">View</a></li>
-                    <li><a href="#n">Exhibition</a></li>
-                    <li><a href="#n">Program</a></li>
-                    <li><a href="#n">News</a></li>
-                    <li><a href="#n">Collection</a></li>
-                </ul>
-            </nav>
-            <button class="btn_close"></button>
-        </header>
-        <div class="visual">
-            <div class="outer">
-                <div class="satellite_wrap">
-                  <div class="satellite_box satellite_box1">
-                    <p>1</p>
-                  </div>
-                  <div class="satellite_box satellite_box2">
-                    <p>2</p>
-                  </div> 
-                  <div class="satellite_box satellite_box3">
-                    <p>3</p>
-                  </div>
+                <button class="btn_open">메뉴열기</button>
+                <div class="gnb_wrap">
+                    <ul>
+                        <li><a href="#n">About us</a></li>
+                        <li><a href="#n">View</a></li>
+                        <li><a href="#n">Exhibition</a></li>
+                        <li><a href="#n">Program</a></li>
+                        <li><a href="#n">News</a></li>
+                        <li><a href="#n">Collection</a></li>
+                    </ul>
                 </div>
-            </div>
-            <h1>
-                <strong>
-                    <em>C</em><span>HEON</span>
-                </strong>
-                <strong>
-                    <em>A</em><span>N</span>
-                </strong>
-                <strong>
-                    <em>M</em><span>USEUM</span>
-                </strong>
-                <strong>
-                    <em>O</em><span>F</span>
-                </strong>
-                <strong>
-                    <em>A</em><span>RT</span>
-                </strong>
-            </h1>
-        </div>
+                <button class="btn_close">메뉴닫기</button>
+            </nav>
+        </header>
+        <main class="container">
+            <section class="visual">
+                <div class="outer">
+                    <div class="cricle1"></div>
+                    <div class="cricle2"></div>
+                    <div class="cricle3"></div>
+                </div>
+                <h1>
+                    <strong>
+                        <em>C</em><span>HEON</span>
+                    </strong>
+                    <strong>
+                        <em>A</em><span>N</span>
+                    </strong>
+                    <strong>
+                        <em>M</em><span>USEUM</span>
+                    </strong>
+                    <strong>
+                        <em>O</em><span>F</span>
+                    </strong>
+                    <strong>
+                        <em>A</em><span>RT</span>
+                    </strong>
+                </h1>
+            </section>
+            <section class="info">
+                <div class="wrapper">
+                    <div class="info_l" data-aos="fade-up">
+                        <h2>관람시간</h2>
+                        <p>화 - 일 10:00 ~ 18:00</p>
+                        <span>17 : 30 입장마감</span>
+                    </div>
+                    <div class="info_r">
+                        <div class="free" data-aos="fade-up" data-aos-delay="300">
+                            <h2>무료입장</h2>
+                        </div>
+                        <div class="closeday" data-aos="fade-up" data-aos-delay="500">
+                            <h2>휴관일</h2>
+                            <p>매주 월요일 휴관 외</p>
+                            <span>* 자세한 사항은 관람안내 참조</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slogun">
+                    <img src="images/slogun.svg" alt="CAMOA">
+                    <div class="more"><a href="#n"><span>more</span></a></div>
+                </div>
+            </section>
+            <section class="news">
+                <h2 data-aos="fade-up"><strong><span>N</span>ews</strong></h2>
+                <div class="list" data-aos="fade-up">
+                    <div class="swiper"> 
+                        <ul class="swiper-wrapper"> 
+                            <li class="swiper-slide">
+                                <strong>2024년 천안시립미술관 작품 수집 심의위원 공개 모집 공고</strong>
+                                <span>2024-07-02</span>
+                            </li> 
+                            <li class="swiper-slide">
+                                <strong>2024년 천안시립미술관 소장품 수집(구입·기증) 공고</strong>
+                                <span>2024-06-10</span>
+                            </li> 
+                            <li class="swiper-slide">
+                                <strong>[제 2024-01호] 2024년도 천안시립미술관 문화자원봉사자 모집 공고</strong>
+                                <span>2024-01-23</span>
+                            </li> 
+                            <li class="swiper-slide">
+                                <strong>[제2023-65] 2023 천안제로프로젝트 주제공모전 최종 결과</strong>
+                                <span>2023-05-30</span>
+                            </li> 
+                            <li class="swiper-slide">
+                                <strong>[제2023-60] 2023 천안제로프로젝트 주제공모전 1차 심의결과</strong>
+                                <span>2023-05-19</span>
+                            </li> 
+                            <li class="swiper-slide">
+                                <strong>[제2023-41] 천안시립미술관 <2023 천안 제로프로젝트> 주제공모전</strong>
+                                <span>2023-04-18</span>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="controlbar">
+                        <div class="scroll"><div class="swiper-scrollbar"></div></div>
+                    </div>
+                </div>
+                <div class="more" data-aos="fade-up"><a href="#n"><span>more</span></a></div>
+            </section>
+        </main>
+        <script>
+            AOS.init({
+            offset: 200, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+            duration: 500, // 애니메이션 효과가 작동되는 시간
+            easing: 'ease', // 가속도
+            });
+        </script>
     </div>
 </body>
 </html>

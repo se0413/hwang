@@ -20,21 +20,58 @@
     top: 100px;
 }
 header {
-    position: fixed;
+    position: relative;
     width: 100%;
-    background-color: transparent;
+    background-color: var(--txt-color-main);
     height: 100px;
     z-index: 100;
     display: flex;
     justify-content: flex-end;
 }
-header .gnb {
+header .gnb .gnb_wrap {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 100vh;
+    background-color: #20231F;
     display: none;
+    text-align: right;
+    font-size: var(--txt-size-tit);
+    font-family: 'SF_HambakSnow';
+}
+header .gnb .gnb_wrap ul {
+    height: 100%;
+    margin-right: 99px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+header .gnb .gnb_wrap ul li {
+    width: 100%;
+}
+header .gnb .gnb_wrap ul li a {
+    display: block;
+    line-height: 150px;
+    padding-right: 80px;
+    transition: 0.5s;
+}
+header .gnb .gnb_wrap ul li a:hover {
+    background-color: #fff;
+    color: #20231F;
+}
+header.menu_open .gnb .gnb_wrap {
+    display: block;
 }
 header button {
+    font-size: 0;
+    line-height: 0;
+}
+header button.btn_open,
+header button.btn_close {
+    position: absolute;
     width: 100px;
-    height: 100px;
-    position: relative;
+    height: 100%;
+    right: 0;
 }
 header button.btn_open::before {
     position: absolute;
@@ -48,6 +85,9 @@ header button.btn_open::before {
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg width='47' height='12' viewBox='0 0 47 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='47' height='3' fill='white'/%3E%3Crect y='9' width='47' height='3' fill='white'/%3E%3C/svg%3E%0A");
     content: "";
+}
+header.menu_open button.btn_open {
+    display: none;
 }
 header button.btn_close::before {
     position: absolute;
@@ -64,4 +104,42 @@ header button.btn_close::before {
 }
 header button.btn_close {
     display: none;
+}
+header.menu_open button.btn_close {
+    display: block;
+    border-left: 1px solid #fff;
+}
+@media screen and (max-width: 768px) {
+    header {
+        height: 50px;
+    }
+    header .gnb .gnb_wrap {
+        top: 50px;
+        font-size: 1.923rem;
+    }
+    header .gnb .gnb_wrap ul {
+        margin-right: 0;
+    }
+    header .gnb .gnb_wrap ul li {
+        width: auto;
+    }
+    header .gnb .gnb_wrap ul li a {
+        line-height: 50px;
+        padding-right: 20px;
+    }
+    header button.btn_open,
+    header button.btn_close {
+        width: 50px;
+    }
+    header button.btn_open::before {
+        width: 29px;
+        height: 8px;
+    }
+    header button.btn_close::before {
+        width: 22px;
+        height: 22px;
+    }
+    header.menu_open button.btn_close {
+        border-left: 0;
+    }
 }

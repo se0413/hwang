@@ -36,5 +36,10 @@ $(document).ready(function(){
         scroll_chk() //스크롤할때마다 1번 실행
     })
 
-   
+	$('header .gnb .btn_open').on('click', function(){
+		$('header').addClass('menu_open')
+	})
+    $('header .gnb .btn_close').on('click', function(){
+		$('header').removeClass('menu_open')
+	})
 })
