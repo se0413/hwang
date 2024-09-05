@@ -7,15 +7,15 @@ $(document).ready(function(){
 		$('.visual h1 strong:nth-child(1).mr').removeClass('mr')
 	}, 3000);
 
-    const news_swiper = new Swiper('.news .swiper', { /* 팝업을 감싼는 요소의 class명 */
-        slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
-        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+    const news_swiper = new Swiper('.news .swiper', { 
+        slidesPerView: 'auto', 
+        spaceBetween: 16, 
         breakpoints: {
-            768: {    /* 768px 이상일때 적용 */
+            768: {   
                 slidesPerView: 3,
                 spaceBetween: 24,
             },
-            1024: {    /* 768px 이상일때 적용 */
+            1024: {    
                 slidesPerView: 3,
                 spaceBetween: 24,
             },
@@ -27,5 +27,49 @@ $(document).ready(function(){
             draggable: true,
         },
     });
+
+    const exhibition_swiper = new Swiper('.exhibition .swiper', { 
+        slidesPerView: 2, 
+        spaceBetween: 35, 
+        breakpoints: {
+            768: {  
+                slidesPerView: 3,
+                spaceBetween: 24, 
+            },
+            1150: {  
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        centeredSlides: true, 
+        loop: true,  
+        autoplay: {  
+            delay: 2500,
+            disableOnInteraction: true,
+        },
+    });
+
+    const program_swiper = new Swiper('.program .swiper', { 
+
+		autoplay: { 
+			delay: 5000000,
+			disableOnInteraction: true,
+		},
+		effect: "fade", 
+		loop: true,  
+
+		pagination: {  
+			el: '.program .paging', 
+			clickable: true, 
+			renderBullet: function (index, className) {   
+				return '<div class="item '+className+'"><span class="txt' + (index + 1) + '"></span></div>';
+			},
+		},
+        navigation: {  
+            nextEl: '.program .btn_next',  
+            prevEl: '.program .btn_prev',  
+        },
+
+	});
 
 })

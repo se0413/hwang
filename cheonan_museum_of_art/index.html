@@ -14,9 +14,13 @@
     <title>천안시립미술관</title>
 </head>
 <body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_nav">대메뉴 바로가기</a>
+    </div>
     <div id="wrap">
         <header>
-            <nav class="gnb">
+            <nav class="gnb" id="skip_nav">
                 <button class="btn_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul>
@@ -56,7 +60,7 @@
                     </strong>
                 </h1>
             </section>
-            <section class="info">
+            <section class="info" id="skip_contents">
                 <div class="wrapper">
                     <div class="info_l" data-aos="fade-up">
                         <h2>관람시간</h2>
@@ -80,8 +84,8 @@
                 </div>
             </section>
             <section class="news">
-                <h2><strong><span>N</span>ews</strong></h2>
-                <div class="list">
+                <h2 data-aos="fade-up"><strong><span>N</span>ews</strong></h2>
+                <div class="list" data-aos="fade-up">
                     <div class="swiper"> 
                         <ul class="swiper-wrapper"> 
                             <li class="swiper-slide">
@@ -114,7 +118,142 @@
                         <div class="scroll"><div class="swiper-scrollbar"></div></div>
                     </div>
                 </div>
+                <div class="more" data-aos="fade-up"><a href="#n"><span>more</span></a></div>
+            </section>
+            <section class="exhibition">
+                <h2 data-aos="fade-up"><strong><span>E</span>xhibition work</strong></h2>
+                <div class="swiper" data-aos="fade-up"> 
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/exhibition_1.png" alt="무궁화꽃이 피었습니다 전시"></div>
+                            <strong>천안시립미술관 천안 K-컬처 박람회 연계한 특별기획전 《무궁화 꽃이 피었습니다</strong>
+                            <span>2024-05-21 ~ 2024-09-08</span>
+                        </li> 
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/exhibition_2.png" alt="기록과 기억으로 말하다 전시"></div>
+                            <strong>천안미술 1951-1989 : 기록과 기억으로 말하다</strong>
+                            <span>2024-02-27 ~ 2024-05-05</span>
+                        </li> 
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/exhibition_3.png" alt="이름 없는 소우주 전시"></div>
+                            <strong>천안제로프로젝트 : 이름 없는 소우주</strong>
+                            <span>2023-11-14 ~ 2023-12-17</span>
+                        </li> 
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/exhibition_4.png" alt="작가문체 : 전용환 오경택 전시"></div>
+                            <strong>커넥트 인 천안 〈작가문체 : 전용환 오경택〉</strong>
+                            <span>2023-09-15 ~ 2023-10-22</span>
+                        </li> 
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/exhibition_5.png" alt="관계도시 : 유동하는 미래 전시"></div>
+                            <strong>천안시 승격 60주년 특별기획전 〈관계도시 : 유동하는 미래〉</strong>
+                            <span>2023-06-16 ~ 2023-08-27</span>
+                        </li> 
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/exhibition_6.png" alt="2022 올해의 청년작가 : 김은혜 홍혜림 전시"></div>
+                            <strong>2022 올해의 청년작가 : 김은혜 홍혜림</strong>
+                            <span>2022-11-01 ~ 2022-12-18</span>
+                        </li> 
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/exhibition_7.png" alt="없음으로부터 있음까지 전시"></div>
+                            <strong>커넥트 인 천안＜없음으로부터 있음까지></strong>
+                            <span>2022-08-30 ~ 2022-10-16</span>
+                        </li> 
+                    </ul>
+                </div>
                 <div class="more"><a href="#n"><span>more</span></a></div>
+            </section>
+            <section class="program">
+                <div class="move_txt">
+                    <strong>CHEONAN MUSEUM OF ART CHEONAN MUSEUM OF ART CHEONAN MUSEUM OF ART</strong>
+                </div>
+                <div class="wrapper">
+                    <h2><strong><span>P</span>rogram</strong></h2>
+                    <div class="p_box">
+                        <div class="paging"></div>
+                        <div class="swiper">
+                            <ul class="swiper-wrapper"> 
+                                <li class="swiper-slide">
+                                    <div class="p_list">
+                                        <div class="p_txt">
+                                            <h3>전시연계프로그램</h3>
+                                            <p>토크 콘서트 : 권지안</p>
+                                            <strong>교육일시 : 2024.08.04 14:00 (단일회차)</strong>
+                                            <span>교육장소천안예술의전당 문화센터</span>
+                                            <em>교육대상전 연령층</em>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/program_1.png" alt="토크 콘서트 : 권지안"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="p_list">
+                                        <div class="p_txt">
+                                            <h3>지역특성화프로그램</h3>
+                                            <p>CAMOA 아트랩 프로젝트 1.0</p>
+                                            <strong>2023.12.06(수) ~ 12.16(토)</strong>
+                                            <span>천안시청소년수련관</span>
+                                            <em>가족</em>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/program_2.png" alt="토크 콘서트 : 권지안"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="p_list">
+                                        <div class="p_txt">
+                                            <h3>전문교육프로그램</h3>
+                                            <p>2024 전시해설사 양성프로그램</p>
+                                            <strong>2024.9.4.(수)~2023.11.20.(수) 14:00~16:30 [10주 과정]</strong>
+                                            <span>문화센터 2층 세미나실</span>
+                                            <em>성인</em>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/program_3.png" alt="토크 콘서트 : 권지안"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="p_list">
+                                        <div class="p_txt">
+                                            <h3>전문교육프로그램</h3>
+                                            <p>CAMOA 미술관 창작마켓</p>
+                                            <strong>2024.8.10.~8.11. 10:00~12:00/14:00~16:00 (1일 2회)</strong>
+                                            <span>천안예술의전당 문화센터</span>
+                                            <em>가족</em>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/program_4.png" alt="토크 콘서트 : 권지안"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="p_list">
+                                        <div class="p_txt">
+                                            <h3>지역특성화프로그램</h3>
+                                            <p>CAMOA 아트랩 프로젝트 2.0</p>
+                                            <strong>2024. 7. 23(화)~2024. 7. 31.(수) / 주2회</strong>
+                                            <span>천안시립미술관 및 협력기관</span>
+                                            <em>전 연령층</em>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/program_4.png" alt="토크 콘서트 : 권지안"></div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="p_list">
+                                        <div class="p_txt">
+                                            <h3>전문교육프로그램</h3>
+                                            <p>CAMOA 아트랩 프로젝트 2.0</p>
+                                            <strong>2024. 7. 23(화)~2024. 7. 31.(수) / 주2회</strong>
+                                            <span>천안시립미술관 및 협력기관</span>
+                                            <em>전 연령층</em>
+                                        </div>
+                                    </div>
+                                    <div class="photo"><img src="images/program_5.png" alt="토크 콘서트 : 권지안"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn_wrap">
+                            <button class="btn_prv">이전</button>
+                            <button class="btn_next">다음</button>
+                        </div>
+                    </div>
+                    <div class="more"><a href="#n"><span>more</span></a></div>
+                </div>
             </section>
         </main>
         <script>
