@@ -44,6 +44,10 @@ html, body{
     html, body{
         font-size: 13px;
     } 
+    .wrapper {
+        margin: 0 10px; /* 넓이는 1260 유지, 좌우에 20px 여백 */
+        width: auto;
+    }
 }
 
 /*

@@ -51,11 +51,18 @@ $(document).ready(function(){
 
     const program_swiper = new Swiper('.program .swiper', { 
 
+        slidesPerView: 1, 
+        spaceBetween: 14, 
+        breakpoints: {
+            768: {  
+                slidesPerView: 1,
+                spaceBetween: 24, 
+            },
+        },
 		autoplay: { 
-			delay: 5000000,
+			delay: 6000,
 			disableOnInteraction: true,
 		},
-		effect: "fade", 
 		loop: true,  
 
 		pagination: {  
