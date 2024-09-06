@@ -229,13 +229,15 @@ footer .famillysite.on button.btn_close {
     display: block;
 }
 footer .famillysite ul {
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     background-color: var(--txt-color-main);
     text-align: center;
     padding: 15px;
     position: absolute;
     right: 0;
-    top: 35px;
+    top: 36px;
     display: none;
 }
 footer .famillysite ul li {
@@ -335,4 +337,21 @@ footer .copyright {
     footer .copyright {
         text-align: center;
     }
+}
+.cursor { 
+	position: absolute;  /* 반드시 absolute여야 하고 위치는 jquery에서 적용 시킴 */
+	z-index: 1000;
+	transform: translate(10%, 10%); /* 커서 위치 조정 */
+	display:none; /* 평소에는 보이지 않게 하기 위해서 - 만약 원래도 따라다니는 마우스 포인터를 디자인하려면 스타일을 주면 됨. */
+}
+.cursor.on {
+	display: block;  /* jquery에서 특정 요소에 마우스를 오버하면 class명을 추가해주고 그때 나타남 */
+    background-color: #fff;
+    color: var(--txt-color-main);
+    border: 1px solid var(--txt-color-main);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding-top: 30px;
 }

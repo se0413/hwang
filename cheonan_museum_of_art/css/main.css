@@ -22,8 +22,9 @@
     border: 1px solid rgba(255, 255, 255, 0.6);
     position: relative;
     animation-name: rotate;
-    animation-duration: 15s;
-    animation-timing-function: infinite;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    animation-timing-function : linear;
     animation-fill-mode: forwards;
     box-shadow: 2px 2px 7px rgba(255, 255, 255, 0.2);
 }
@@ -44,7 +45,7 @@
     border-radius: 50%; 
     background-color: #CACACA; 
     position: absolute;
-    bottom: 62%;
+    top: 62%;
     left: 0;
 }
 .visual .outer .cricle3{ 
@@ -97,7 +98,7 @@
 }
 .visual h1 span:last-of-type {
     animation-name: slide;
-    animation-timing-function: 2s;
+    /* animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); */
     animation-duration: 13s;
     animation-fill-mode: forwards;
     margin-left:-355px;
@@ -106,8 +107,10 @@
 @keyframes slide {
     0% { margin-left:-800px; opacity: 0;}
     20% { margin-left:-800px; opacity: 0; }
-    35% { margin-left: 0; opacity: 0.5;}
-    40% { margin-left: 0; opacity: 1; }
+    35% { margin-left: 0; opacity: 0.4;}
+    36% { margin-left: 0; opacity: 0.4;}
+    40% { margin-left: 0; opacity: 0.6; }
+    80% { margin-left: 0; opacity: 1; }
     100% { margin-left: 0; opacity: 1;}
 }
 @media screen and (max-width: 1400px) {
@@ -390,8 +393,11 @@
 }
 .news .list .swiper .swiper-slide {
     width: calc(100% / 3);
-    padding: 40px;
     position: relative;
+}
+.news .list .swiper .swiper-slide a {
+    display: block;
+    padding: 40px;
 }
 .news .list .swiper .swiper-slide::before {
     position: absolute;
@@ -508,8 +514,10 @@
     }
     .news .list .swiper .swiper-slide {
         width: 100%;
-        padding: 20px;
         height: 140px;
+    }
+    .news .list .swiper .swiper-slide a {
+        padding: 20px;
     }
     .news .list .swiper .swiper-slide strong {
         font-size: 1.385rem;
@@ -811,9 +819,21 @@
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='22' viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.69232 11.0008L0.846485 2.15443C0.651346 1.95964 0.54718 1.72057 0.533985 1.43724C0.520443 1.15425 0.62461 0.901994 0.846485 0.680466C1.06801 0.458591 1.31367 0.347656 1.58346 0.347656C1.85326 0.347656 2.09892 0.458591 2.32044 0.680466L11.4632 9.82266C11.6447 10.0046 11.7724 10.1904 11.846 10.3799C11.9192 10.5695 11.9559 10.7765 11.9559 11.0008C11.9559 11.2251 11.9192 11.432 11.846 11.6216C11.7724 11.8112 11.6447 11.997 11.4632 12.1789L2.32044 21.3211C2.12565 21.5162 1.88659 21.6204 1.60326 21.6336C1.32027 21.6471 1.06801 21.543 0.846485 21.3211C0.62461 21.0996 0.513672 20.8539 0.513672 20.5841C0.513672 20.3143 0.62461 20.0687 0.846485 19.8471L9.69232 11.0008Z' fill='%2320231F'/%3E%3C/svg%3E%0A");
 }
 .program .p_box .paging {
-    width: 170%;
     margin-right: 50px;
     position: relative;
+}
+.program .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+    position: relative;
+}
+.program .swiper-pagination-bullets.swiper-pagination-horizontal::before {
+    position: absolute;
+    right: -17px;
+    top: 0;
+    height: 100%;
+    border: 1px dashed var(--txt-color-main);
+    content: "";
+    opacity: 0.2;
 }
 .program .paging .swiper-pagination-bullet { 
     width: 100%;
