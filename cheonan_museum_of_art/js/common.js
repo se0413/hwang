@@ -3,7 +3,7 @@ $(document).ready(function(){
     let scrolling
     let scroll_top //header 고정 시작 값
     let window_w
-    let mobile_size = 1024
+    let mobile_size = 768
     let pc_mobile
 
     function scroll_chk(){
@@ -36,10 +36,30 @@ $(document).ready(function(){
         scroll_chk() //스크롤할때마다 1번 실행
     })
 
-	$('header .gnb .btn_open').on('click', function(){
+	$('header .gnb .btn_open').on('click focusin', function(){
 		$('header').addClass('menu_open')
 	})
-    $('header .gnb .btn_close').on('click', function(){
+    $('header .gnb .btn_close').on('click focusout', function(){
 		$('header').removeClass('menu_open')
 	})
+
+    $('footer .famillysite button.btn_open').on('click', function(){
+        $('footer .famillysite').addClass('on')
+        $('footer .famillysite ul').slideDown()
+    })
+    $('footer .famillysite button.btn_close').on('click', function(){
+        $('footer .famillysite').removeClass('on')
+        $('footer .famillysite ul').slideUp()
+    })
+
+    $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    //스크롤금지
+    $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    //스크롤금지 해제
+
+    $('.quick button').on('click', function(){
+        $('html, body').animate({
+            scrollTop:0
+        },500)
+    })
 })

@@ -79,4 +79,26 @@ $(document).ready(function(){
 
 	});
 
+    var cultural_swiper = new Swiper(".cultural .swiper", {
+        effect: "cards",
+        grabCursor: true,
+        initialSlide: 0,
+        speed: 500,
+        loop: true,
+        rotate: true,
+        mousewheel: {
+        invert: false,
+      },
+
+      pagination: {  
+            el: '.cultural .paging', 
+            clickable: true, 
+
+        },
+        navigation: {  
+            nextEl: '.cultural .btn_next',  
+            prevEl: '.cultural .btn_prev',  
+        },
+    });
+
 })

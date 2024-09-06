@@ -143,3 +143,196 @@ header.menu_open button.btn_close {
         border-left: 0;
     }
 }
+.quick {
+    position: fixed;
+    right: 1%;
+    bottom: 100px;
+    z-index: 90; 
+}
+.quick button {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: var(--txt-color-main);
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid var(--txt-color-main);
+    font-size: 1.333rem;
+    font-family: 'SF_HambakSnow';
+    padding-top: 40px;
+}
+.quick button span {
+    position: relative;
+    padding-top: 40px;
+}
+.quick button span::before {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 37px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_32_2117' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='50' height='50'%3E%3Crect x='50' y='50' width='50' height='50' transform='rotate(-180 50 50)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_32_2117)'%3E%3Cpath d='M24.9994 6.25005L38.2207 19.4714L36.7863 20.9573L26.041 10.2126L26.041 25.0402L23.9577 25.0402L23.9577 10.1724L13.2124 20.9053L11.778 19.4714L24.9994 6.25005ZM26.041 29.2068L26.041 35.4568L23.9577 35.4568L23.9577 29.2068L26.041 29.2068ZM26.041 39.6235L26.041 43.7902L23.9577 43.7902L23.9577 39.6235L26.041 39.6235Z' fill='%2320231F'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+@media screen and (max-width: 768px) {
+    .quick {
+        display: none;
+    }
+}
+footer {
+    background-color: var(--txt-color-main);
+    padding: 75px 0 100px 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+footer .wrapper {
+    position: relative;
+}
+footer .famillysite {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+footer .famillysite button {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 8px 69px 8px 20px;
+    position: relative;
+}
+footer .famillysite button::before {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .famillysite button.btn_open::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_32_2094' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect x='20' width='20' height='20' transform='rotate(90 20 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_32_2094)'%3E%3Cpath d='M10.0005 11.0767L13.539 7.5384C13.6169 7.46034 13.7126 7.41868 13.8259 7.4134C13.9391 7.40798 14.04 7.44965 14.1286 7.5384C14.2173 7.62701 14.2617 7.72527 14.2617 7.83319C14.2617 7.94111 14.2173 8.03937 14.1286 8.12798L10.4717 11.7851C10.3989 11.8577 10.3246 11.9087 10.2488 11.9382C10.173 11.9675 10.0902 11.9821 10.0005 11.9821C9.91075 11.9821 9.82797 11.9675 9.75214 11.9382C9.6763 11.9087 9.602 11.8577 9.52922 11.7851L5.87234 8.12798C5.79429 8.05007 5.75262 7.95444 5.74734 7.84111C5.74193 7.72791 5.78359 7.62701 5.87234 7.5384C5.96095 7.44965 6.05922 7.40527 6.16714 7.40527C6.27505 7.40527 6.37332 7.44965 6.46193 7.5384L10.0005 11.0767Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .famillysite.on button.btn_open {
+    display: none;
+}
+footer .famillysite button.btn_close::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_32_2097' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect y='20' width='20' height='20' transform='rotate(-90 0 20)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_32_2097)'%3E%3Cpath d='M9.99953 8.92327L6.46099 12.4616C6.38307 12.5397 6.28745 12.5813 6.17411 12.5866C6.06092 12.592 5.96002 12.5504 5.87141 12.4616C5.78266 12.373 5.73828 12.2747 5.73828 12.1668C5.73828 12.0589 5.78266 11.9606 5.87141 11.872L9.52828 8.21493C9.60106 8.1423 9.67536 8.09125 9.7512 8.06181C9.82703 8.0325 9.90981 8.01785 9.99953 8.01785C10.0893 8.01785 10.172 8.0325 10.2479 8.06181C10.3237 8.09125 10.398 8.1423 10.4708 8.21493L14.1277 11.872C14.2057 11.9499 14.2474 12.0456 14.2527 12.1589C14.2581 12.2721 14.2164 12.373 14.1277 12.4616C14.039 12.5504 13.9408 12.5947 13.8329 12.5947C13.7249 12.5947 13.6267 12.5504 13.5381 12.4616L9.99953 8.92327Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .famillysite button.btn_close {
+    display: none;
+}
+footer .famillysite.on button.btn_close {
+    display: block;
+}
+footer .famillysite ul {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: var(--txt-color-main);
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    display: none;
+}
+footer .famillysite ul li {
+    line-height: 30px;
+}
+footer .f_info {
+    display: flex;
+    margin: 40px 0;
+}
+footer .f_info span {
+    margin-right: 23px;
+}
+footer .f_info  span:nth-child(1) {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+footer .f_nav {
+    display: flex;
+    margin-bottom: 55px;
+}
+footer .f_nav address{
+    width: 190px;
+    margin-right: 25px;
+}
+footer .f_nav strong {
+    display: block;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding-bottom: 15px;
+}
+footer .f_nav span {
+    display: block;
+    margin-top: 15px;
+}
+footer .f_nav .contact{
+    width: 190px;
+    margin-right: 25px;
+}
+footer .f_nav .follow_us{
+    width: 190px;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 35px 0 90px 0;
+    }
+    footer .famillysite {
+        position: relative;
+    }
+    footer .f_logo {
+        display: none;
+    }
+    footer .famillysite button {
+        width: 100%;
+        padding: 8px 20px;
+        text-align: left;
+    }
+    footer .famillysite ul {
+        padding: 15px;
+        top: 33px;
+        width: 100%;
+    }
+    footer .f_info {
+        margin: 20px 0 0 0;
+        text-align: center;
+        display: block;
+    }
+    footer .f_info span {
+        margin-right: 10px;
+    }
+    footer .f_nav {
+        display: block;
+        text-align: center;
+        margin-bottom: 55px;
+        width: 100%;
+    }
+    footer .f_nav address{
+        width: 100%;
+        margin-right: 0;
+    }
+    footer .f_nav strong {
+        display: none;
+    }
+    footer .f_nav span {
+        display: block;
+        margin-top: 15px;
+    }
+    footer .f_nav .contact{
+        width: 100%;
+        margin-right: 0;
+    }
+    footer .f_nav .follow_us{
+        width: 100%;
+    }
+    footer .copyright {
+        text-align: center;
+    }
+}

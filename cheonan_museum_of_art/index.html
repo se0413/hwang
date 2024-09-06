@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -36,6 +38,9 @@
             </nav>
         </header>
         <main class="container">
+            <aside class="quick">
+                <button><span>TOP</span></button>
+            </aside>
             <section class="visual">
                 <div class="outer">
                     <div class="cricle1"></div>
@@ -62,7 +67,7 @@
             </section>
             <section class="info" id="skip_contents">
                 <div class="wrapper">
-                    <div class="info_l" data-aos="fade-up">
+                    <div class="info_l">
                         <h2>관람시간</h2>
                         <p>화 - 일 10:00 ~ 18:00</p>
                         <span>17 : 30 입장마감</span>
@@ -84,8 +89,8 @@
                 </div>
             </section>
             <section class="news">
-                <h2 data-aos="fade-up"><strong><span>N</span>ews</strong></h2>
-                <div class="list" data-aos="fade-up">
+                <h2><strong><span>N</span>ews</strong></h2>
+                <div class="list">
                     <div class="swiper"> 
                         <ul class="swiper-wrapper"> 
                             <li class="swiper-slide">
@@ -118,11 +123,11 @@
                         <div class="scroll"><div class="swiper-scrollbar"></div></div>
                     </div>
                 </div>
-                <div class="more" data-aos="fade-up"><a href="#n"><span>more</span></a></div>
+                <div class="more"><a href="#n"><span>more</span></a></div>
             </section>
             <section class="exhibition">
-                <h2 data-aos="fade-up"><strong><span>E</span>xhibition work</strong></h2>
-                <div class="swiper" data-aos="fade-up"> 
+                <h2><strong><span>E</span>xhibition work</strong></h2>
+                <div class="swiper"> 
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
                             <div class="photo"><img src="images/exhibition_1.png" alt="무궁화꽃이 피었습니다 전시"></div>
@@ -168,8 +173,8 @@
                     <strong>CHEONAN MUSEUM OF ART CHEONAN MUSEUM OF ART CHEONAN MUSEUM OF ART CHEONAN MUSEUM OF ART CHEONAN MUSEUM OF ART CHEONAN MUSEUM OF ART CHEONAN MUSEUM OF ART</strong>
                 </div>
                 <div class="wrapper">
-                    <h2 data-aos="fade-up"><strong><span>P</span>rogram</strong></h2>
-                    <div class="p_box" data-aos="fade-up">
+                    <h2><strong><span>P</span>rogram</strong></h2>
+                    <div class="p_box">
                         <div class="btn_wrap">
                             <button class="btn_prev">이전</button>
                             <button class="btn_next">다음</button>
@@ -326,7 +331,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="more" data-aos="fade-up"><a href="#n"><span>more</span></a></div>
+                    <div class="more"><a href="#n"><span>more</span></a></div>
                 </div>
             </section>
             <section class="collection">
@@ -334,10 +339,10 @@
                 <div class="line2"></div>
                 <div class="line3"></div>
                 <div class="line4"></div>
-                <h2 data-aos="fade-up"><strong><span>C</span>ollection</strong></h2>
+                <h2><strong><span>C</span>ollection</strong></h2>
                 <div class="c_ctn">
                     <ul>
-                        <li data-aos="fade-up">
+                        <li>
                             <div class="photo"><img src="images/collection_1.png" alt="평화의 메아리 작품"></div>
                             <div class="c_txt">
                                 <strong><em>작가명 :</em> 전영화</strong>
@@ -345,7 +350,7 @@
                                 <div class="view"><a href="#n"><span>view</span></a></div>
                             </div>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="300">
+                        <li>
                             <div class="photo"><img src="images/collection_2.png" alt="평화의 메아리 작품"></div>
                             <div class="c_txt">
                                 <strong><em>작가명 :</em> 최홍일</strong>
@@ -353,7 +358,7 @@
                                 <div class="view"><a href="#n"><span>view</span></a></div>
                             </div>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="600">
+                        <li>
                             <div class="photo"><img src="images/collection_3.png" alt="평화의 메아리 작품"></div>
                             <div class="c_txt">
                                 <strong><em>작가명 :</em> 이재창</strong>
@@ -363,14 +368,105 @@
                         </li>
                     </ul>
                 </div>
-                <div class="more" data-aos="fade-up"><a href="#n"><span>more</span></a></div>
+                <div class="more"><a href="#n"><span>more</span></a></div>
             </section>
+            <section class="cultural">
+                <h2><strong><span>C</span>ultural event</strong></h2>
+                <div class="cultural_btn_wrap">
+                    <div class="paging"></div>
+                    <div class="btn_wrap">
+                        <button class="btn_prev">이전</button>
+                        <button class="btn_next">다음</button>
+                    </div>
+                </div>
+                <div class="more"><a href="#n"><span>more</span></a></div>
+                <div class="swiper">
+                    <ul class="swiper-wrapper"> 
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/cultural_event1.png" alt="미술한가위">
+                                </div>
+                            </a>
+                        </li> 
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/cultural_event2.png" alt="CAMOA Museum Night">
+                                </div>
+                            </a>
+                        </li> 
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/cultural_event3.png" alt="scent of Space">
+                                </div>
+                            </a>
+                        </li> 
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <div class="photo">
+                                    <img src="images/cultural_event4.png" alt="매직버블쇼">
+                                </div>
+                            </a>
+                        </li> 
+                    </ul>
+                </div>
+            </section>
+            <footer>
+                <div class="wrapper">
+                    <div class="f_logo"><img src="images/logo_w.png" alt="CAMOA"></div>
+                    <div class="famillysite">
+                        <button class="btn_open">Familly site</button>
+                        <ul>
+                            <li>
+                                <a href="#n">천안문화재단</a>
+                            </li>
+                            <li>
+                                <a href="#n">천안예술의전당</a>
+                            </li>
+                            <li>
+                                <a href="#n">천안시영상미디어센터</a>
+                            </li>
+                        </ul>
+                        <button class="btn_close">Familly site</button>
+                    </div>
+                    <div class="f_info">
+                        <span><a href="#n">개인정보처리방침</a></span>
+                        <span><a href="#n">이용약관</a></span>
+                        <span><a href="#n">저작권보호정책</a></span>
+                        <span><a href="#n">오시는 길</a></span>
+                    </div>
+                    <div class="f_nav">
+                        <address>
+                            <strong>Adress</strong>
+                            <span>(31246) 충청남도 천안시 동남구 성남면 종합휴양지로 185 천안시립미술관</span>
+                        </address>
+                        <div class="contact">
+                            <strong>Contact</strong>
+                            <span>T : 041-900-1865</span>
+                        </div>
+                        <div class="follow_us">
+                            <strong>Follow us</strong>
+                            <span><a href="#n">인스타그램</a></span>
+                            <span><a href="#n">페이스북</a></span>
+                        </div>
+                    </div>
+                    <div class="copyright">ⓒcheonan museum of art all rights reserved</div>
+                </div>
+            </footer>
         </main>
         <script>
             AOS.init({
             offset: 100, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
             duration: 500, // 애니메이션 효과가 작동되는 시간
             easing: 'ease', // 가속도
+            });
+        </script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "cards",
+                grabCursor: true,
             });
         </script>
     </div>
