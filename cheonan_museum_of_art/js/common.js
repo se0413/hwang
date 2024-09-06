@@ -38,9 +38,16 @@ $(document).ready(function(){
 
 	$('header .gnb .btn_open').on('click focusin', function(){
 		$('header').addClass('menu_open')
+        $('html, body').css({'overflow': 'hidden', 'height': '100%'});
+        $('.gnb_wrap').on('scroll touchmove mousewheel', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        });
 	})
     $('header .gnb .btn_close').on('click focusout', function(){
 		$('header').removeClass('menu_open')
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
 	})
 
     $('footer .famillysite button.btn_open').on('click', function(){
@@ -51,11 +58,6 @@ $(document).ready(function(){
         $('footer .famillysite').removeClass('on')
         $('footer .famillysite ul').slideUp()
     })
-
-    $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
-    //스크롤금지
-    $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
-    //스크롤금지 해제
 
     $('.quick button').on('click', function(){
         $('html, body').animate({
