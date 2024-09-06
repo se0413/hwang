@@ -86,9 +86,7 @@ $(document).ready(function(){
         speed: 500,
         loop: true,
         rotate: true,
-        mousewheel: {
-        invert: false,
-      },
+        mousewheel: false,
 
       pagination: {  
             el: '.cultural .paging', 
