@@ -36,7 +36,7 @@ $(document).ready(function(){
         }else{
             $('header').removeClass('fixed')
         }   
-        console.log(scrolling)
+        // console.log(scrolling)
     }
     scroll_chk()
     $(window).scroll(function(){
