@@ -13,10 +13,10 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh; /*브라우저 높이만큼*/
+    height: 80vh; 
     color: #fff;
     text-align: left;
-    min-height: 480px; /*최소높이, 브라우저 세로길이를 줄였을때 글자가 잘리는 것을 방지*/
+    min-height: 480px;
 }
 .visual ul li.bg1 {
     background-image: url(../images/main/visual_popup1.png);
@@ -158,6 +158,239 @@
         content: "";
     }
 }
+.quick .q_list {
+    position: relative;
+    height: 140px;
+    border-radius: 15px;
+    padding: 0 60px;
+    background-color: #fff;
+    margin-top: -30px;
+    z-index: 3;
+}
+.quick .q_list ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.quick .q_list ul li {
+    margin: 20px 0;
+    width: 90px;
+}
+.quick .q_list ul li a h2 {
+    display: block;
+    text-align: center;
+    padding-top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: relative;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.quick .q_list ul li a h2::before {
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, 0);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    transition: 0.5s;
+}
+.quick .q_list ul li.application a h2::before {
+    background-image: url(../images/main/service_ico1.png);
+}
+.quick .q_list ul li.scholarship a h2::before {
+    background-image: url(../images/main/service_ico2.png);
+}
+.quick .q_list ul li.care a h2::before {
+    background-image: url(../images/main/service_ico3.png);
+}
+.quick .q_list ul li.performance a h2::before {
+    background-image: url(../images/main/service_ico4.png);
+}
+.quick .q_list ul li.service a h2::before {
+    background-image: url(../images/main/service_ico5.png);
+}
+.quick .q_list ul li.map a h2::before {
+    background-image: url(../images/main/service_ico6.png);
+}
+.quick .q_list ul li.qa a h2::before {
+    background-image: url(../images/main/service_ico7.png);
+}
+.quick .q_list ul li a:hover h2 {
+    font-weight: 600;
+    color: #568034;
+}
+.quick .q_list ul li a:hover h2::before {
+    transform: translate(-50%, -8px);
+}
+@media screen and (max-width: 1024px) {
+    .quick .q_list {
+        height: auto;
+        border-radius: 0;
+        padding: 0;
+        margin-top: 30px;
+        z-index: 3;
+    }
+    .quick .q_list ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        height: 100%;
+    }
+    .quick .q_list ul li {
+        margin: 20px 0;
+        width: calc(33.33% - 7px);
+    }
+    .quick .q_list ul li:last-child {
+        display: none;
+    }
+}
+.board h2 {
+    font-size: 0;
+    line-height: 0;
+}
+.board .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.board .tap_area {
+    position: relative;
+    width: 830px;
+    height: 300px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+.board .tap_area .tap_cnt div[role="tabpanel"] {
+    display: none; 
+}
+.board .tap_area .tap_cnt div[role="tabpanel"].active {
+    display: block;
+}
+.board .tap_area .tap_btn > ul {
+    display: flex;
+    margin: 20px 0 0 20px;
+}
+.board .tap_area .tap_btn > ul > li button {
+    padding: 15px 20px;
+    font-size: 25px;
+    color: rgba(29, 29, 29, 0.4);
+}
+.board .tap_area .tap_btn > ul > li.active button {
+    color: #568034;
+    font-weight: 600;
+}
+.board .tap_area .tap_btn > ul > li.active button span {
+    border-bottom: 3px solid #568034;
+}
+.board .tap_area .tap_cnt .detail {
+    padding: 0 40px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.board .tap_area .tap_cnt .detail > li > a {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 37px;
+}
+.board .tap_area .tap_cnt .detail > li > a strong {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 500px;
+    text-overflow: ellipsis;
+}
+.board .tap_area .tap_cnt .detail > li > a span {
+    color: rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+.board .tap_area .tap_cnt .detail > li > a:hover {
+    color: #568034;
+}
+.board .tap_area .tap_cnt .detail > li > a:hover span {
+    color: #568034;
+}
+.board .tap_area .tap_cnt .detail .more {
+    position: absolute;
+    right: 40px;
+    top: 38px;
+}
+.board .tap_area .tap_cnt .detail .more span {
+    position: relative;
+    font-size: 20px;
+    padding-right: 26px;
+    color: rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.board .tap_area .tap_cnt .detail .more span::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_43_2269' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_43_2269)'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='%231D1D1D' fill-opacity='0.2'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+    transition: 0.3s;
+}
+.board .tap_area .tap_cnt .detail .more a:hover span {
+    color: #568034;
+}
+.board .tap_area .tap_cnt .detail .more a:hover span::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_43_2269' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_43_2269)'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='%23568034'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.board .main_link {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: flex-end;
+    width: 404px;
+}
+.board .main_link a {
+    display: block;
+    width: 100%;
+    height: 85px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 30px;
+    line-height: 85px;
+    padding-left: 40px;
+    color: rgba(29, 29, 29, 0.4);
+    position: relative;
+}
+.board .main_link a::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 90px;
+    height: 100%;
+    background-color: rgba(86, 128, 52, 0.2);
+    border-radius: 150px 25px 25px 0;
+    content: "";
+}
+.board .main_link a::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 45px;
+    height: 45px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_43_2337' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='45' height='45'%3E%3Crect y='45' width='45' height='45' transform='rotate(-90 0 45)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_43_2337)'%3E%3Cpath d='M27.743 23.9067L11.25 23.9067C10.8509 23.9067 10.5169 23.772 10.2478 23.5026C9.97844 23.2336 9.84375 22.8995 9.84375 22.5005C9.84375 22.1014 9.97844 21.7673 10.2478 21.4983C10.5169 21.2289 10.8509 21.0942 11.25 21.0942L27.743 21.0942L21.5119 14.8636C21.2525 14.6039 21.1197 14.2775 21.1134 13.8844C21.1075 13.4915 21.2403 13.1592 21.5119 12.8873C21.7837 12.6158 22.1131 12.48 22.5 12.48C22.8869 12.48 23.2162 12.6158 23.4881 12.8873L31.9148 21.314C32.2536 21.6531 32.423 22.0486 32.423 22.5005C32.423 22.9523 32.2536 23.3478 31.9148 23.6869L23.4881 32.1136C23.2284 32.373 22.902 32.5058 22.5089 32.512C22.1161 32.518 21.7838 32.3851 21.5119 32.1136C21.2403 31.8417 21.1045 31.5123 21.1045 31.1255C21.1045 30.7386 21.2403 30.4092 21.5119 30.1373L27.743 23.9067Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+} 
+
+
+
 footer {
     margin-bottom: 5000px;
 }
