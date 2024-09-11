@@ -48,12 +48,48 @@ $(document).ready(function(){
         $(this).attr('aria-selected', 'true')
 
         tab_name = $(this).attr('aria-controls')
-        tab_name = '#'+ tab_name /*id 클래스를 추가로 삽입*/
+        tab_name = '#'+ tab_name 
         console.log(tab_name)
 
         tab_cnt.removeClass('active')
         tab_cnt_prant.find(tab_name).addClass('active')
         
      })
+
+     const excellence_swiper = new Swiper('.excellence .swiper', {
+        slidesPerView: 1, 
+        spaceBetween: 16, 
+        breakpoints: {
+            360: {  
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            768: {  
+                slidesPerView: 3,
+                spaceBetween: 16,
+            },
+            1300: {  
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        centeredSlides: true, 
+        loop: true, 
+    });
+
+    const foundation_news_swiper = new Swiper('.foundation_news .swiper', { 
+
+        slidesPerView: 1, 
+        spaceBetween: 16, 
+        centeredSlides: true, 
+        loop: true, 
+
+        navigation: { 
+            nextEl: '.foundation_news .btn_next',  
+            prevEl: '.foundation_news .btn_prev',  
+        },
+
+    });
+
 
 })

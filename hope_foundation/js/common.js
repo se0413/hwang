@@ -76,6 +76,7 @@ $(document).ready(function(){
     //header .gnb .gnb_open, header .gnb .gnb_close
     $('header .gnb .gnb_open').on('click', function(){
         $('header').addClass('menu_open')
+        
         $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
     })
     $('header .gnb .gnb_close').on('click', function(){

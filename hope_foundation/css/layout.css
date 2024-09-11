@@ -111,6 +111,7 @@ header .gnb .gnb_wrap ul.depth2 > li > a {
     font-size: 18px;
     line-height: 1.8;
     font-weight: 400;
+    transition: 0.5s;
 }
 header .gnb .gnb_wrap ul.depth2 > li > a span {
     padding-right: 26px;
@@ -291,9 +292,6 @@ header.fixed .tnb a.search::before {
     header .tnb {
         display: none;
     }
-    header.menu_open {
-        position: fixed;
-    }
     header.menu_open .logo a {
         display: none;
     }
@@ -327,9 +325,10 @@ header.fixed .tnb a.search::before {
     header.menu_open .gnb .gnb_wrap {
         display: block;
     }
-    header .gnb .gnb_wrap .depth1{
+    header.menu_open .gnb .gnb_wrap .depth1{
         display: block;
         text-align: left;
+        color: #1d1d1d;
     }
     header .gnb .gnb_wrap .depth1 > li {
         width: auto;
