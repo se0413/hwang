@@ -38,6 +38,10 @@ header {
     padding: 0 30px;
     align-items: flex-start; 
 }
+header h1 {
+    font-size: 0;
+    line-height: 0;
+}
 header .logo a {
     display: block;
     width: 48px;
