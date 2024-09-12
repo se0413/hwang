@@ -60,7 +60,7 @@ $(document).ready(function(){
         slidesPerView: 1, 
         spaceBetween: 16, 
         breakpoints: {
-            360: {  
+            500: {  
                 slidesPerView: 2,
                 spaceBetween: 16,
             },
