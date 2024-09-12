@@ -85,12 +85,12 @@ $(document).ready(function(){
     })
 
     //footer famillysite
-    $('footer .familly_site button.familly_open').on('click', function(){
-        $('footer .familly_site').addClass('open')
-        $('footer .familly_site ul').slideDown()
+    $('footer .famillysite button.btn_open').on('click', function(){
+        $('footer .famillysite').addClass('open')
+        $('footer .famillysite ul').slideDown()
     })
-    $('footer .familly_site button.familly_close').on('click', function(){
-        $('footer .familly_site').removeClass('open')
-        $('footer .familly_site ul').slideUp()
+    $('footer .famillysite button.btn_close').on('click', function(){
+        $('footer .famillysite').removeClass('open')
+        $('footer .famillysite ul').slideUp()
     })
 })

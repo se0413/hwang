@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
@@ -226,7 +228,7 @@
                     </div>
                 </div>
             </section>
-            <section class="excellence">
+            <section class="excellence" data-aos="fade-up">
                 <div class="wrapper">
                     <h2>청년창업농 우수사례</h2>
                     <div class="more"><a href="#n"><span>더보기</span></a></div>
@@ -300,7 +302,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="row_board">
+            <section class="row_board" data-aos="fade-up">
                 <div class="wrapper">
                     <div class="fa">
                         <div class="tit">
@@ -405,7 +407,7 @@
                     </div>
                 </div>
             </section>
-            <section class="hope_number">
+            <section class="hope_number" data-aos="fade-up">
                 <div class="wrapper">
                     <ul>
                         <li>
@@ -441,7 +443,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="hope_story">
+            <section class="hope_story" data-aos="fade-up">
                 <div class="wrapper">
                     <div class="tit">
                         <h2>취&middot;창업 이야기</h2>
@@ -470,7 +472,83 @@
                 </div>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <div class="wrapper">
+                <div class="sns">
+                    <ul>
+                        <li class="instar">
+                            <a href="https://www.instagram.com/rhof2114" target="_blank" title="새창열림"></a>
+                        </li>
+                        <li class="facebook">
+                            <a href="https://www.facebook.com/krafo2114" target="_blank" title="새창열림"></a>
+                        </li>
+                        <li class="youtube">
+                            <a href="https://www.youtube.com/channel/UC-WoEKB1m3jGB_jkscYsgfg" target="_blank" title="새창열림"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="famillysite">
+                    <button class="btn_open">패밀리사이트</button>
+                    <ul>
+                        <li>
+                            <a href="https://www.mafra.go.kr/sites/home/index.do" target="_blank" title="새창열림">농림축산식품부</a>
+                        </li>
+                        <li>
+                            <a href="http://www.kra.co.kr" target="_blank" title="새창열림">한국마사회</a>
+                        </li>
+                        <li>
+                            <a href="http://www.rda.go.kr" target="_blank" title="새창열림">농촌진흥청</a>
+                        </li>
+                        <li>
+                            <a href="http://www.kosaf.go.kr" target="_blank" title="새창열림">한국장학재단</a>
+                        </li>
+                        <li>
+                            <a href="http://jaedan.nonghyup.com" target="_blank" title="새창열림">농협재단</a>
+                        </li>
+                        <li>
+                            <a href="http://www.fry.or.kr" target="_blank" title="새창열림">농어촌청소년육성재단</a>
+                        </li>
+                        <li>
+                            <a href="http://www.dsa.or.kr" target="_blank" title="새창열림">대산농촌문화재단</a>
+                        </li>
+                        <li>
+                            <a href="http://www.sdream.or.kr/" target="_blank" title="새창열림">삼성꿈장학재단</a>
+                        </li>
+                        <li>
+                            <a href="http://amenity.or.kr/interres/main.asp" target="_blank" title="새창열림">행복한지역발전재단</a>
+                        </li>
+                        <li>
+                            <a href="http://www.dasomhouse.kr/" target="_blank" title="새창열림">다솜둥지복지재단</a>
+                        </li>
+                        <li>
+                            <a href="https://www.gafi.or.kr/" target="_blank" title="새창열림">경기도농수산진흥원</a>
+                        </li>
+                    </ul>
+                    <button class="btn_close">패밀리사이트</button>
+                </div>
+                <div class="f_nav">
+                    <span><a href="#n">개인정보보호방침</a></span>
+                    <span><a href="#n">이메일무단수집거부</a></span>
+                    <span><a href="#n">원격지원 서비스</a></span>
+                    <span><a href="#n">청렴포털사이트</a></span>
+                    <span><a href="#n">찾아오시는 길</a></span>
+                </div>
+                <div class="f_list">
+                    <address>주소 : (06767) 서울특별시 서초구 중앙로 586 5층</address>
+                    <span>사업자등록번호 : 138-82-03351<br></span>
+                    <span>TEL : 02-509-2114</span>
+                    <span>FAX : 02-576-2245</span>
+                </div>
+                <div class="copyright">ⓒ 2008 BY RHOF. All rights reserved.</div>
+            </div>
+        </footer>
+        <script>
+            AOS.init({
+            offset: 200, 
+            duration: 500, 
+            easing: 'ease', 
+            });
+        </script>
     </div>
 </body>
 </html>

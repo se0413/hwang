@@ -108,7 +108,7 @@
         height: 50vh;
     }
     .visual ul li h3 {
-        font-size: 30px;
+        font-size: 25px;
         margin: 330px 0 0 0;
     }
     .visual ul li p {
@@ -986,6 +986,7 @@
     }
     .row_board .fa .rb_list ul li a {
         margin-bottom: 5px;
+        line-height: 30px;
     }
     .row_board .fa .rb_list ul li a::before {
         width: 28px;
@@ -1030,14 +1031,14 @@
         height: 18px;
     }
     .row_board .foundation_news .swiper .photo {
-        height: 250px;
+        height: 200px;
     }
     .row_board .foundation_news .swiper > ul > li .fn_list {
         padding: 15px;
     }
     .row_board .foundation_news .swiper > ul > li a strong {
-        font-size: 15px;
-        margin: 13px 0 3px 0;
+        font-size: 18px;
+        margin: 10px 0 5px 0;
     }
     .row_board .foundation_news .swiper > ul > li a span {
         font-size: 13px;
@@ -1297,11 +1298,34 @@
     border-radius: 15px;
     border: 1px solid #ddd;
     background-color: #f9f9f9;
-    height: 380px;
+    margin: 0 10px;
 }
 .hope_story ul li a .photo {
     font-size: 0;
     line-height: 0;
+    position: relative;
+}
+.hope_story ul li a:hover .photo::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    content: "";
+}
+.hope_story ul li a:hover .photo::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_43_2449' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_43_2449)'%3E%3Cpath d='M36.3016 50.4616L50.1599 41.2566C50.6171 40.9444 50.8458 40.5255 50.8458 39.9999C50.8458 39.4744 50.6171 39.0555 50.1599 38.7433L36.3016 29.5383C35.7888 29.1921 35.2727 29.1571 34.7533 29.4333C34.2338 29.7088 33.9741 30.1477 33.9741 30.7499V49.2574C33.9741 49.8591 34.2338 50.2969 34.7533 50.5708C35.2727 50.8441 35.7888 50.8077 36.3016 50.4616ZM40.0058 71.6666C35.6258 71.6666 31.5088 70.8371 27.6549 69.1782C23.801 67.5199 20.4488 65.2688 17.5983 62.4249C14.7477 59.5816 12.4908 56.238 10.8274 52.3941C9.16464 48.5502 8.33325 44.4402 8.33325 40.0641C8.33325 38.3291 8.47214 36.6046 8.74992 34.8908C9.0277 33.1774 9.43381 31.481 9.96825 29.8016C10.1816 29.126 10.6121 28.6621 11.2599 28.4099C11.9071 28.1583 12.5269 28.1905 13.1191 28.5066C13.7535 28.8227 14.2033 29.3152 14.4683 29.9841C14.7327 30.653 14.7583 31.3419 14.5449 32.0508C14.1721 33.3502 13.8769 34.6646 13.6591 35.9941C13.4419 37.323 13.3333 38.6583 13.3333 39.9999C13.3333 47.4444 15.9166 53.7499 21.0833 58.9166C26.2499 64.0833 32.5555 66.6666 39.9999 66.6666C47.4444 66.6666 53.7499 64.0833 58.9166 58.9166C64.0833 53.7499 66.6666 47.4444 66.6666 39.9999C66.6666 32.5555 64.0833 26.2499 58.9166 21.0833C53.7499 15.9166 47.4444 13.3333 39.9999 13.3333C38.6338 13.3333 37.2819 13.4358 35.9441 13.6408C34.6069 13.8458 33.2835 14.1535 31.9741 14.5641C31.2646 14.778 30.5896 14.7555 29.9491 14.4966C29.308 14.2383 28.8358 13.7991 28.5324 13.1791C28.2285 12.5596 28.2146 11.9316 28.4908 11.2949C28.7663 10.6583 29.231 10.233 29.8849 10.0191C31.466 9.45075 33.0919 9.0277 34.7624 8.74992C36.4335 8.47214 38.1174 8.33325 39.8141 8.33325C44.2146 8.33325 48.3499 9.1602 52.2199 10.8141C56.0905 12.468 59.4616 14.7255 62.3333 17.5866C65.2049 20.4477 67.4783 23.8035 69.1533 27.6541C70.8288 31.5046 71.6666 35.6188 71.6666 39.9966C71.6666 44.3749 70.8355 48.491 69.1733 52.3449C67.511 56.1988 65.2552 59.551 62.4058 62.4016C59.5563 65.2521 56.2055 67.5091 52.3533 69.1724C48.501 70.8352 44.3852 71.6666 40.0058 71.6666ZM19.0383 23.0124C17.9488 23.0124 17.0141 22.6227 16.2341 21.8433C15.4541 21.0633 15.0641 20.1283 15.0641 19.0383C15.0641 17.9488 15.4541 17.0141 16.2341 16.2341C17.0141 15.4541 17.9488 15.0641 19.0383 15.0641C20.1283 15.0641 21.0633 15.4541 21.8433 16.2341C22.6227 17.0141 23.0124 17.9488 23.0124 19.0383C23.0124 20.1283 22.6227 21.0633 21.8433 21.8433C21.0633 22.6227 20.1283 23.0124 19.0383 23.0124Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
 }
 .hope_story ul li a .photo img {
     width: 100%;
@@ -1311,9 +1335,49 @@
 .hope_story ul li a strong{
     display: block;
     font-size: 20px;
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
     text-align: center;
 }
-footer {
-    margin-bottom: 5000px;
+@media screen and (max-width: 768px) {
+    .hope_story {
+        padding: 50px 0 30px 0;
+    }
+    .hope_story::before {
+        top: 240px;
+        height: 150px;
+    }
+    .hope_story .tit h2 {
+        font-size: 20px;
+    }
+    .hope_story .tit .more {
+        right: 20px;
+        top: 16px;
+    }
+    .hope_story .tit .more span {
+        font-size: 13px;
+        padding-right: 18px;
+    }
+    .hope_story .tit .more span::before {
+        top: -1px;
+        width: 18px;
+        height: 18px;
+    }
+    .hope_story ul {
+        display: block;
+    }
+    .hope_story ul li {
+        padding: 15px;
+        margin: 0;
+    }
+    .hope_story ul li:nth-child(2),
+    .hope_story ul li:nth-child(3) {
+        display: none;
+    }
+    .hope_story ul li a .photo {
+        height: 200px;
+    }
+    .hope_story ul li a strong{
+        font-size: 15px;
+        margin: 15px 0 0 0;
+    }
 }
