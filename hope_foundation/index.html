@@ -21,9 +21,9 @@
         <a href="#skip_nav">대메뉴 바로가기</a>
     </div>
     <div id="wrap">
-        <header class="">
+        <header>
             <h1 class="logo"><a href="index.html">한국농어촌희망재단</a></h1>
-            <nav class="gnb">
+            <nav class="gnb" id="skip_nav">
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
@@ -110,7 +110,7 @@
                     <button class="btn_stop">정지</button>
                 </div>
             </section>
-            <section class="quick">
+            <section class="quick" id="skip_contents">
                 <h2>서비스 바로가기</h2>
                 <div class="wrapper">
                     <div class="q_list">
@@ -539,13 +539,15 @@
                 <div class="copyright">ⓒ 2008 BY RHOF. All rights reserved.</div>
             </div>
         </footer>
-        <script>
+        <script type="text/javascript">
             AOS.init({
-            offset: 80, 
-            duration: 500, 
-            easing: 'ease', 
+                startEvent: 'load'
             });
-        </script>
+            
+            $(window).on('load', function() {
+                AOS.refresh();
+            });
+            </script>
     </div>
 </body>
 </html>
