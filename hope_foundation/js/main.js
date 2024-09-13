@@ -38,7 +38,21 @@ $(document).ready(function(){
         $('.visual .btn_wrap .btn_stop').show()
     })
     
+    $('.board .main_link a').on('mouseover', function(){
+        $('.board .main_link a').removeClass('on')
+        $(this).addClass('on')
+    })
+    $('.board .main_link a').on('mouseleave', function(){
+        $(this).removeClass('on')
+    })
 
+    $('.row_board .fa .rb_list ul li a').on('mouseover', function(){
+        $('.row_board .fa .rb_list ul li a').removeClass('on')
+        $(this).addClass('on')
+    })
+    $('.row_board .fa .rb_list ul li a').on('mouseleave', function(){
+        $(this).removeClass('on')
+    })
 
     tab_btn.on('click', function(){
         tab_btn.removeClass('active')
