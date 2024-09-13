@@ -105,5 +105,13 @@ $(document).ready(function(){
 
     });
 
+    let start = $(window).height() * 0.2;
+    AOS.init({
+        offset: start,
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+        anchorPlacement: 'top-bottom'
+    });
+
 
 })
