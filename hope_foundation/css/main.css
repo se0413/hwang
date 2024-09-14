@@ -1375,18 +1375,18 @@
     .hope_story::before {
         top: 240px;
     }
-    .hope_story .tit h2 {
+    .hope_story h2 {
         font-size: 20px;
     }
-    .hope_story .tit .more {
+    .hope_story .more {
         right: 20px;
         top: 16px;
     }
-    .hope_story .tit .more span {
+    .hope_story .more span {
         font-size: 13px;
         padding-right: 18px;
     }
-    .hope_story .tit .more span::before {
+    .hope_story .more span::before {
         top: -1px;
         width: 18px;
         height: 18px;
