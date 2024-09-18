@@ -1,12 +1,5 @@
 $(document).ready(function(){
 
-	setTimeout(function(){
-		$('.visual strong').addClass('mr')
-	}, 1000);
-	setTimeout(function(){
-		$('.visual h1 strong:nth-child(1).mr').removeClass('mr')
-	}, 3000);
-
     const news_swiper = new Swiper('.news .swiper', { 
         slidesPerView: 'auto', 
         spaceBetween: 16, 
@@ -98,5 +91,51 @@ $(document).ready(function(){
             prevEl: '.cultural .btn_prev',  
         },
     });
+
+    let info_top
+    let news_top
+    let exhibition_top
+    let program_top
+    let collection_top
+    let cultural_top
+    let window_h
+    let scrolling
+    let life_w
+    let goldfish_h2
+
+    function scroll_chk(){
+        window_h = $(window).height() //브라우저높이
+        scrolling = $(window).scrollTop() //스크롤된 값
+        info_top =$('.info').offset().top
+        news_top = $('.news').offset().top
+        exhibition_top = $('.exhibition').offset().top
+        program_top = $('.program').offset().top
+        collection_top = $('.collection').offset().top
+        cultural_top = $('.cultural').offset().top
+
+
+        if(scrolling > (info_top - window_h + (window_h / 2))){
+            $('body').addClass('w_bg')
+        }else{
+            $('body').removeClass('w_bg')
+        }
+
+    }
+
+    scroll_chk() 
+    $(window).scroll(function(){ 
+        scroll_chk()
+    })
+    $(window).resize(function(){
+        scroll_chk()
+    })
+
+	setTimeout(function(){
+		$('.visual strong').addClass('mr')
+	}, 1000);
+	setTimeout(function(){
+		$('.visual h1 strong:nth-child(1).mr').removeClass('mr')
+	}, 3000);
+
 
 })

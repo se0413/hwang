@@ -1114,6 +1114,7 @@
 .hope_number .m_box .top_txt h2 span {
     font-size: 40px;
     position: relative;
+    font-weight: 600;
 }
 .hope_number .m_box .top_txt h2 span::before {
     position: absolute;

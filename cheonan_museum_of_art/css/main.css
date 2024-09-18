@@ -116,7 +116,7 @@
 @media screen and (max-width: 1400px) {
     .visual {
         font-size: 3.333rem;
-        height: 500px;
+        height: 700px;
     }
     .visual .outer {
         position: absolute;
@@ -158,11 +158,15 @@
     }
 }
 .info {
-    background-color: #F5F5F5;
-    padding: 260px 0 280px 0;
+    background-color: #20231F;
+    padding: 400px 0 280px 0;
     color: #20231F;
     font-weight: 400;
     position: relative;
+    transition: 2s;
+}
+body.w_bg .info {
+    background-color: #f5f5f5;
 }
 .info .wrapper {
     display: flex;
