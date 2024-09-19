@@ -672,24 +672,50 @@ footer .copyright {
     font-size: 20px;
     font-weight: 600;
     line-height: 70px;
+    border-radius: 15px 15px 0 0;
+    transition: 0.5s;
 }
 .sub_visual .lnb ul li.active a,
 .sub_visual .lnb ul li a:hover {
     color: #568034;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px 15px 0 0;
     border-bottom: 3px solid #568034
+}
+.sub_contents .sub_title {
+    text-align: center;
+    font-weight: 600;
+}
+.sub_contents .sub_title h2 {
+    font-size: 20px;
+    color: #568034;
+}
+.sub_contents .sub_title p {
+    font-size: 40px;
+    margin-bottom: 100px;
 }
 @media screen and (max-width: 1024px) {
     .sub_visual {
-        height: 500px;
-        padding: 350px 0 0 0;
+        height: 300px;
+        padding: 150px 0 0 0;
     }
     .sub_visual .wrapper {
+        overflow-y: auto;
         margin: 0;
     }
     .sub_visual .breadcrumb {
         margin-left: 20px;
+    }
+    .sub_visual .wrapper::-webkit-scrollbar {
+        width: 0;
+        height: 0; /*안보이게 해놈*/
+        background-color: transparent; /*투명*/
+    }
+    .sub_visual .wrapper::-webkit-scrollbar-thumb {
+        background-color: #ddd;
+        border-radius: 2px; /*넓이 준거의 반*/
+    }
+    .sub_visual .wrapper::-webkit-scrollbar-track {
+        background-color: transparent; /*투명*/
     }
     .sub_visual .breadcrumb ol li a::after{
         left: -6px;
@@ -706,23 +732,34 @@ footer .copyright {
         margin-left: 20px;
     }
     .sub_visual .lnb {
+        height: 51px;
         margin-top: 43px;
     }
+    .sub_visual .lnb ul {
+        display: inline-flex;
+    }
     .sub_visual .lnb ul li {
-        height: 50px;
+        width: auto;
     }
     .sub_visual .lnb ul li a{
+        display: block;
+        padding: 0 15px;
         font-size: 13px;
         line-height: 50px;
+        white-space: nowrap;
     }
     .sub_visual .lnb ul li.active a,
     .sub_visual .lnb ul li a:hover {
         border-bottom: 1px solid #568034
     }
-}
-@media screen and (max-width: 768px) {
-    .sub_visual {
-        height: 300px;
-        padding: 150px 0 0 0;
+    .sub_contents {
+        padding: 100px 0 115px 0;
+    }
+    .sub_contents .sub_title h2 {
+        font-size: 15px;
+    }
+    .sub_contents .sub_title p {
+        font-size: 25px;
+        margin-bottom: 50px;
     }
 }
