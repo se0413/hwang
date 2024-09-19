@@ -656,10 +656,7 @@ footer .copyright {
     margin-top: 10px;
 }
 .sub_visual .lnb {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    margin-top: 159px;
 }
 .sub_visual .lnb ul{
     display: flex;
@@ -682,4 +679,50 @@ footer .copyright {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px 15px 0 0;
     border-bottom: 3px solid #568034
+}
+@media screen and (max-width: 1024px) {
+    .sub_visual {
+        height: 500px;
+        padding: 350px 0 0 0;
+    }
+    .sub_visual .wrapper {
+        margin: 0;
+    }
+    .sub_visual .breadcrumb {
+        margin-left: 20px;
+    }
+    .sub_visual .breadcrumb ol li a::after{
+        left: -6px;
+        width: 20px;
+        height: 20px;
+    }
+    .sub_visual .breadcrumb ol li.home a {
+        width: 20px;
+        height: 20px;
+    }
+    .sub_visual strong {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .sub_visual .lnb {
+        margin-top: 43px;
+    }
+    .sub_visual .lnb ul li {
+        height: 50px;
+    }
+    .sub_visual .lnb ul li a{
+        font-size: 13px;
+        line-height: 50px;
+    }
+    .sub_visual .lnb ul li.active a,
+    .sub_visual .lnb ul li a:hover {
+        border-bottom: 1px solid #568034
+    }
+}
+@media screen and (max-width: 768px) {
+    .sub_visual {
+        height: 300px;
+        padding: 150px 0 0 0;
+    }
 }
