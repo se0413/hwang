@@ -740,6 +740,7 @@ footer .copyright {
     }
     .sub_visual .lnb ul li {
         width: auto;
+        height: auto;
     }
     .sub_visual .lnb ul li a{
         display: block;
