@@ -615,13 +615,6 @@
     transform: translate(-50%, 0);
     white-space: nowrap;
 }
-.show_event .se_borad ul li .se_txt {
-    display: none;
-    transition: 0.5s;
-}
-.show_event .se_borad ul li.on .se_txt {
-    display: block;
-}
 .show_event .se_borad ul li.on .more{
     top: 52%;
     position: absolute;
