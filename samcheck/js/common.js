@@ -45,23 +45,22 @@ $(document).ready(function(){
 
     $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
         if(pc_mobile == 'pc'){
-            $('header').addClass('menu_over')
             $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
             $(this).addClass('on')
+            $('.header_sub').addClass('fixed')
         }
     })
     $('header .gnb .gnb_wrap ul.depth1 > li:last-child > ul.depth2 > li:last-child > a').on('focusout', function(){
         if(pc_mobile == 'pc'){
-            $('header').removeClass('menu_over')
             $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
             $(this).removeClass('on')
         }
     })
     $('header').on('mouseleave', function(){
         if(pc_mobile == 'pc'){
-            $('header').removeClass('menu_over')
             $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
             $(this).removeClass('on')
+            $('.header_sub').removeClass('fixed')
         }
     })
 
