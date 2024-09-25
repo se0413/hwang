@@ -1,0 +1,47 @@
+html, body{
+    font-family: 'Pretendard';
+    font-weight:400; 
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #20231F;
+    word-break: keep-all; 
+    word-wrap: break-word; 
+}
+#wrap{ 
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1400px;
+    margin: 0px auto; 
+}
+
+@media screen and (max-width: 1600px){
+    .wrapper {
+        margin: 0 20px; 
+        width: auto;
+    }
+}
+@media screen and (max-width: 1300px){
+    #wrap { 
+        min-width: 100%;
+    }
+}
+@media screen and (max-width: 1024px){
+    html, body{
+        font-size: 15px;
+    } 
+    .wrapper {
+        margin: 0 20px; 
+        width: auto;
+    }
+}
+@media screen and (max-width: 768px){
+    html, body{
+        font-size: 13px;
+    } 
+    .wrapper {
+        margin: 0 10px; 
+        width: auto;
+    }
+}
