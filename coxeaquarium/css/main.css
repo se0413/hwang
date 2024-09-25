@@ -615,7 +615,7 @@
     transform: translate(-50%, 0);
     white-space: nowrap;
 }
-.show_event .se_borad ul li.on .more{
+.show_event .se_borad ul li .more{
     top: 52%;
     position: absolute;
     left: 50%;
